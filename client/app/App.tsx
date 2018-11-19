@@ -1,17 +1,21 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Hello } from './components/Hello';
 import {BrowserRouter as Router} from "react-router-dom";
+import { Routes } from './Routes';
+import { NavBar } from './NavBar';
+import {MuiThemeProvider} from "@material-ui/core";
+import {theme} from "./theme";
 declare let module: any;
 
 console.log("startApp");
 
 ReactDOM.render(
-
     <Router>
-        <Hello compiler="Typescript" framework="React" bundler="Webpack" />
-    </Router>
-    ,
+        <MuiThemeProvider theme={theme}>
+            <NavBar/>
+            <Routes/>
+        </MuiThemeProvider>
+    </Router>,
     document.getElementById('root'));
 
 if (module.hot) {
