@@ -12,11 +12,6 @@ import logger from "redux-logger";
 import createSagaMiddleware from "redux-saga";
 import {rootSaga} from "./store/sagas";
 
-declare let module: any;
-declare global {
-    interface Window { __REDUX_DEVTOOLS_EXTENSION__: any; }
-}
-
 console.log("startApp");
 
 // create the saga middleware
@@ -37,7 +32,3 @@ ReactDOM.render(
         </Router>
     </Provider>,
     document.getElementById('root'));
-
-if (module.hot) {
-    module.hot.accept();
-}

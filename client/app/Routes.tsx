@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Route } from "react-router-dom";
 import Topics from "./components/Topics/TopicsContainer";
-import {Topic} from "./components/Topic/Topic";
+import TopicContainer from "./components/Topic/TopicContainer";
 
 class User extends React.Component<{match: any}, {}> {
     render() {
@@ -22,7 +22,7 @@ export class Routes extends React.Component<{}, {}> {
 
                 <Route path="/topics" exact strict component={Topics}/>
 
-                <Route path="/topics/:id" exact strict component={Topic}/>
+                <Route path="/topics/:id" exact strict component={TopicContainer}/>
 
                 <Route path="/user/:username?" component={User}/>
             </div>
