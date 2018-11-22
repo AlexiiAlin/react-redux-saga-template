@@ -1,24 +1,36 @@
 import * as React from 'react';
-import {CircularProgress, Paper, Table, TableBody, TableCell, TableHead, TableRow} from "@material-ui/core";
+import {Button, CircularProgress, Paper, Table, TableBody, TableCell, TableHead, TableRow} from "@material-ui/core";
 import {Link} from "react-router-dom";
 import {connect} from "react-redux";
 import {TopicsActions} from "./store/topics.actions";
 import {Row} from "../../shared/interfaces";
+import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
+import {Remove} from "@material-ui/icons";
 
 interface TopicsProps {
-  onSomeClick: any,
+  incrementValue: any,
   nr: any,
   topics: Row[],
   onLoad: any,
   dogUrl: any,
   isLoadingTopics: boolean,
-  isLoadingDog: boolean
+  isLoadingDog: boolean,
+  deleteTopic: any
 }
 
 class TopicsContainer extends React.Component<TopicsProps, {}> {
 
   componentWillMount() {
     this.props.onLoad();
+  }
+
+  incrementValue() {
+    console.log('WTF DUDE');
+    this.props.incrementValue();
+  }
+
+  deleteTopic(id) {
+    this.props.deleteTopic(id);
   }
 
   render() {
@@ -32,6 +44,7 @@ class TopicsContainer extends React.Component<TopicsProps, {}> {
             <TableCell>ID</TableCell>
             <TableCell>Title</TableCell>
             <TableCell>Username</TableCell>
+            <TableCell style={{width: 50}}></TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -41,11 +54,16 @@ class TopicsContainer extends React.Component<TopicsProps, {}> {
                 <TableCell component="th" scope="row">
                   {topic.id}
                 </TableCell>
-                <TableCell><Link to={`/topics/${topic.id}`}>{topic.title}</Link></TableCell>
                 <TableCell>
-                    <span onClick={this.props.onSomeClick} style={{marginRight: 8, cursor: 'pointer'}}>
-                      <b>Here it goes</b>
-                    </span>{topic.userName}
+                  <Link to={`/topics/${topic.id}`}>{topic.title}</Link>
+                </TableCell>
+                <TableCell>
+                    {topic.userName}
+                </TableCell>
+                <TableCell style={{width: 50, cursor: 'pointer'}}>
+                  <div onClick={() => this.deleteTopic(topic.id)}>
+                    <DeleteForeverIcon/>
+                  </div>
                 </TableCell>
               </TableRow>
             );
@@ -58,13 +76,27 @@ class TopicsContainer extends React.Component<TopicsProps, {}> {
       :  <img src={this.props.dogUrl} style={{width: 100, height: 100, marginLeft: 8, marginBottom: 4}}/>;
 
     return(
-      <Paper>
-        { table }
+      <div>
+        <Link to='/createTopic'>
+          <Button variant='contained' style={{marginLeft: 8, marginTop: 8}}>
+              Create topic
+          </Button>
+        </Link>
+
+        <Paper>
+          { table }
+        </Paper>
+
+        <div onClick={() => this.incrementValue()}>
+          <Button variant='contained' style={{marginLeft: 8, marginTop: 8}}>
+            Increment
+          </Button>
+        </div>
 
         <h1 style={{marginLeft: 8}}>This is the nr: {this.props.nr}</h1>
 
         { dog }
-      </Paper>
+      </div>
     )
   }
 }
@@ -81,13 +113,18 @@ const mapStateToProps = (state : any) => {
 
 const mapDispatchToProps = (dispatch : any) => {
   return {
-    onSomeClick: (someParam : any) => {
-      dispatch(TopicsActions.someMethod(someParam));
+    incrementValue: (someParam : any) => {
+      dispatch(TopicsActions.incrementNumber(someParam));
     },
     onLoad: () => {
       dispatch(TopicsActions.loadTopicsStarted());
+    },
+    deleteTopic: (id: number) => {
+      dispatch(TopicsActions.deleteTopic(id));
     }
   }
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(TopicsContainer);
+
+// 7<92SsHZ6T/t

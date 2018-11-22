@@ -10,8 +10,7 @@ const initialState = {
 
 export function topicsReducer(state : any = initialState, action: any) {
   switch (action.type) {
-    case TopicsActions.TOPICS_SOME_METHOD: {
-      console.log('Entered reducer...');
+    case TopicsActions.TOPICS_INCREMENT_VALUE: {
       const nr = state.nr + 1;
       return {...state, ...{nr}};
     }
@@ -38,6 +37,9 @@ export function topicsReducer(state : any = initialState, action: any) {
     case TopicsActions.DOG_LOAD_FAIL: {
       console.log('FAILED');
       return state;
+    }
+    case TopicsActions.TOPICS_DELETE: {
+      return {...state, ...{topics: state.topics.filter(topic => topic.id !== action.payload.id)}};
     }
     default:
       return state;

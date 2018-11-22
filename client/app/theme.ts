@@ -8,7 +8,7 @@ export const theme = createMuiTheme({
     MuiAppBar: {
       // Name of the rule
       style: {
-        background: 'black',
+        background: '#202830',
         borderRadius: 3,
         border: 0,
         color: 'white',

@@ -1,4 +1,4 @@
-import { Controller, Get, PathParams} from '@tsed/common';
+import {BodyParams, Controller, Delete, Get, PathParams, Post} from '@tsed/common';
 import {TopicsService} from './topics-service';
 import {Topic} from '../models/topic';
 
@@ -17,4 +17,13 @@ export class TopicsController {
     return this.threadsService.getTopic(topicId);
   }
 
+  @Post('/')
+  public createTopic(@BodyParams() topic: Topic) {
+    return this.threadsService.saveTopic(topic);
+  }
+
+  @Delete('/:id')
+  public deleteTopic(@PathParams('id') topicId: number) {
+    return this.threadsService.deleteTopic(topicId);
+  }
 }

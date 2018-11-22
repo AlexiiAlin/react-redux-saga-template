@@ -1,16 +1,17 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import {BrowserRouter as Router} from "react-router-dom";
+import { Router } from "react-router-dom";
 import { Routes } from './Routes';
 import { NavBar } from './NavBar';
-import {MuiThemeProvider} from "@material-ui/core";
-import {theme} from "./theme";
-import {Provider} from "react-redux";
-import {applyMiddleware, compose, createStore} from "redux";
+import { MuiThemeProvider } from "@material-ui/core";
+import { theme } from "./theme";
+import { Provider } from "react-redux";
+import { applyMiddleware, compose, createStore}  from "redux";
 import reducers from './store/reducers';
 import logger from "redux-logger";
 import createSagaMiddleware from "redux-saga";
 import {rootSaga} from "./store/sagas";
+import history from './history';
 
 console.log("startApp");
 
@@ -23,12 +24,12 @@ const store = createStore(reducers, applyMiddleware(sagaMiddleware, logger));
 sagaMiddleware.run(rootSaga);
 
 ReactDOM.render(
-    <Provider store={store}>
-        <Router>
-            <MuiThemeProvider theme={theme}>
-                <NavBar/>
-                <Routes/>
-            </MuiThemeProvider>
-        </Router>
-    </Provider>,
-    document.getElementById('root'));
+  <Provider store={store}>
+    <Router history={history}>
+      <MuiThemeProvider theme={theme}>
+        <NavBar/>
+        <Routes/>
+      </MuiThemeProvider>
+    </Router>
+  </Provider>,
+  document.getElementById('root'));

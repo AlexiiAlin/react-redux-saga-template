@@ -1,12 +1,14 @@
-import {all, call, put, takeEvery, takeLatest} from "redux-saga/effects";
-import {TopicsActions} from "./topics.actions";
+import { all, call, put, takeEvery } from "redux-saga/effects";
+import { TopicsActions } from "./topics.actions";
 import axios from "axios";
-import {delay} from "redux-saga";
+import { delay } from "redux-saga";
+import { Row } from "../../../shared/interfaces";
 
 export function* topicsSaga() {
   yield all([
     takeEvery(TopicsActions.DOG_LOAD_START, getDog),
-    takeEvery(TopicsActions.TOPICS_LOAD_START, getTopics)
+    takeEvery(TopicsActions.TOPICS_LOAD_START, getTopics),
+    takeEvery(TopicsActions.TOPICS_DELETE, deleteTopic)
   ]);
 }
 
@@ -37,7 +39,14 @@ function* getDog() {
 function* getTopics() {
   try {
     const response = yield call(axios.get, '/api/topics');
-    const topics = response.data;
+    const topics: Row[] = response.data.map(el => {
+      return {
+        id: el.id,
+        title: el.title,
+        userName: el.user.username
+
+      }
+    });
 
     // dispatch a success action to the store with the new dog
     yield put({ type: TopicsActions.TOPICS_LOAD_SUCCESS, payload: {topics} });
@@ -47,5 +56,13 @@ function* getTopics() {
   } catch (error) {
     // dispatch a failure action to the store with the error
     yield put({ type: TopicsActions.TOPICS_LOAD_FAIL, error });
+  }
+}
+
+function* deleteTopic(action) {
+  try {
+    yield call(axios.delete, `/api/topics/${action.payload.id}`);
+  } catch (e) {
+    console.log('Something went wrong');
   }
 }
