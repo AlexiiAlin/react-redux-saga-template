@@ -1,8 +1,9 @@
 import {CreateTopicActions} from "./create-topic.actions";
 
 const initialState = {
-  title: ''
-}
+  title: '',
+  isLoading: false
+};
 
 export function createTopicReducer(state = initialState, action) {
   switch (action.type) {
@@ -11,6 +12,12 @@ export function createTopicReducer(state = initialState, action) {
     }
     case CreateTopicActions.CHANGE_TITLE: {
       return {...state, ...{title: action.payload.title}}
+    }
+    case CreateTopicActions.LOAD_TOPIC_START: {
+      return {...state, ...{isLoading: true}}
+    }
+    case CreateTopicActions.LOAD_TOPIC_SUCCEED: {
+      return {...state, ...{isLoading: false, title: action.payload.title}}
     }
     case CreateTopicActions.RESET_STATE: {
       return {...state, ...{title: ''}}

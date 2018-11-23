@@ -18,14 +18,14 @@ export class Routes extends React.Component<{}, {}> {
             <div>
                 <Route path="/" exact strict render={
                     () => {
-                        return (<h1>Welcome to this app that is <b>not</b> a forum</h1>)}
+                        return (<h1>Welcome to this app that is <u>not</u> a forum</h1>)}
                 }/>
 
                 <Route path="/topics" exact strict component={TopicsContainer}/>
 
-                <Route path="/createTopic" exact strict component={CreateTopicContainer}/>
-
                 <Route path="/topics/:id" exact strict component={TopicContainer}/>
+
+                <Route path="/createTopic/:id?" exact strict component={CreateTopicContainer}/>
 
                 <Route path="/user/:username?" component={User}/>
             </div>

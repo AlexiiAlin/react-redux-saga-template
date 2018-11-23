@@ -5,7 +5,8 @@ import {connect} from "react-redux";
 import {TopicsActions} from "./store/topics.actions";
 import {Row} from "../../shared/interfaces";
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
-import {Remove} from "@material-ui/icons";
+import { Edit, Remove } from "@material-ui/icons";
+import history from '../../history';
 
 interface TopicsProps {
   incrementValue: any,
@@ -15,7 +16,8 @@ interface TopicsProps {
   dogUrl: any,
   isLoadingTopics: boolean,
   isLoadingDog: boolean,
-  deleteTopic: any
+  deleteTopic: any,
+  editTopic: any
 }
 
 class TopicsContainer extends React.Component<TopicsProps, {}> {
@@ -33,6 +35,10 @@ class TopicsContainer extends React.Component<TopicsProps, {}> {
     this.props.deleteTopic(id);
   }
 
+  editTopic(id) {
+    history.push(`/createTopic/${id}`);
+  }
+
   render() {
     const { topics } = this.props;
 
@@ -44,7 +50,8 @@ class TopicsContainer extends React.Component<TopicsProps, {}> {
             <TableCell>ID</TableCell>
             <TableCell>Title</TableCell>
             <TableCell>Username</TableCell>
-            <TableCell style={{width: 50}}></TableCell>
+            <TableCell style={{width: 25}}></TableCell>
+            <TableCell style={{width: 25}}></TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -60,8 +67,13 @@ class TopicsContainer extends React.Component<TopicsProps, {}> {
                 <TableCell>
                     {topic.userName}
                 </TableCell>
-                <TableCell style={{width: 50, cursor: 'pointer'}}>
-                  <div onClick={() => this.deleteTopic(topic.id)}>
+                <TableCell style={{width: 25, padding: '0 0 0 80px'}}>
+                  <div onClick={() => this.editTopic(topic.id)} style={{cursor: 'pointer'}}>
+                    <Edit/>
+                  </div>
+                </TableCell>
+                <TableCell style={{width: 25}}>
+                  <div onClick={() => this.deleteTopic(topic.id)} style={{cursor: 'pointer'}}>
                     <DeleteForeverIcon/>
                   </div>
                 </TableCell>
