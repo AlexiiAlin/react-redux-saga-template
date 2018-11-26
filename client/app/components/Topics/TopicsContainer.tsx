@@ -50,8 +50,8 @@ class TopicsContainer extends React.Component<TopicsProps, {}> {
             <TableCell>ID</TableCell>
             <TableCell>Title</TableCell>
             <TableCell>Username</TableCell>
-            <TableCell style={{width: 25}}></TableCell>
-            <TableCell style={{width: 25}}></TableCell>
+            <TableCell style={{width: 25}}/>
+            <TableCell style={{width: 25}}/>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -86,6 +86,7 @@ class TopicsContainer extends React.Component<TopicsProps, {}> {
     const dog = this.props.isLoadingDog
       ? <CircularProgress />
       :  <img src={this.props.dogUrl} style={{width: 100, height: 100, marginLeft: 8, marginBottom: 4}}/>;
+
 
     return(
       <div>

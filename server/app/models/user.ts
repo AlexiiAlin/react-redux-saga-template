@@ -10,6 +10,9 @@ export class User {
   @Column({name: 'username'})
   username: string;
 
+  @Column({name: 'password'})
+  password: string;
+
   @OneToMany(type => Topic, topic => topic.user)
   topics: Topic[];
 

@@ -2,6 +2,7 @@ import * as Express from 'express';
 import * as Path from 'path';
 import {IServerLifecycle, ServerLoader, ServerSettings} from '@tsed/common';
 
+const session = require('express-session');
 const bodyParser = require('body-parser');
 
 const rootDir = Path.resolve(__dirname);
@@ -22,6 +23,13 @@ export class Server extends ServerLoader implements IServerLifecycle {
   public $onMountingMiddlewares(): void | Promise<any> {
     this.use(bodyParser.json({limit: '10mb'}), bodyParser.json({ type: 'application/vnd.api+json' }));
     this.use('/', Express.static(Path.resolve(`${__dirname}/../client`)));
+    this.set('trust proxy', 1) // trust first proxy
+    this.use(session({
+      secret: 'keyboard cat',
+      resave: false,
+      saveUninitialized: true,
+      cookie: { secure: true }
+    }));
 
     this.expressApp.get("/*", function(request, response, next){
       if (!request.path.includes('/api')) {

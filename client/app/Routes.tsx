@@ -3,6 +3,7 @@ import { Route } from "react-router-dom";
 import TopicsContainer from "./components/Topics/TopicsContainer";
 import TopicContainer from "./components/Topic/TopicContainer";
 import CreateTopicContainer from "./components/CreateTopic/CreateTopicContainer";
+import LoginContainer from './components/Login/LoginContainer';
 
 class User extends React.Component<{match: any}, {}> {
     render() {
@@ -26,6 +27,9 @@ export class Routes extends React.Component<{}, {}> {
                 <Route path="/topics/:id" exact strict component={TopicContainer}/>
 
                 <Route path="/createTopic/:id?" exact strict component={CreateTopicContainer}/>
+
+                <Route path="/login" exact strict component={LoginContainer}/>
+
 
                 <Route path="/user/:username?" component={User}/>
             </div>
