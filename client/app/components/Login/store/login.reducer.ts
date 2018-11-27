@@ -4,25 +4,28 @@ const initialState = {
   userName: '',
   password: '',
   error: '',
-  isAuthenticated: false
+  badCredentials: false
 };
 
 export function loginReducer(state = initialState, action) {
   switch (action.type) {
     case LoginActions.CHANGE_USERNAME: {
-      return {...state, ...{userName: action.payload.userName}}
+      return {...state, ...{userName: action.payload.userName, badCredentials: false}}
     }
     case LoginActions.CHANGE_PASSWORD: {
-      return {...state, ...{password: action.payload.password}}
+      return {...state, ...{password: action.payload.password, badCredentials: false}}
     }
     case LoginActions.LOGIN_START: {
       return {...state}
     }
     case LoginActions.LOGIN_SUCCEED: {
-      return {...state, ...{isAuthenticated: true}}
+      return {...state, ...{badCredentials: false}}
     }
     case LoginActions.LOGIN_FAIL: {
-      return {...state, ...{isAuthenticated: false}}
+      return {...state, ...{badCredentials: true}}
+    }
+    case LoginActions.LOGOUT: {
+      return {...state}
     }
     default:
       return state;

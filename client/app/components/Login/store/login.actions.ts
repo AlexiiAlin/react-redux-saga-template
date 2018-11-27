@@ -5,6 +5,8 @@ export class LoginActions {
   static readonly LOGIN_START = '[LOGIN]LOGIN_START';
   static readonly LOGIN_SUCCEED = '[LOGIN]LOGIN_SUCCEEDED';
   static readonly LOGIN_FAIL = '[LOGIN]LOGIN_FAILED';
+  static readonly LOGOUT = '[LOGIN]LOGOUT';
+
 
   static changeUserName(userName: string) {
     return {
@@ -33,4 +35,11 @@ export class LoginActions {
       }
     }
   }
+
+  static logout() {
+    return {
+      type: LoginActions.LOGOUT
+    }
+  }
+
 }

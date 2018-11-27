@@ -1,8 +1,9 @@
 import * as Express from 'express';
 import * as Path from 'path';
+import * as Passport from "passport";
 import {IServerLifecycle, ServerLoader, ServerSettings} from '@tsed/common';
 
-const session = require('express-session');
+var session = require('express-session');
 const bodyParser = require('body-parser');
 
 const rootDir = Path.resolve(__dirname);
@@ -23,13 +24,18 @@ export class Server extends ServerLoader implements IServerLifecycle {
   public $onMountingMiddlewares(): void | Promise<any> {
     this.use(bodyParser.json({limit: '10mb'}), bodyParser.json({ type: 'application/vnd.api+json' }));
     this.use('/', Express.static(Path.resolve(`${__dirname}/../client`)));
-    this.set('trust proxy', 1) // trust first proxy
+
+    // required for passport session
     this.use(session({
-      secret: 'keyboard cat',
-      resave: false,
+      secret: 'secrettexthere',
       saveUninitialized: true,
-      cookie: { secure: true }
+      resave: true
     }));
+
+// Init passport authentication
+    this.use(Passport.initialize());
+// persistent login sessions
+    this.use(Passport.session());
 
     this.expressApp.get("/*", function(request, response, next){
       if (!request.path.includes('/api')) {

@@ -4,6 +4,7 @@ import TopicsContainer from "./components/Topics/TopicsContainer";
 import TopicContainer from "./components/Topic/TopicContainer";
 import CreateTopicContainer from "./components/CreateTopic/CreateTopicContainer";
 import LoginContainer from './components/Login/LoginContainer';
+import { PrivateRoute } from './PrivateRoute';
 
 class User extends React.Component<{match: any}, {}> {
     render() {
@@ -30,8 +31,12 @@ export class Routes extends React.Component<{}, {}> {
 
                 <Route path="/login" exact strict component={LoginContainer}/>
 
+                <Route path="/logout" exact strict component={LoginContainer}/>
 
-                <Route path="/user/:username?" component={User}/>
+                {/*<Route path="/user/:username?" component={User}/>*/}
+
+
+                <PrivateRoute path="/user/:username?" component={User}/>
             </div>
         )
     }

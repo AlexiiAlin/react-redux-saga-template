@@ -9,13 +9,9 @@ export function* topicSaga() {
 }
 
 function* getTopic(action: any) {
-  try {
-    const result = yield call(axios.get, `/api/topics/${action.payload.id}`);
+  const result = yield call(axios.get, `/api/topics/${action.payload.id}`);
 
-    const topic = result.data;
+  const topic = result.data;
 
-    yield put({ type: TopicActions.TOPIC_LOAD_SUCCEED, payload: { topic } });
-  } catch (e) {
-    yield put({ type: TopicActions.TOPIC_LOAD_FAIL });
-  }
+  yield put({ type: TopicActions.TOPIC_LOAD_SUCCEED, payload: { topic } });
 }

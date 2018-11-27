@@ -4,19 +4,29 @@ import axios from 'axios';
 
 export function* loginSaga() {
   yield all([
-    yield takeEvery(LoginActions.LOGIN_START, login)
+    yield takeEvery(LoginActions.LOGIN_START, login),
+    yield takeEvery(LoginActions.LOGOUT, logout)
   ]);
 }
 
 function* login(action) {
   try {
-    yield call(axios.post, '/api/login', {
-      userName: action.payload.userName,
+    yield call(axios.post, '/passport/login', {
+      username: action.payload.userName,
       password: action.payload.password
     });
 
-    yield put({type: LoginActions.LOGIN_SUCCEED, payload: {isAuthenticated: true}});
+    window.location.href = `${window.location.origin}/topics`;
   } catch (e) {
-    yield put({type: LoginActions.LOGIN_FAIL, payload: {isAuthenticated: false}});
+    yield put({type: LoginActions.LOGIN_FAIL, payload: {badCredentials: false, userName: ''}});
+  }
+}
+
+function* logout() {
+  try {
+    yield call(axios.post, '/passport/logout');
+    window.location.href = `${window.location.origin}/`;
+  } catch (e) {
+    console.log('LOGOUT FAILED');
   }
 }

@@ -11,22 +11,14 @@ export function* createTopicSagas() {
 }
 
 function* saveTopic(action) {
-  try {
-    yield call(axios.post,'/api/topics', action.payload);
+  yield call(axios.post,'/api/topics', action.payload);
 
-    history.push('/topics');
-  } catch (e) {
-    yield put({type: CreateTopicActions.SAVE_TOPIC_FAILED})
-  }
+  history.push('/topics');
 }
 
 function* loadTopic(action) {
-  try {
-    const response = yield call(axios.get, `/api/topics/${action.payload.id}`);
-    const title = response.data.title;
+  const response = yield call(axios.get, `/api/topics/${action.payload.id}`);
+  const title = response.data.title;
 
-    yield put({type: CreateTopicActions.LOAD_TOPIC_SUCCEED, payload: {title}})
-  } catch (e) {
-    yield put({type: CreateTopicActions.LOAD_TOPIC_FAIL});
-  }
+  yield put({type: CreateTopicActions.LOAD_TOPIC_SUCCEED, payload: {title}})
 }

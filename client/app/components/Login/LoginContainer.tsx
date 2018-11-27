@@ -9,44 +9,63 @@ interface LoginProps {
   password: string,
   changeUserName: any,
   changePassword: any,
+  badCredentials: boolean,
   login: any,
-  isAuthenticated: boolean
+  logout: any,
+  userProfile: any
 }
 
 class LoginContainer extends React.Component<LoginProps, {}> {
+
 
   login(userName, password) {
     this.props.login(userName, password);
   }
 
+  logout() {
+    this.props.logout();
+  }
+
   render() {
 
+    const renderBody = this.props.userProfile.isAuthenticated
+      ? (
+        <div onClick={() => this.logout()}>
+          <Button type="submit" variant='contained'>Log out</Button>
+        </div>
+      ) : (
+          <React.Fragment>
+            <div>
+              <TextField
+                placeholder="User name"
+                variant="outlined"
+                value={this.props.userName}
+                margin="normal"
+                onChange={this.props.changeUserName}
+              />
+            </div>
+
+            <div>
+              <TextField
+                placeholder="Password"
+                variant="outlined"
+                value={this.props.password}
+                margin="normal"
+                onChange={this.props.changePassword}
+                type="password"
+              />
+            </div>
+
+            <div onClick={() => this.login(this.props.userName, this.props.password)}>
+              <Button type="submit" variant='contained'>Log in</Button>
+            </div>
+
+            <div style={{marginTop: 50}}>{this.props.badCredentials && 'Wrong username or password...'}</div>
+          </React.Fragment>
+      );
     return(
       <div style={{marginLeft: 8}}>
-        <div>
-          <TextField
-            label="User name"
-            value={this.props.userName}
-            margin="normal"
-            onChange={this.props.changeUserName}
-          />
-        </div>
-
-        <div>
-          <TextField
-            label="Password"
-            value={this.props.password}
-            margin="normal"
-            onChange={this.props.changePassword}
-            type="password"
-          />
-        </div>
-
-        <div onClick={() => this.login(this.props.userName, this.props.password)}>
-          <Button type="submit" variant='contained'>Log in</Button>
-        </div>
-
-        <div style={{marginTop: 100}}>{this.props.isAuthenticated ? 'DA BOSS' : 'Nu boss...'}</div>
+        {renderBody}
       </div>
     )
   }
@@ -56,7 +75,8 @@ const mapStateToProps = (state : any) => {
   return {
     userName: state.login.userName,
     password: state.login.password,
-    isAuthenticated: state.login.isAuthenticated
+    badCredentials: state.login.badCredentials,
+    userProfile: state.userProfile
   }
 };
 
@@ -70,6 +90,9 @@ const mapDispatchToProps = (dispatch : any) => {
     },
     login: (userName, password) => {
       dispatch(LoginActions.loginStarted(userName, password));
+    },
+    logout: () => {
+      dispatch(LoginActions.logout())
     }
   }
 };

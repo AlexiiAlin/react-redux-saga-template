@@ -139,5 +139,3 @@ const mapDispatchToProps = (dispatch : any) => {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(TopicsContainer);
-
-// 7<92SsHZ6T/t

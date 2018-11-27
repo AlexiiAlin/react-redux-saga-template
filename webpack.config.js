@@ -3,7 +3,7 @@ const path = require('path'),
 
 module.exports = {
   entry: {
-    app: ['./client/app/App.tsx'],
+    app: ['./client/app/index.tsx'],
     vendor: ['react', 'react-dom']
   },
   devServer: {
