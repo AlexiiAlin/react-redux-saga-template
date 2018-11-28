@@ -5,6 +5,8 @@ import { store } from './index';
 interface PrivateRouteProps extends RouteProps{
   component: any,
   path: string,
+  exact?: boolean,
+  strict?: boolean
 }
 
 interface PriveRouteState {
@@ -30,15 +32,17 @@ export class PrivateRoute extends React.Component<PrivateRouteProps, PriveRouteS
   }
 
   render() {
-    console.log(this.state);
+
+    const { path, component, exact, strict } = this.props;
+
     const route = this.state.isAuthenticated
       ?
-        <Route path={this.props.path} component={this.props.component}/>
-      : <Route path={this.props.path} render={() => (
+        <Route path={path} exact={exact} strict={strict} component={component}/>
+      : <Route path={path} render={() => (
           <Redirect to='/login'/>
       )} />;
 
-    const result = this.state.isReady ? route : null
+    const result = this.state.isReady ? route : null;
 
     return (
       result
