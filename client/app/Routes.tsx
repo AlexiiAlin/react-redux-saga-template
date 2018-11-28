@@ -17,17 +17,17 @@ class User extends React.Component<{match: any}, {}> {
 export class Routes extends React.Component<{}, {}> {
     render() {
         return(
-            <div>
+            <div style={{height: 'calc(100% - 64px)'}}>
                 <Route path="/" exact strict render={
                     () => {
                         return (<h1>Welcome to this app that is <u>not</u> a forum</h1>)}
                 }/>
 
-                <Route path="/topics" exact strict component={TopicsContainer}/>
+                <PrivateRoute path="/topics" exact strict component={TopicsContainer}/>
 
-                <Route path="/topics/:id" exact strict component={TopicContainer}/>
+                <PrivateRoute path="/topics/:id" exact strict component={TopicContainer}/>
 
-                <Route path="/createTopic/:id?" exact strict component={CreateTopicContainer}/>
+                <PrivateRoute path="/createTopic/:id?" exact strict component={CreateTopicContainer}/>
 
                 <Route path="/login" exact strict component={LoginContainer}/>
 

@@ -1,8 +1,6 @@
 import { Redirect, Route, RouteProps } from 'react-router';
 import * as React from 'react';
-import { connect } from 'react-redux';
 import { store } from './index';
-import { LoginActions } from './components/Login/store/login.actions';
 
 interface PrivateRouteProps extends RouteProps{
   component: any,

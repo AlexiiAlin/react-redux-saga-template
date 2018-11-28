@@ -3,6 +3,8 @@ import {connect} from "react-redux";
 import history from '../../history';
 import { Button, TextField } from '@material-ui/core';
 import { LoginActions } from './store/login.actions';
+import AccesibilityIcon from '@material-ui/icons/AccessibilityOutlined';
+
 
 interface LoginProps {
   userName: string,
@@ -31,41 +33,62 @@ class LoginContainer extends React.Component<LoginProps, {}> {
     const renderBody = this.props.userProfile.isAuthenticated
       ? (
         <div onClick={() => this.logout()}>
-          <Button type="submit" variant='contained'>Log out</Button>
+          <Button type="submit" variant='contained' className="width-100">Log out</Button>
         </div>
       ) : (
-          <React.Fragment>
-            <div>
-              <TextField
-                placeholder="User name"
-                variant="outlined"
-                value={this.props.userName}
-                margin="normal"
-                onChange={this.props.changeUserName}
-              />
-            </div>
+        <React.Fragment>
+          <div style={{alignSelf: 'center'}}>
+            <AccesibilityIcon style={{marginLeft: '48%'}}/>
+          </div>
+          <div style={{textAlign: 'center'}}>
+            Sign in to access the app!
+          </div>
 
-            <div>
-              <TextField
-                placeholder="Password"
-                variant="outlined"
-                value={this.props.password}
-                margin="normal"
-                onChange={this.props.changePassword}
-                type="password"
-              />
-            </div>
+          <div>
+            <TextField
+              placeholder="User name"
+              variant="outlined"
+              value={this.props.userName}
+              margin="normal"
+              onChange={this.props.changeUserName}
+              className="width-100"
+              onKeyPress={(event) => {
+                if (event.key === 'Enter') {
+                  this.login(this.props.userName, this.props.password);
+                }
+              }}
+            />
+          </div>
 
-            <div onClick={() => this.login(this.props.userName, this.props.password)}>
-              <Button type="submit" variant='contained'>Log in</Button>
-            </div>
+          <div style={{width: '100%'}}>
+            <TextField
+              placeholder="Password"
+              variant="outlined"
+              value={this.props.password}
+              margin="normal"
+              onChange={this.props.changePassword}
+              type="password"
+              className="width-100"
+              onKeyPress={(event) => {
+                if (event.key === 'Enter') {
+                  this.login(this.props.userName, this.props.password);
+                }
+              }}
+            />
+          </div>
 
-            <div style={{marginTop: 50}}>{this.props.badCredentials && 'Wrong username or password...'}</div>
-          </React.Fragment>
+          <div onClick={() => this.login(this.props.userName, this.props.password)}>
+            <Button type="submit" variant='contained' className="width-100" style={{marginTop: 8}}>Log in</Button>
+          </div>
+
+          <div style={{marginTop: 20, textAlign: 'center'}}>{this.props.badCredentials && 'Wrong username or password...'}</div>
+        </React.Fragment>
       );
     return(
-      <div style={{marginLeft: 8}}>
-        {renderBody}
+      <div style={{display: 'flex', height: '100%'}}>
+        <div className="login-container">
+          {renderBody}
+        </div>
       </div>
     )
   }
