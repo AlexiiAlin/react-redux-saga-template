@@ -16,13 +16,13 @@ export function createTopicReducer(state = initialState, action) {
       return {...state, ...{title: action.payload.title}}
     }
     case CreateTopicActions.LOAD_TOPIC_START: {
-      return {...state, ...{isLoading: true}}
+      return {...state, ...{isLoading: true, isSaving: false}}
     }
     case CreateTopicActions.LOAD_TOPIC_SUCCEED: {
-      return {...state, ...{isLoading: false, title: action.payload.title}}
+      return {...state, ...{title: action.payload.title, isLoading: false}}
     }
     case CreateTopicActions.RESET_STATE: {
-      return {...state, ...{title: ''}}
+      return {...state, ...{title: '',isLoading: false, isSaving: false}}
     }
     default:
       return state;
