@@ -1,25 +1,25 @@
 import * as React from 'react';
 import '../../style.css';
 import { connect } from 'react-redux';
-import { NavBarActions } from './store/navBar.actions';
-import { AppBar, SvgIcon, Toolbar, Typography } from '@material-ui/core';
+import { NavBarActions } from './store/nav-bar.actions';
+import { AppBar, Toolbar, Typography } from '@material-ui/core';
 import { Link } from 'react-router-dom';
-import { AccountCircle } from '@material-ui/icons';
+import { AccountCircle, Home } from '@material-ui/icons';
+import { ApplicationState } from '../../store/application-state';
 
-interface IProps{
+interface NavBarProps{
   userName: string,
   isAuthenticated: boolean,
-  loadUserProfile: any
+  loadUserProfile: Function
 }
 
-class NavBarContainer extends React.Component<IProps, {}> {
+class NavBarContainer extends React.Component<NavBarProps, {}> {
 
   componentWillMount() {
     this.props.loadUserProfile();
   }
 
   render() {
-
     const loginInfo = this.props.isAuthenticated ? this.props.userName : <AccountCircle/>;
 
     return(
@@ -27,9 +27,7 @@ class NavBarContainer extends React.Component<IProps, {}> {
         <AppBar position="static" color="primary">
           <Toolbar>
             <Link to="/" style={{width: '5%', display: 'flex', justifyContent: 'center'}}>
-              <SvgIcon style={{marginRight: 8, color: 'white'}}>
-                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
-              </SvgIcon>
+              <Home nativeColor='white'/>
             </Link>
             <Typography variant="h6" style={{width: '90%', display: 'flex', justifyContent: 'center'}}>
               <Link to="/topics" style={{color: 'white'}}>Norum - Not a forum</Link>
@@ -44,20 +42,19 @@ class NavBarContainer extends React.Component<IProps, {}> {
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state : ApplicationState) => {
   return {
     userName: state.userProfile.userName,
     isAuthenticated: state.userProfile.isAuthenticated
   }
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
     loadUserProfile: () => {
       dispatch(NavBarActions.loadProfile())
     }
   }
-
-}
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(NavBarContainer);

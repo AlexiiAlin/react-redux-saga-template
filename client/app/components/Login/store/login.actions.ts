@@ -1,4 +1,3 @@
-
 export class LoginActions {
   static readonly CHANGE_USERNAME = '[LOGIN]CHANGE_USERNAME';
   static readonly CHANGE_PASSWORD = '[LOGIN]CHANGE_PASSWORD';
@@ -6,7 +5,6 @@ export class LoginActions {
   static readonly LOGIN_SUCCEED = '[LOGIN]LOGIN_SUCCEEDED';
   static readonly LOGIN_FAIL = '[LOGIN]LOGIN_FAILED';
   static readonly LOGOUT = '[LOGIN]LOGOUT';
-
 
   static changeUserName(userName: string) {
     return {
@@ -26,7 +24,7 @@ export class LoginActions {
     }
   }
 
-  static loginStarted(userName: string, password) {
+  static loginStarted(userName: string, password: string) {
     return {
       type: LoginActions.LOGIN_START,
       payload: {

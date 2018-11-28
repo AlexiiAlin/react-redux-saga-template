@@ -3,10 +3,9 @@ import { topicsSaga } from "../components/Topics/store/topics.saga";
 import { topicSaga } from "../components/Topic/store/topic.saga";
 import { createTopicSagas } from "../components/CreateTopic/store/create-topic.saga";
 import { loginSaga } from '../components/Login/store/login.saga';
+import { navBarSaga } from '../components/NavBar/store/nav-bar.saga';
 import history from '../history';
-import { navBarSaga } from '../components/NavBar/store/navBar.saga';
 
-// watcher saga: watches for actions dispatched to the store, starts worker saga
 export function* rootSaga() {
   try {
     yield all([

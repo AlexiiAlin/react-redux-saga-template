@@ -1,10 +1,10 @@
 import * as React from 'react';
 import {connect} from "react-redux";
-import history from '../../history';
 import { Button, TextField } from '@material-ui/core';
 import { LoginActions } from './store/login.actions';
 import AccesibilityIcon from '@material-ui/icons/AccessibilityOutlined';
-
+import { ApplicationState } from '../../store/application-state';
+import { UserProfileState } from '../NavBar/store/nav-bar';
 
 interface LoginProps {
   userName: string,
@@ -12,13 +12,12 @@ interface LoginProps {
   changeUserName: any,
   changePassword: any,
   badCredentials: boolean,
-  login: any,
-  logout: any,
-  userProfile: any
+  login: Function,
+  logout: Function,
+  userProfile: UserProfileState
 }
 
 class LoginContainer extends React.Component<LoginProps, {}> {
-
 
   login(userName, password) {
     this.props.login(userName, password);
@@ -29,7 +28,6 @@ class LoginContainer extends React.Component<LoginProps, {}> {
   }
 
   render() {
-
     const renderBody = this.props.userProfile.isAuthenticated
       ? (
         <div onClick={() => this.logout()}>
@@ -84,6 +82,7 @@ class LoginContainer extends React.Component<LoginProps, {}> {
           <div style={{marginTop: 20, textAlign: 'center'}}>{this.props.badCredentials && 'Wrong username or password...'}</div>
         </React.Fragment>
       );
+
     return(
       <div style={{display: 'flex', height: '100%'}}>
         <div className="login-container">
@@ -94,7 +93,7 @@ class LoginContainer extends React.Component<LoginProps, {}> {
   }
 }
 
-const mapStateToProps = (state : any) => {
+const mapStateToProps = (state : ApplicationState) => {
   return {
     userName: state.login.userName,
     password: state.login.password,
@@ -103,7 +102,7 @@ const mapStateToProps = (state : any) => {
   }
 };
 
-const mapDispatchToProps = (dispatch : any) => {
+const mapDispatchToProps = dispatch => {
   return {
     changeUserName: (event) => {
       dispatch(LoginActions.changeUserName(event.target.value));

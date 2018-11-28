@@ -1,7 +1,8 @@
 import {all, call, put, takeEvery} from "redux-saga/effects";
 import {CreateTopicActions} from "./create-topic.actions";
 import axios from 'axios';
-import history from '../../../history';
+import { delay } from 'redux-saga';
+import history from '../../../history'
 
 export function* createTopicSagas() {
   yield all([
@@ -11,12 +12,14 @@ export function* createTopicSagas() {
 }
 
 function* saveTopic(action) {
+  yield delay(1000);
   yield call(axios.post,'/api/topics', action.payload);
 
   history.push('/topics');
 }
 
 function* loadTopic(action) {
+  yield delay(1000);
   const response = yield call(axios.get, `/api/topics/${action.payload.id}`);
   const title = response.data.title;
 

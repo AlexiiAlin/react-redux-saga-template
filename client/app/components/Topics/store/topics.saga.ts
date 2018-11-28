@@ -2,7 +2,7 @@ import { all, call, put, takeEvery } from "redux-saga/effects";
 import { TopicsActions } from "./topics.actions";
 import axios from "axios";
 import { delay } from "redux-saga";
-import { Row } from "../../../shared/interfaces";
+import { Topic } from "../../../shared/interfaces";
 
 export function* topicsSaga() {
   yield all([
@@ -32,7 +32,7 @@ function* getDog() {
 
 function* getTopics() {
   const response = yield call(axios.get, '/api/topics');
-  const topics: Row[] = response.data.map(el => {
+  const topics: Topic[] = response.data.map(el => {
     return {
       id: el.id,
       title: el.title,

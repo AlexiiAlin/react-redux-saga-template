@@ -8,7 +8,6 @@ export class TopicsActions {
   static readonly DOG_LOAD_FAIL = '[TOPICS]DOG_LOAD_FAIL';
   static readonly TOPICS_DELETE = '[TOPICS]DELETE';
 
-
   static loadTopicsStarted() {
     return {
       type: TopicsActions.TOPICS_LOAD_START

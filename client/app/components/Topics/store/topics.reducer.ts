@@ -1,8 +1,10 @@
 import {TopicsActions} from "./topics.actions";
+import { TopicsState } from './topics-state';
+import { Topic } from '../../../shared/interfaces';
 
-const initialState = {
+const initialState : TopicsState = {
   nr: 1,
-  topics: [] as any,
+  topics: [] as Topic[],
   isLoadingTopics: false,
   isLoadingDog: false,
   url: ''

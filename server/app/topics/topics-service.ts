@@ -25,16 +25,12 @@ export class TopicsService {
   }
 
   public saveTopic(topic) {
-    console.log('HELLO FROM THE SERVER SIDE');
-
     return this.ormService.connection.then((connection: Connection) => {
       return connection.getRepository(Topic).save(topic);
     })
   }
 
   public deleteTopic(id: number) {
-    console.log("HELLO FROM THE DELETE SIDE");
-
     return this.ormService.connection.then((connection: Connection) => {
       return connection.getRepository(Topic).delete(id);
     })

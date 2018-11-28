@@ -1,6 +1,7 @@
-import { NavBarActions } from './navBar.actions';
+import { NavBarActions } from './nav-bar.actions';
+import { UserProfileState } from './nav-bar';
 
-const initialState = {
+const initialState : UserProfileState = {
   userName: '',
   isAuthenticated: false,
   isReady: false

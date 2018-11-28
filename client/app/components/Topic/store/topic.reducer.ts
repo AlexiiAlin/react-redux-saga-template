@@ -1,7 +1,9 @@
 import {TopicActions} from "./topic.actions";
+import { TopicState } from './topic-state';
+import { Topic } from '../../../shared/interfaces';
 
-const initialState = {
-  topic: {},
+const initialState : TopicState = {
+  topic: {} as Topic,
   isLoading: false
 }
 

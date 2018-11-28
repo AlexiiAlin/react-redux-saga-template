@@ -3,21 +3,22 @@ import {Button, CircularProgress, Paper, Table, TableBody, TableCell, TableHead,
 import {Link} from "react-router-dom";
 import {connect} from "react-redux";
 import {TopicsActions} from "./store/topics.actions";
-import {Row} from "../../shared/interfaces";
+import {Topic} from "../../shared/interfaces";
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
-import { Edit, Remove } from "@material-ui/icons";
+import { Edit } from "@material-ui/icons";
 import history from '../../history';
+import { ApplicationState } from '../../store/application-state';
 
 interface TopicsProps {
-  incrementValue: any,
-  nr: any,
-  topics: Row[],
-  onLoad: any,
-  dogUrl: any,
+  incrementValue: Function,
+  deleteTopic: Function,
+  onLoad: Function,
+  editTopic: Function
+  topics: Topic[],
   isLoadingTopics: boolean,
   isLoadingDog: boolean,
-  deleteTopic: any,
-  editTopic: any
+  nr: number,
+  dogUrl: string,
 }
 
 class TopicsContainer extends React.Component<TopicsProps, {}> {
@@ -107,14 +108,13 @@ class TopicsContainer extends React.Component<TopicsProps, {}> {
         </div>
 
         <h1 style={{marginLeft: 8}}>This is the nr: {this.props.nr}</h1>
-
         { dog }
       </div>
     )
   }
 }
 
-const mapStateToProps = (state : any) => {
+const mapStateToProps = (state : ApplicationState) => {
   return {
     topics: state.topics.topics,
     nr: state.topics.nr,
@@ -124,7 +124,7 @@ const mapStateToProps = (state : any) => {
   }
 };
 
-const mapDispatchToProps = (dispatch : any) => {
+const mapDispatchToProps = dispatch => {
   return {
     incrementValue: (someParam : any) => {
       dispatch(TopicsActions.incrementNumber(someParam));

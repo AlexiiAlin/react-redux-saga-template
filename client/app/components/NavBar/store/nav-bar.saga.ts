@@ -1,5 +1,5 @@
 import { all, call, put, takeEvery } from 'redux-saga/effects';
-import { NavBarActions } from './navBar.actions';
+import { NavBarActions } from './nav-bar.actions';
 import axios from 'axios';
 
 export function* navBarSaga() {

@@ -1,11 +1,13 @@
 import * as React from 'react';
 import {connect} from "react-redux";
 import {TopicActions} from "./store/topic.actions";
+import { ApplicationState } from '../../store/application-state';
+import { MatchProps, Topic } from '../../shared/interfaces';
 
 interface TopicProps {
-  match: any,
-  onLoad: any,
-  topic: any
+  match: MatchProps,
+  onLoad: Function,
+  topic: Topic
 }
 
 class TopicContainer extends React.Component<TopicProps, {}> {
@@ -22,18 +24,18 @@ class TopicContainer extends React.Component<TopicProps, {}> {
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state : ApplicationState) => {
   return {
     topic: state.topic.topic
   }
 };
 
-const mapDispatchToProps = (dispatch => {
+const mapDispatchToProps = dispatch => {
   return {
     onLoad: (id) => {
       dispatch(TopicActions.loadTopicStart(id));
     }
   }
-})
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(TopicContainer);

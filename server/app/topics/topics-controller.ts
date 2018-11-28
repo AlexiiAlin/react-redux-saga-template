@@ -21,7 +21,9 @@ export class TopicsController {
 
   @Post('/')
   @Authenticated()
-  public createTopic(@BodyParams() topic: Topic) {
+  public createTopic(@Request() request: any,
+                     @BodyParams() topic: Topic) {
+    topic.userId = request.user.id;
     return this.threadsService.saveTopic(topic);
   }
 

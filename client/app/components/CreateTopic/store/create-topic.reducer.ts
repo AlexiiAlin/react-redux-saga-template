@@ -1,14 +1,16 @@
 import {CreateTopicActions} from "./create-topic.actions";
+import { CreateTopicState } from './create-topic-state';
 
-const initialState = {
+const initialState : CreateTopicState = {
   title: '',
-  isLoading: false
+  isLoading: false,
+  isSaving: false
 };
 
 export function createTopicReducer(state = initialState, action) {
   switch (action.type) {
     case CreateTopicActions.SAVE_TOPIC: {
-      return {...state};
+      return {...state, ...{isSaving: true}};
     }
     case CreateTopicActions.CHANGE_TITLE: {
       return {...state, ...{title: action.payload.title}}

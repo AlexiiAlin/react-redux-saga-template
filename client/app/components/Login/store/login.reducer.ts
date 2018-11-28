@@ -1,6 +1,7 @@
 import { LoginActions } from './login.actions';
+import { LoginState } from './login-state';
 
-const initialState = {
+const initialState : LoginState = {
   userName: '',
   password: '',
   error: '',
