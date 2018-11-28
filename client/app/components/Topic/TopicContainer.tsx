@@ -19,7 +19,9 @@ class TopicContainer extends React.Component<TopicProps, {}> {
   render() {
     const { topic } = this.props;
     return(
-      <h1>{topic && topic.title}</h1>
+      <div style={{marginLeft: 24}}>
+        <h1>{topic && topic.title}</h1>
+      </div>
     )
   }
 }

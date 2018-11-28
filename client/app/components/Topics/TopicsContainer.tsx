@@ -1,5 +1,15 @@
 import * as React from 'react';
-import {Button, CircularProgress, Paper, Table, TableBody, TableCell, TableHead, TableRow} from "@material-ui/core";
+import {
+  Button,
+  CircularProgress,
+  LinearProgress,
+  Paper,
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableRow
+} from "@material-ui/core";
 import {Link} from "react-router-dom";
 import {connect} from "react-redux";
 import {TopicsActions} from "./store/topics.actions";
@@ -10,26 +20,17 @@ import history from '../../history';
 import { ApplicationState } from '../../store/application-state';
 
 interface TopicsProps {
-  incrementValue: Function,
   deleteTopic: Function,
   onLoad: Function,
   editTopic: Function
   topics: Topic[],
-  isLoadingTopics: boolean,
-  isLoadingDog: boolean,
-  nr: number,
-  dogUrl: string,
+  isLoading: boolean
 }
 
 class TopicsContainer extends React.Component<TopicsProps, {}> {
 
   componentWillMount() {
     this.props.onLoad();
-  }
-
-  incrementValue() {
-    console.log('WTF DUDE');
-    this.props.incrementValue();
   }
 
   deleteTopic(id) {
@@ -43,72 +44,64 @@ class TopicsContainer extends React.Component<TopicsProps, {}> {
   render() {
     const { topics } = this.props;
 
-    const table = this.props.isLoadingTopics
-      ? <CircularProgress />
-      : <Table>
-        <TableHead>
-          <TableRow>
-            <TableCell>ID</TableCell>
-            <TableCell>Title</TableCell>
-            <TableCell>Username</TableCell>
-            <TableCell style={{width: 25}}/>
-            <TableCell style={{width: 25}}/>
+    const tableContent = topics.length === 0
+      ?
+        !this.props.isLoading && <TableRow key={10000} style={{height: 340}}>
+          <TableCell style={{fontStyle: 'italic', color: '#DADCDF', position: 'relative', left: 'calc(50% - 70px)'}}>
+            No active topics
+          </TableCell>
+        </TableRow>
+      : topics.map(topic => {
+        return (
+          <TableRow key={topic.id}>
+            <TableCell component="th" scope="row">
+              {topic.id}
+            </TableCell>
+            <TableCell>
+              <Link to={`/topics/${topic.id}`}>{topic.title}</Link>
+            </TableCell>
+            <TableCell>
+              {topic.userName}
+            </TableCell>
+            <TableCell style={{width: 25, padding: '0 0 0 80px'}}>
+              <div onClick={() => this.editTopic(topic.id)} style={{cursor: 'pointer'}}>
+                <Edit/>
+              </div>
+            </TableCell>
+            <TableCell style={{width: 25}}>
+              <div onClick={() => this.deleteTopic(topic.id)} style={{cursor: 'pointer'}}>
+                <DeleteForeverIcon/>
+              </div>
+            </TableCell>
           </TableRow>
-        </TableHead>
-        <TableBody>
-          {topics.map(topic => {
-            return (
-              <TableRow key={topic.id}>
-                <TableCell component="th" scope="row">
-                  {topic.id}
-                </TableCell>
-                <TableCell>
-                  <Link to={`/topics/${topic.id}`}>{topic.title}</Link>
-                </TableCell>
-                <TableCell>
-                    {topic.userName}
-                </TableCell>
-                <TableCell style={{width: 25, padding: '0 0 0 80px'}}>
-                  <div onClick={() => this.editTopic(topic.id)} style={{cursor: 'pointer'}}>
-                    <Edit/>
-                  </div>
-                </TableCell>
-                <TableCell style={{width: 25}}>
-                  <div onClick={() => this.deleteTopic(topic.id)} style={{cursor: 'pointer'}}>
-                    <DeleteForeverIcon/>
-                  </div>
-                </TableCell>
-              </TableRow>
-            );
-          })}
-        </TableBody>
-      </Table>;
-
-    const dog = this.props.isLoadingDog
-      ? <CircularProgress />
-      :  <img src={this.props.dogUrl} style={{width: 100, height: 100, marginLeft: 8, marginBottom: 4}}/>;
-
+        );
+      });
 
     return(
       <div>
         <Link to='/createTopic'>
-          <Button variant='contained' style={{marginLeft: 8, marginTop: 8}}>
+          <Button variant='contained' style={{marginLeft: 24, marginTop: 24}}>
               Create topic
           </Button>
         </Link>
 
         <Paper>
-          { table }
+          {this.props.isLoading && <LinearProgress/>}
+          <Table>
+            <TableHead>
+              <TableRow>
+                <TableCell>ID</TableCell>
+                <TableCell>Title</TableCell>
+                <TableCell>Username</TableCell>
+                <TableCell style={{width: 25}}/>
+                <TableCell style={{width: 25}}/>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {tableContent}
+            </TableBody>
+          </Table>
         </Paper>
-
-        <div onClick={() => this.incrementValue()}>
-          <Button variant='contained' style={{marginLeft: 8, marginTop: 8}}>
-            Increment
-          </Button>
-        </div>
-
-        <h1 style={{marginLeft: 8}}>This is the nr: {this.props.nr}</h1>
-        { dog }
       </div>
     )
   }
@@ -117,18 +110,12 @@ class TopicsContainer extends React.Component<TopicsProps, {}> {
 const mapStateToProps = (state : ApplicationState) => {
   return {
     topics: state.topics.topics,
-    nr: state.topics.nr,
-    dogUrl: state.topics.url,
-    isLoadingTopics: state.topics.isLoadingTopics,
-    isLoadingDog: state.topics.isLoadingDog
+    isLoading: state.topics.isLoading
   }
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    incrementValue: (someParam : any) => {
-      dispatch(TopicsActions.incrementNumber(someParam));
-    },
     onLoad: () => {
       dispatch(TopicsActions.loadTopicsStarted());
     },

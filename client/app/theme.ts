@@ -22,8 +22,7 @@ export const theme = createMuiTheme({
     },
     MuiPaper: {
       style: {
-        width: '100%',
-        marginTop: 12,
+        margin: 24,
         overflowX: 'auto'
       }
     }

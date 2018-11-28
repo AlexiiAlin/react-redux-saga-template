@@ -57,10 +57,13 @@ class CreateTopicContainer extends React.Component<TopicProps, {}> {
         onChange={this.props.titleChange}
         style={{width: '30%'}}
         margin="normal"
+        InputLabelProps={{
+          shrink: true
+        }}
       />;
 
     return(
-      <form style={{marginLeft: 8}} onSubmit={(event) => {
+      <form style={{marginLeft: 24}} onSubmit={(event) => {
         event.preventDefault();
         return this.saveTopic(this.props.title)
       }} >

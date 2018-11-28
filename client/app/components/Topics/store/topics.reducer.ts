@@ -3,40 +3,21 @@ import { TopicsState } from './topics-state';
 import { Topic } from '../../../shared/interfaces';
 
 const initialState : TopicsState = {
-  nr: 1,
   topics: [] as Topic[],
-  isLoadingTopics: false,
-  isLoadingDog: false,
-  url: ''
+  isLoading: false
 };
 
 export function topicsReducer(state : any = initialState, action: any) {
   switch (action.type) {
-    case TopicsActions.TOPICS_INCREMENT_VALUE: {
-      const nr = state.nr + 1;
-      return {...state, ...{nr}};
-    }
     case TopicsActions.TOPICS_LOAD_START: {
       console.log('STARTED');
-      return {...state, ...{isLoadingTopics: true}}
+      return {...state, ...{isLoading: true}}
     }
     case TopicsActions.TOPICS_LOAD_SUCCESS: {
       console.log('SUCCESS');
-      return {...state, ...{topics: action.payload.topics, isLoadingTopics: false}}
+      return {...state, ...{topics: action.payload.topics, isLoading: false}}
     }
     case TopicsActions.TOPICS_LOAD_FAIL: {
-      console.log('FAILED');
-      return state;
-    }
-    case TopicsActions.DOG_LOAD_START: {
-      console.log('STARTED');
-      return {...state, ...{isLoadingDog: true}}
-    }
-    case TopicsActions.DOG_LOAD_SUCCESS: {
-      console.log('SUCCESS');
-      return {...state, ...{isLoadingDog: false, url: action.payload.message}}
-    }
-    case TopicsActions.DOG_LOAD_FAIL: {
       console.log('FAILED');
       return state;
     }
