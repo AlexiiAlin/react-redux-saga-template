@@ -5,6 +5,7 @@ import { LoginActions } from './store/login.actions';
 import AccesibilityIcon from '@material-ui/icons/AccessibilityOutlined';
 import { ApplicationState } from '../../store/application-state';
 import { UserProfileState } from '../NavBar/store/nav-bar';
+import { ValidatorForm, TextValidator} from 'react-material-ui-form-validator';
 
 interface LoginProps {
   userName: string,
@@ -34,7 +35,10 @@ class LoginContainer extends React.Component<LoginProps, {}> {
           <Button type="submit" variant='contained' className="width-100">Log out</Button>
         </div>
       ) : (
-        <React.Fragment>
+        <ValidatorForm onSubmit={(event) => {
+          event.preventDefault();
+          return this.login(this.props.userName, this.props.password);
+        }} >
           <div style={{alignSelf: 'center'}}>
             <AccesibilityIcon style={{marginLeft: '48%'}}/>
           </div>
@@ -43,23 +47,22 @@ class LoginContainer extends React.Component<LoginProps, {}> {
           </div>
 
           <div>
-            <TextField
+            <TextValidator
+              name="username"
               placeholder="User name"
               variant="outlined"
               value={this.props.userName}
               margin="normal"
               onChange={this.props.changeUserName}
               className="width-100"
-              onKeyPress={(event) => {
-                if (event.key === 'Enter') {
-                  this.login(this.props.userName, this.props.password);
-                }
-              }}
+              validators={['required']}
+              errorMessages={['This field is required']}
             />
           </div>
 
           <div style={{width: '100%'}}>
-            <TextField
+            <TextValidator
+              name="password"
               placeholder="Password"
               variant="outlined"
               value={this.props.password}
@@ -67,11 +70,8 @@ class LoginContainer extends React.Component<LoginProps, {}> {
               onChange={this.props.changePassword}
               type="password"
               className="width-100"
-              onKeyPress={(event) => {
-                if (event.key === 'Enter') {
-                  this.login(this.props.userName, this.props.password);
-                }
-              }}
+              validators={['required']}
+              errorMessages={['This field is required']}
             />
           </div>
 
@@ -80,7 +80,7 @@ class LoginContainer extends React.Component<LoginProps, {}> {
           </div>
 
           <div style={{marginTop: 20, textAlign: 'center'}}>{this.props.badCredentials && 'Wrong username or password...'}</div>
-        </React.Fragment>
+        </ValidatorForm>
       );
 
     return(

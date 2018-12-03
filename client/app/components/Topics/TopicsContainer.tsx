@@ -1,7 +1,6 @@
 import * as React from 'react';
 import {
   Button,
-  CircularProgress,
   LinearProgress,
   Paper,
   Table,
@@ -21,13 +20,12 @@ import { ApplicationState } from '../../store/application-state';
 
 interface TopicsProps {
   deleteTopic: Function,
-  onLoad: Function,
-  editTopic: Function
+  onLoad: Function
   topics: Topic[],
   isLoading: boolean
 }
 
-class TopicsContainer extends React.Component<TopicsProps, {}> {
+export class TopicsContainer extends React.Component<TopicsProps, {}> {
 
   componentWillMount() {
     this.props.onLoad();
@@ -42,6 +40,8 @@ class TopicsContainer extends React.Component<TopicsProps, {}> {
   }
 
   render() {
+    console.log('PROPS : ', this.props);
+
     const { topics } = this.props;
 
     const tableContent = topics.length === 0

@@ -20,7 +20,7 @@ export class Routes extends React.Component<{}, {}> {
             <div style={{height: 'calc(100% - 64px)'}}>
                 <Route path="/" exact strict render={
                     () => {
-                        return (<h1>Welcome to this app that is <u>not</u> a forum</h1>)}
+                        return (<h1 style={{marginLeft: 24}}>Welcome to this app that is <u>not</u> a forum</h1>)}
                 }/>
 
                 <PrivateRoute path="/topics" exact strict component={TopicsContainer}/>
@@ -34,7 +34,6 @@ export class Routes extends React.Component<{}, {}> {
                 <Route path="/logout" exact strict component={LoginContainer}/>
 
                 {/*<Route path="/user/:username?" component={User}/>*/}
-
 
                 <PrivateRoute path="/user/:username?" component={User}/>
             </div>

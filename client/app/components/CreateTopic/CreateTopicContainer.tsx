@@ -4,6 +4,7 @@ import {CreateTopicActions} from "./store/create-topic.actions";
 import { Button, CircularProgress, TextField } from "@material-ui/core";
 import { ApplicationState } from '../../store/application-state';
 import { MatchProps } from '../../shared/interfaces';
+import { ValidatorForm, TextValidator} from 'react-material-ui-form-validator';
 
 interface TopicProps {
   onSave: Function,
@@ -25,15 +26,6 @@ class CreateTopicContainer extends React.Component<TopicProps, {}> {
     } else {
       this.props.resetState();
     }
-    console.log('componentWillMount')
-  }
-
-  componentWillUpdate(nextProps: Readonly<TopicProps>, nextState: Readonly<{}>, nextContext: any): void {
-    console.log('componentWillUpdate')
-  }
-
-  componentWillUnmount(): void {
-    console.log('componentWillUnmount')
   }
 
   saveTopic(title) {
@@ -42,28 +34,29 @@ class CreateTopicContainer extends React.Component<TopicProps, {}> {
     } else {
       this.props.onSave(title);
     }
-
-    console.log('saveTopic')
   };
 
   render() {
 
     const renderTitle = this.props.isLoading
       ? <CircularProgress style={{margin: '16px 0 16px 20px'}}/>
-      : <TextField
-        id="standard-textarea"
-        label="Title"
-        value={this.props.title}
-        onChange={this.props.titleChange}
-        style={{width: '30%'}}
-        margin="normal"
-        InputLabelProps={{
-          shrink: true
-        }}
+      : <TextValidator
+          id="standard-textarea"
+          label="Title*"
+          name="title"
+          value={this.props.title}
+          onChange={this.props.titleChange}
+          style={{width: '30%'}}
+          margin="normal"
+          InputLabelProps={{
+            shrink: true
+          }}
+          validators={['required']}
+          errorMessages={['This field is required']}
       />;
 
     return(
-      <form style={{marginLeft: 24}} onSubmit={(event) => {
+      <ValidatorForm style={{marginLeft: 24}} onSubmit={(event) => {
         event.preventDefault();
         return this.saveTopic(this.props.title)
       }} >
@@ -76,7 +69,7 @@ class CreateTopicContainer extends React.Component<TopicProps, {}> {
           {this.props.isSaving && <CircularProgress style={{width: 20, height: 20, position: 'absolute', marginTop: 8, marginLeft: 8}}/>}
         </div>
 
-      </form>
+      </ValidatorForm>
     )
   }
 }

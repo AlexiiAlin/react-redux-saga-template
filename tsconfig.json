@@ -13,9 +13,6 @@
     "types": ["reflect-metadata"],
     "moduleResolution": "node",
     "experimentalDecorators":true,
-    "emitDecoratorMetadata": true,
-  },
-  "exclude": [
-    "node_modules"
-  ]
+    "emitDecoratorMetadata": true
+  }
 }
