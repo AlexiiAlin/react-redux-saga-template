@@ -17,10 +17,8 @@ export function* rootSaga() {
     ])
   } catch (e) {
     if(e.response.status === 403) {
-      console.log(history);
       window.location.href = `${window.location.origin}/login`;
     } else {
-      console.log(e);
     }
   }
 }

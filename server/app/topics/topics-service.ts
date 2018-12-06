@@ -2,6 +2,7 @@ import {Service} from '@tsed/common';
 import {Connection} from "typeorm";
 import {Topic} from "../models/topic";
 import {OrmConfigService} from "../services/ormconfig-service";
+import { Comment } from '../models/comment';
 
 @Service()
 export class TopicsService {
@@ -11,16 +12,14 @@ export class TopicsService {
   public getTopics() {
     return this.ormService.connection.then((connection: Connection) => {
       return connection.getRepository(Topic)
-        .createQueryBuilder("topic")
-        .leftJoinAndSelect("topic.user", "user")
-        .getMany();
+        .find({relations: ["user"]});
     });
   }
 
   public getTopic(id: number) {
     return this.ormService.connection.then((connection: Connection) => {
       return connection.getRepository(Topic)
-        .findOne(id);
+        .findOne(id, {relations: ["comments", "comments.user", "user"]});
     })
   }
 
@@ -33,6 +32,16 @@ export class TopicsService {
   public deleteTopic(id: number) {
     return this.ormService.connection.then((connection: Connection) => {
       return connection.getRepository(Topic).delete(id);
+    })
+  }
+
+  public deleteComments(id: number) {
+    return this.ormService.connection.then((connection: Connection) => {
+      return connection.createQueryBuilder()
+        .delete()
+        .from(Comment)
+        .where("topicId = :id", { id})
+        .execute();
     })
   }
 

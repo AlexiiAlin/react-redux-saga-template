@@ -40,8 +40,6 @@ export class TopicsContainer extends React.Component<TopicsProps, {}> {
   }
 
   render() {
-    console.log('PROPS : ', this.props);
-
     const { topics } = this.props;
 
     const tableContent = topics.length === 0

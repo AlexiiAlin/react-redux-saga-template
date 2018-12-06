@@ -1,5 +1,6 @@
 import {Column, Entity, OneToMany, PrimaryGeneratedColumn} from 'typeorm';
 import {Topic} from "./topic";
+import { Comment } from './comment';
 
 @Entity({name: 'users'})
 export class User {
@@ -15,5 +16,8 @@ export class User {
 
   @OneToMany(type => Topic, topic => topic.user)
   topics: Topic[];
+
+  @OneToMany(type => Comment, comment => comment.user)
+  comments: Comment[];
 
 }
