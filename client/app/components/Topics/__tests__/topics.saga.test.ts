@@ -3,36 +3,15 @@ import { TopicsActions } from '../store/topics.actions';
 import { deleteTopic, getTopics } from '../store/topics.saga';
 import { delay } from 'redux-saga';
 import axios from 'axios';
+import { expectedResult, callResponse } from './topics.data';
 
 
 describe('Topics saga', () => {
 
   it('should get topics', () => {
-    const responseValue = {
-      data: [{
-        id: 1,
-        title: 'TestTitle1',
-        user: {
-          username: 'TestUsername1'
-        }
-      }, {
-        id: 2,
-        title: 'TestTitle2',
-        user: {
-          username: 'TestUsername2'
-        }
-      }]
-    };
+    const responseValue = callResponse();
 
-    const resultLoadSuccess = [{
-      id: 1,
-      title: 'TestTitle1',
-      userName: 'TestUsername1'
-    }, {
-      id: 2,
-      title: 'TestTitle2',
-      userName: 'TestUsername2'
-    }];
+    const resultLoadSuccess = expectedResult();
 
     const generator = getTopics();
 
