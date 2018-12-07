@@ -14,6 +14,15 @@ export class TopicActions {
     }
   }
 
+  static loadTopicSuccess(topic) {
+    return {
+      type: TopicActions.TOPIC_LOAD_SUCCEED,
+      payload: {
+        topic
+      }
+    }
+  }
+
   static addCommentStart(topicId: number, comment: string) {
     return {
       type: TopicActions.ADD_COMMENT_START,

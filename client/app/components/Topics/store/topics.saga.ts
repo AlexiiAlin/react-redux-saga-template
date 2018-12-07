@@ -11,8 +11,8 @@ export function* topicsSaga() {
   ]);
 }
 
-function* getTopics() {
-  yield delay(2000);
+export function* getTopics() {
+  yield call(delay, 2000);
   const response = yield call(axios.get, '/api/topics');
   const topics: Topic[] = response.data.map(el => {
     return {
@@ -25,6 +25,6 @@ function* getTopics() {
   yield put({ type: TopicsActions.TOPICS_LOAD_SUCCESS, payload: {topics} });
 }
 
-function* deleteTopic(action) {
+export function* deleteTopic(action) {
   yield call(axios.delete, `/api/topics/${action.payload.id}`);
 }

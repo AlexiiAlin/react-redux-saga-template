@@ -10,7 +10,16 @@ export class TopicsActions {
     }
   }
 
-  static deleteTopic (id: number) {
+  static loadTopicsSuccess(topics) {
+    return {
+      type: TopicsActions.TOPICS_LOAD_SUCCESS,
+      payload: {
+        topics
+      }
+    }
+  }
+
+  static deleteTopic(id: number) {
     return {
       type: TopicsActions.TOPICS_DELETE,
       payload: {

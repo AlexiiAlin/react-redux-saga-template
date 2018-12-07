@@ -8,19 +8,19 @@ import { ValidatorForm, TextValidator} from 'react-material-ui-form-validator';
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 
 interface TopicProps {
+  topic: Topic,
+  isLoading: boolean
   match: MatchProps,
   onLoad: Function,
-  topic: Topic,
   addComment: Function,
   deleteComment: Function,
-  isLoading: boolean
 }
 
 interface TopicState {
   comment: string
 }
 
-class TopicContainer extends React.Component<TopicProps, TopicState> {
+export class TopicContainer extends React.Component<TopicProps, TopicState> {
 
   constructor(props) {
     super(props);
@@ -109,7 +109,7 @@ class TopicContainer extends React.Component<TopicProps, TopicState> {
         <div>
           {comments}
 
-          {this.props.isLoading && <CircularProgress style={{marginLeft: '20%'}}/>}
+          {this.props.isLoading && <CircularProgress style={{marginLeft: '20%', marginTop: 24}}/>}
           </div>
       </div>
     )

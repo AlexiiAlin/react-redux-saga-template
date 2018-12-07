@@ -11,7 +11,7 @@ export function* topicSaga() {
   ]);
 }
 
-function* getTopic(action: any) {
+export function* getTopic(action: any) {
   const result = yield call(axios.get, `/api/topics/${action.payload.id}`);
 
   const topic = result.data;
@@ -19,7 +19,7 @@ function* getTopic(action: any) {
   yield put({ type: TopicActions.TOPIC_LOAD_SUCCEED, payload: { topic } });
 }
 
-function* addComment(action: any) {
+export function* addComment(action: any) {
   yield call(axios.post, '/api/comments', {
     description: action.payload.comment,
     topicId: action.payload.topicId
@@ -29,6 +29,6 @@ function* addComment(action: any) {
   yield put({ type: TopicActions.TOPIC_LOAD_START, payload: { id: action.payload.topicId } });
 }
 
-function* deleteComment(action: any) {
+export function* deleteComment(action: any) {
   yield call(axios.delete, `/api/comments/${action.payload.commentId}`);
 }

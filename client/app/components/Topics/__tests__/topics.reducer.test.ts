@@ -1,5 +1,5 @@
-import { topicsReducer, initialState } from './topics.reducer';
-import { TopicsActions } from './topics.actions';
+import { topicsReducer, initialState } from '../store/topics.reducer';
+import { TopicsActions } from '../store/topics.actions';
 import { Topic } from '../../../shared/interfaces';
 
 const mockedReducer = topicsReducer;
@@ -28,7 +28,7 @@ describe('Topics reducer', () => {
     expect(result).toEqual({...mockedState, ...{isLoading: true}});
   });
 
-  it('should update topics and set loading to true when loading succeeds', () => {
+  it('should update topics and set loading to false when loading succeeds', () => {
     const action = {
       type: TopicsActions.TOPICS_LOAD_SUCCESS,
       payload: {
@@ -37,6 +37,38 @@ describe('Topics reducer', () => {
           title: 'TestTitle1',
           userName: 'TestUsername1'
         }]
+      }
+    };
+
+    const expectedResult = {
+      topics: [{
+        id: 1,
+        title: 'TestTitle1',
+        userName: 'TestUsername1'
+      }],
+      isLoading: false
+    };
+
+    const result = mockedReducer(mockedState, action);
+
+    expect(result).toEqual(expectedResult);
+  });
+
+  it('should update topics when a topic is deleted', () => {
+    mockedState.topics = [{
+      id: 1,
+      title: 'TestTitle1',
+      userName: 'TestUsername1'
+    }, {
+      id: 2,
+      title: 'TestTitle2',
+      userName: 'TestUsername2'
+    }];
+
+    const action = {
+      type: TopicsActions.TOPICS_DELETE,
+      payload: {
+        id: 2
       }
     };
 

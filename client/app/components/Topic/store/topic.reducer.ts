@@ -3,7 +3,7 @@ import { TopicState } from './topic-state';
 import { Topic } from '../../../shared/interfaces';
 import { deepCopy } from '../../../shared/extensions';
 
-const initialState : TopicState = {
+export  const initialState : TopicState = {
   topic: {} as Topic,
   isLoading: false
 };
@@ -18,9 +18,6 @@ export function topicReducer(state = initialState, action) {
     }
     case TopicActions.ADD_COMMENT_START: {
       return {...state, ...{isLoading: true}}
-    }
-    case TopicActions.ADD_COMMENT_SUCCEED: {
-      return {...state, ...{isLoading: false}}
     }
     case TopicActions.DELETE_COMMENT: {
       let newState : TopicState = deepCopy(state);
