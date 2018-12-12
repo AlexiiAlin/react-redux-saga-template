@@ -25,7 +25,7 @@ export function* addComment(action: any) {
     topicId: action.payload.topicId
   });
 
-  yield delay(500);
+  yield delay(1000);
   yield put({ type: TopicActions.TOPIC_LOAD_START, payload: { id: action.payload.topicId } });
 }
 

@@ -7,14 +7,18 @@ import { MatchProps } from '../../shared/interfaces';
 import { ValidatorForm, TextValidator} from 'react-material-ui-form-validator';
 
 interface TopicProps {
-  onSave: Function,
-  onUpdate: Function,
-  onLoad: Function,
-  resetState: Function,
-  titleChange: any,
   title: string,
+  description: string,
+  url: string,
   isLoading: boolean,
   isSaving: boolean,
+  descriptionChange: Function,
+  urlChange: Function,
+  titleChange: Function,
+  onLoad: Function,
+  onSave: Function,
+  onUpdate: Function,
+  resetState: Function,
   match: MatchProps,
 }
 
@@ -28,11 +32,11 @@ class CreateTopicContainer extends React.Component<TopicProps, {}> {
     }
   }
 
-  saveTopic(title) {
+  saveTopic(title, description, url) {
     if (this.props.match.params && this.props.match.params.id) {
-      this.props.onUpdate(title, parseInt(this.props.match.params.id));
+      this.props.onUpdate(title, description, url, parseInt(this.props.match.params.id));
     } else {
-      this.props.onSave(title);
+      this.props.onSave(title, description, url);
     }
   };
 
@@ -40,25 +44,57 @@ class CreateTopicContainer extends React.Component<TopicProps, {}> {
 
     const renderTitle = this.props.isLoading
       ? <CircularProgress style={{margin: '16px 0 16px 20px'}}/>
-      : <TextValidator
-          id="standard-textarea"
-          label="Title*"
-          name="title"
-          value={this.props.title}
-          onChange={this.props.titleChange}
-          style={{width: '30%'}}
-          margin="normal"
-          InputLabelProps={{
-            shrink: true
-          }}
-          validators={['required']}
-          errorMessages={['This field is required']}
-      />;
+      : <React.Fragment>
+          <div>
+            <TextValidator
+              id="title"
+              label="Title*"
+              name="title"
+              value={this.props.title}
+              onChange={this.props.titleChange}
+              style={{width: '30%'}}
+              margin="normal"
+              InputLabelProps={{
+                shrink: true
+              }}
+              validators={['required']}
+              errorMessages={['This field is required']}/>
+          </div>
+
+          <div>
+            <TextValidator
+              id="description"
+              label="Description"
+              name="description"
+              value={this.props.description}
+              onChange={this.props.descriptionChange}
+              style={{width: '30%'}}
+              margin="normal"
+              InputLabelProps={{
+                shrink: true
+              }}
+              multiline/>
+          </div>
+
+          <div>
+            <TextValidator
+              id="url"
+              label="Image Url"
+              name="url"
+              value={this.props.url}
+              onChange={this.props.urlChange}
+              style={{width: '30%'}}
+              margin="normal"
+              InputLabelProps={{
+                shrink: true
+              }}/>
+          </div>
+      </React.Fragment>;
 
     return(
       <ValidatorForm style={{marginLeft: 24}} onSubmit={(event) => {
         event.preventDefault();
-        return this.saveTopic(this.props.title)
+        return this.saveTopic(this.props.title, this.props.description, this.props.url)
       }} >
         {renderTitle}
 
@@ -77,6 +113,8 @@ class CreateTopicContainer extends React.Component<TopicProps, {}> {
 const mapStateToProps = (state : ApplicationState) => {
   return {
     title: state.createTopic.title,
+    description: state.createTopic.description,
+    url: state.createTopic.url,
     isLoading: state.createTopic.isLoading,
     isSaving: state.createTopic.isSaving
   };
@@ -84,14 +122,20 @@ const mapStateToProps = (state : ApplicationState) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    onSave: (title) => {
-      dispatch(CreateTopicActions.saveTopic(title));
+    onSave: (title, description, url) => {
+      dispatch(CreateTopicActions.saveTopic(title, description, url));
     },
-    onUpdate: (title, id) => {
-      dispatch(CreateTopicActions.updateTopic(title, id));
+    onUpdate: (title, description, url, id) => {
+      dispatch(CreateTopicActions.updateTopic(title, description, url, id));
     },
     titleChange: (event) => {
       dispatch(CreateTopicActions.changeTitle(event.target.value));
+    },
+    descriptionChange: (event) => {
+      dispatch(CreateTopicActions.changeDescription(event.target.value));
+    },
+    urlChange: (event) => {
+      dispatch(CreateTopicActions.changeUrl(event.target.value));
     },
     resetState: () => {
       dispatch(CreateTopicActions.resetState());

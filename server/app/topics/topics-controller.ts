@@ -1,7 +1,6 @@
 import { Authenticated, BodyParams, Controller, Delete, Get, PathParams, Post, Request } from '@tsed/common';
 import {TopicsService} from './topics-service';
 import {Topic} from '../models/topic';
-import { Comment } from '../models/comment';
 
 @Controller('/api/topics')
 export class TopicsController {
@@ -32,6 +31,7 @@ export class TopicsController {
   @Authenticated()
   public deleteTopic(@PathParams('id') topicId: number) {
     return this.threadsService.deleteComments(topicId)
+      .then(() => this.threadsService.deleteLikes(topicId))
       .then(() => this.threadsService.deleteTopic(topicId));
   }
 }

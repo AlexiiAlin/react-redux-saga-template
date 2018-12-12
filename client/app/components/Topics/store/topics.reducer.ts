@@ -21,6 +21,18 @@ export function topicsReducer(state : any = initialState, action: any) {
     case TopicsActions.TOPICS_DELETE: {
       return {...state, ...{topics: state.topics.filter(topic => topic.id !== action.payload.id)}};
     }
+    case TopicsActions.TOPICS_LIKE: {
+      const topics = state.topics.map(topic => {
+        return topic.id === action.payload.id
+          ? {...topic, ...{
+              isLiked: !topic.isLiked,
+              numberOfLikes: topic.numberOfLikes + (topic.isLiked ? -1 : 1)
+          }}
+          : topic
+      });
+
+      return {...state, ...{topics}}
+    }
     default:
       return state;
   }

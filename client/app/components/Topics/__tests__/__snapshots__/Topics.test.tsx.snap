@@ -43,10 +43,20 @@ ShallowWrapper {
           <WithStyles(Table)>
             <WithStyles(TableHead)>
               <WithStyles(TableRow)>
-                <WithStyles(TableCell)>
-                  ID
-                </WithStyles(TableCell)>
-                <WithStyles(TableCell)>
+                <WithStyles(TableCell)
+                  style={
+                    Object {
+                      "width": 25,
+                    }
+                  }
+                />
+                <WithStyles(TableCell)
+                  style={
+                    Object {
+                      "width": "60%",
+                    }
+                  }
+                >
                   Title
                 </WithStyles(TableCell)>
                 <WithStyles(TableCell)>
@@ -144,10 +154,20 @@ ShallowWrapper {
             <WithStyles(Table)>
               <WithStyles(TableHead)>
                 <WithStyles(TableRow)>
-                  <WithStyles(TableCell)>
-                    ID
-                  </WithStyles(TableCell)>
-                  <WithStyles(TableCell)>
+                  <WithStyles(TableCell)
+                    style={
+                      Object {
+                        "width": 25,
+                      }
+                    }
+                  />
+                  <WithStyles(TableCell)
+                    style={
+                      Object {
+                        "width": "60%",
+                      }
+                    }
+                  >
                     Title
                   </WithStyles(TableCell)>
                   <WithStyles(TableCell)>
@@ -205,10 +225,20 @@ ShallowWrapper {
               "children": Array [
                 <WithStyles(TableHead)>
                   <WithStyles(TableRow)>
-                    <WithStyles(TableCell)>
-                      ID
-                    </WithStyles(TableCell)>
-                    <WithStyles(TableCell)>
+                    <WithStyles(TableCell)
+                      style={
+                        Object {
+                          "width": 25,
+                        }
+                      }
+                    />
+                    <WithStyles(TableCell)
+                      style={
+                        Object {
+                          "width": "60%",
+                        }
+                      }
+                    >
                       Title
                     </WithStyles(TableCell)>
                     <WithStyles(TableCell)>
@@ -262,10 +292,20 @@ ShallowWrapper {
                 "nodeType": "class",
                 "props": Object {
                   "children": <WithStyles(TableRow)>
-                    <WithStyles(TableCell)>
-                      ID
-                    </WithStyles(TableCell)>
-                    <WithStyles(TableCell)>
+                    <WithStyles(TableCell)
+                      style={
+                        Object {
+                          "width": 25,
+                        }
+                      }
+                    />
+                    <WithStyles(TableCell)
+                      style={
+                        Object {
+                          "width": "60%",
+                        }
+                      }
+                    >
                       Title
                     </WithStyles(TableCell)>
                     <WithStyles(TableCell)>
@@ -294,10 +334,20 @@ ShallowWrapper {
                   "nodeType": "class",
                   "props": Object {
                     "children": Array [
-                      <WithStyles(TableCell)>
-                        ID
-                      </WithStyles(TableCell)>,
-                      <WithStyles(TableCell)>
+                      <WithStyles(TableCell)
+                        style={
+                          Object {
+                            "width": 25,
+                          }
+                        }
+                      />,
+                      <WithStyles(TableCell)
+                        style={
+                          Object {
+                            "width": "60%",
+                          }
+                        }
+                      >
                         Title
                       </WithStyles(TableCell)>,
                       <WithStyles(TableCell)>
@@ -326,10 +376,12 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "class",
                       "props": Object {
-                        "children": "ID",
+                        "style": Object {
+                          "width": 25,
+                        },
                       },
                       "ref": null,
-                      "rendered": "ID",
+                      "rendered": null,
                       "type": [Function],
                     },
                     Object {
@@ -338,6 +390,9 @@ ShallowWrapper {
                       "nodeType": "class",
                       "props": Object {
                         "children": "Title",
+                        "style": Object {
+                          "width": "60%",
+                        },
                       },
                       "ref": null,
                       "rendered": "Title",
@@ -491,10 +546,20 @@ ShallowWrapper {
             <WithStyles(Table)>
               <WithStyles(TableHead)>
                 <WithStyles(TableRow)>
-                  <WithStyles(TableCell)>
-                    ID
-                  </WithStyles(TableCell)>
-                  <WithStyles(TableCell)>
+                  <WithStyles(TableCell)
+                    style={
+                      Object {
+                        "width": 25,
+                      }
+                    }
+                  />
+                  <WithStyles(TableCell)
+                    style={
+                      Object {
+                        "width": "60%",
+                      }
+                    }
+                  >
                     Title
                   </WithStyles(TableCell)>
                   <WithStyles(TableCell)>
@@ -592,10 +657,20 @@ ShallowWrapper {
               <WithStyles(Table)>
                 <WithStyles(TableHead)>
                   <WithStyles(TableRow)>
-                    <WithStyles(TableCell)>
-                      ID
-                    </WithStyles(TableCell)>
-                    <WithStyles(TableCell)>
+                    <WithStyles(TableCell)
+                      style={
+                        Object {
+                          "width": 25,
+                        }
+                      }
+                    />
+                    <WithStyles(TableCell)
+                      style={
+                        Object {
+                          "width": "60%",
+                        }
+                      }
+                    >
                       Title
                     </WithStyles(TableCell)>
                     <WithStyles(TableCell)>
@@ -653,10 +728,20 @@ ShallowWrapper {
                 "children": Array [
                   <WithStyles(TableHead)>
                     <WithStyles(TableRow)>
-                      <WithStyles(TableCell)>
-                        ID
-                      </WithStyles(TableCell)>
-                      <WithStyles(TableCell)>
+                      <WithStyles(TableCell)
+                        style={
+                          Object {
+                            "width": 25,
+                          }
+                        }
+                      />
+                      <WithStyles(TableCell)
+                        style={
+                          Object {
+                            "width": "60%",
+                          }
+                        }
+                      >
                         Title
                       </WithStyles(TableCell)>
                       <WithStyles(TableCell)>
@@ -710,10 +795,20 @@ ShallowWrapper {
                   "nodeType": "class",
                   "props": Object {
                     "children": <WithStyles(TableRow)>
-                      <WithStyles(TableCell)>
-                        ID
-                      </WithStyles(TableCell)>
-                      <WithStyles(TableCell)>
+                      <WithStyles(TableCell)
+                        style={
+                          Object {
+                            "width": 25,
+                          }
+                        }
+                      />
+                      <WithStyles(TableCell)
+                        style={
+                          Object {
+                            "width": "60%",
+                          }
+                        }
+                      >
                         Title
                       </WithStyles(TableCell)>
                       <WithStyles(TableCell)>
@@ -742,10 +837,20 @@ ShallowWrapper {
                     "nodeType": "class",
                     "props": Object {
                       "children": Array [
-                        <WithStyles(TableCell)>
-                          ID
-                        </WithStyles(TableCell)>,
-                        <WithStyles(TableCell)>
+                        <WithStyles(TableCell)
+                          style={
+                            Object {
+                              "width": 25,
+                            }
+                          }
+                        />,
+                        <WithStyles(TableCell)
+                          style={
+                            Object {
+                              "width": "60%",
+                            }
+                          }
+                        >
                           Title
                         </WithStyles(TableCell)>,
                         <WithStyles(TableCell)>
@@ -774,10 +879,12 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "class",
                         "props": Object {
-                          "children": "ID",
+                          "style": Object {
+                            "width": 25,
+                          },
                         },
                         "ref": null,
-                        "rendered": "ID",
+                        "rendered": null,
                         "type": [Function],
                       },
                       Object {
@@ -786,6 +893,9 @@ ShallowWrapper {
                         "nodeType": "class",
                         "props": Object {
                           "children": "Title",
+                          "style": Object {
+                            "width": "60%",
+                          },
                         },
                         "ref": null,
                         "rendered": "Title",
@@ -977,10 +1087,20 @@ ShallowWrapper {
           <WithStyles(Table)>
             <WithStyles(TableHead)>
               <WithStyles(TableRow)>
-                <WithStyles(TableCell)>
-                  ID
-                </WithStyles(TableCell)>
-                <WithStyles(TableCell)>
+                <WithStyles(TableCell)
+                  style={
+                    Object {
+                      "width": 25,
+                    }
+                  }
+                />
+                <WithStyles(TableCell)
+                  style={
+                    Object {
+                      "width": "60%",
+                    }
+                  }
+                >
                   Title
                 </WithStyles(TableCell)>
                 <WithStyles(TableCell)>
@@ -1057,10 +1177,20 @@ ShallowWrapper {
             <WithStyles(Table)>
               <WithStyles(TableHead)>
                 <WithStyles(TableRow)>
-                  <WithStyles(TableCell)>
-                    ID
-                  </WithStyles(TableCell)>
-                  <WithStyles(TableCell)>
+                  <WithStyles(TableCell)
+                    style={
+                      Object {
+                        "width": 25,
+                      }
+                    }
+                  />
+                  <WithStyles(TableCell)
+                    style={
+                      Object {
+                        "width": "60%",
+                      }
+                    }
+                  >
                     Title
                   </WithStyles(TableCell)>
                   <WithStyles(TableCell)>
@@ -1105,10 +1235,20 @@ ShallowWrapper {
               "children": Array [
                 <WithStyles(TableHead)>
                   <WithStyles(TableRow)>
-                    <WithStyles(TableCell)>
-                      ID
-                    </WithStyles(TableCell)>
-                    <WithStyles(TableCell)>
+                    <WithStyles(TableCell)
+                      style={
+                        Object {
+                          "width": 25,
+                        }
+                      }
+                    />
+                    <WithStyles(TableCell)
+                      style={
+                        Object {
+                          "width": "60%",
+                        }
+                      }
+                    >
                       Title
                     </WithStyles(TableCell)>
                     <WithStyles(TableCell)>
@@ -1141,10 +1281,20 @@ ShallowWrapper {
                 "nodeType": "class",
                 "props": Object {
                   "children": <WithStyles(TableRow)>
-                    <WithStyles(TableCell)>
-                      ID
-                    </WithStyles(TableCell)>
-                    <WithStyles(TableCell)>
+                    <WithStyles(TableCell)
+                      style={
+                        Object {
+                          "width": 25,
+                        }
+                      }
+                    />
+                    <WithStyles(TableCell)
+                      style={
+                        Object {
+                          "width": "60%",
+                        }
+                      }
+                    >
                       Title
                     </WithStyles(TableCell)>
                     <WithStyles(TableCell)>
@@ -1173,10 +1323,20 @@ ShallowWrapper {
                   "nodeType": "class",
                   "props": Object {
                     "children": Array [
-                      <WithStyles(TableCell)>
-                        ID
-                      </WithStyles(TableCell)>,
-                      <WithStyles(TableCell)>
+                      <WithStyles(TableCell)
+                        style={
+                          Object {
+                            "width": 25,
+                          }
+                        }
+                      />,
+                      <WithStyles(TableCell)
+                        style={
+                          Object {
+                            "width": "60%",
+                          }
+                        }
+                      >
                         Title
                       </WithStyles(TableCell)>,
                       <WithStyles(TableCell)>
@@ -1205,10 +1365,12 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "class",
                       "props": Object {
-                        "children": "ID",
+                        "style": Object {
+                          "width": 25,
+                        },
                       },
                       "ref": null,
-                      "rendered": "ID",
+                      "rendered": null,
                       "type": [Function],
                     },
                     Object {
@@ -1217,6 +1379,9 @@ ShallowWrapper {
                       "nodeType": "class",
                       "props": Object {
                         "children": "Title",
+                        "style": Object {
+                          "width": "60%",
+                        },
                       },
                       "ref": null,
                       "rendered": "Title",
@@ -1312,10 +1477,20 @@ ShallowWrapper {
             <WithStyles(Table)>
               <WithStyles(TableHead)>
                 <WithStyles(TableRow)>
-                  <WithStyles(TableCell)>
-                    ID
-                  </WithStyles(TableCell)>
-                  <WithStyles(TableCell)>
+                  <WithStyles(TableCell)
+                    style={
+                      Object {
+                        "width": 25,
+                      }
+                    }
+                  />
+                  <WithStyles(TableCell)
+                    style={
+                      Object {
+                        "width": "60%",
+                      }
+                    }
+                  >
                     Title
                   </WithStyles(TableCell)>
                   <WithStyles(TableCell)>
@@ -1392,10 +1567,20 @@ ShallowWrapper {
               <WithStyles(Table)>
                 <WithStyles(TableHead)>
                   <WithStyles(TableRow)>
-                    <WithStyles(TableCell)>
-                      ID
-                    </WithStyles(TableCell)>
-                    <WithStyles(TableCell)>
+                    <WithStyles(TableCell)
+                      style={
+                        Object {
+                          "width": 25,
+                        }
+                      }
+                    />
+                    <WithStyles(TableCell)
+                      style={
+                        Object {
+                          "width": "60%",
+                        }
+                      }
+                    >
                       Title
                     </WithStyles(TableCell)>
                     <WithStyles(TableCell)>
@@ -1440,10 +1625,20 @@ ShallowWrapper {
                 "children": Array [
                   <WithStyles(TableHead)>
                     <WithStyles(TableRow)>
-                      <WithStyles(TableCell)>
-                        ID
-                      </WithStyles(TableCell)>
-                      <WithStyles(TableCell)>
+                      <WithStyles(TableCell)
+                        style={
+                          Object {
+                            "width": 25,
+                          }
+                        }
+                      />
+                      <WithStyles(TableCell)
+                        style={
+                          Object {
+                            "width": "60%",
+                          }
+                        }
+                      >
                         Title
                       </WithStyles(TableCell)>
                       <WithStyles(TableCell)>
@@ -1476,10 +1671,20 @@ ShallowWrapper {
                   "nodeType": "class",
                   "props": Object {
                     "children": <WithStyles(TableRow)>
-                      <WithStyles(TableCell)>
-                        ID
-                      </WithStyles(TableCell)>
-                      <WithStyles(TableCell)>
+                      <WithStyles(TableCell)
+                        style={
+                          Object {
+                            "width": 25,
+                          }
+                        }
+                      />
+                      <WithStyles(TableCell)
+                        style={
+                          Object {
+                            "width": "60%",
+                          }
+                        }
+                      >
                         Title
                       </WithStyles(TableCell)>
                       <WithStyles(TableCell)>
@@ -1508,10 +1713,20 @@ ShallowWrapper {
                     "nodeType": "class",
                     "props": Object {
                       "children": Array [
-                        <WithStyles(TableCell)>
-                          ID
-                        </WithStyles(TableCell)>,
-                        <WithStyles(TableCell)>
+                        <WithStyles(TableCell)
+                          style={
+                            Object {
+                              "width": 25,
+                            }
+                          }
+                        />,
+                        <WithStyles(TableCell)
+                          style={
+                            Object {
+                              "width": "60%",
+                            }
+                          }
+                        >
                           Title
                         </WithStyles(TableCell)>,
                         <WithStyles(TableCell)>
@@ -1540,10 +1755,12 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "class",
                         "props": Object {
-                          "children": "ID",
+                          "style": Object {
+                            "width": 25,
+                          },
                         },
                         "ref": null,
-                        "rendered": "ID",
+                        "rendered": null,
                         "type": [Function],
                       },
                       Object {
@@ -1552,6 +1769,9 @@ ShallowWrapper {
                         "nodeType": "class",
                         "props": Object {
                           "children": "Title",
+                          "style": Object {
+                            "width": "60%",
+                          },
                         },
                         "ref": null,
                         "rendered": "Title",
@@ -1696,10 +1916,20 @@ ShallowWrapper {
           <WithStyles(Table)>
             <WithStyles(TableHead)>
               <WithStyles(TableRow)>
-                <WithStyles(TableCell)>
-                  ID
-                </WithStyles(TableCell)>
-                <WithStyles(TableCell)>
+                <WithStyles(TableCell)
+                  style={
+                    Object {
+                      "width": 25,
+                    }
+                  }
+                />
+                <WithStyles(TableCell)
+                  style={
+                    Object {
+                      "width": "60%",
+                    }
+                  }
+                >
                   Title
                 </WithStyles(TableCell)>
                 <WithStyles(TableCell)>
@@ -1723,11 +1953,28 @@ ShallowWrapper {
             </WithStyles(TableHead)>
             <WithStyles(TableBody)>
               <WithStyles(TableRow)>
-                <WithStyles(TableCell)
-                  component="th"
-                  scope="row"
-                >
-                  1
+                <WithStyles(TableCell)>
+                  <div
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "cursor": "pointer",
+                        "display": "flex",
+                      }
+                    }
+                  >
+                    <pure(StarBorderIcon) />
+                     
+                    <div
+                      style={
+                        Object {
+                          "fontSize": 15,
+                          "marginLeft": 4,
+                          "marginTop": 4,
+                        }
+                      }
+                    />
+                  </div>
                 </WithStyles(TableCell)>
                 <WithStyles(TableCell)>
                   <Link
@@ -1744,7 +1991,6 @@ ShallowWrapper {
                   style={
                     Object {
                       "padding": "0 0 0 80px",
-                      "width": 25,
                     }
                   }
                 >
@@ -1759,13 +2005,7 @@ ShallowWrapper {
                     <pure(EditIcon) />
                   </div>
                 </WithStyles(TableCell)>
-                <WithStyles(TableCell)
-                  style={
-                    Object {
-                      "width": 25,
-                    }
-                  }
-                >
+                <WithStyles(TableCell)>
                   <div
                     onClick={[Function]}
                     style={
@@ -1779,11 +2019,28 @@ ShallowWrapper {
                 </WithStyles(TableCell)>
               </WithStyles(TableRow)>
               <WithStyles(TableRow)>
-                <WithStyles(TableCell)
-                  component="th"
-                  scope="row"
-                >
-                  2
+                <WithStyles(TableCell)>
+                  <div
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "cursor": "pointer",
+                        "display": "flex",
+                      }
+                    }
+                  >
+                    <pure(StarBorderIcon) />
+                     
+                    <div
+                      style={
+                        Object {
+                          "fontSize": 15,
+                          "marginLeft": 4,
+                          "marginTop": 4,
+                        }
+                      }
+                    />
+                  </div>
                 </WithStyles(TableCell)>
                 <WithStyles(TableCell)>
                   <Link
@@ -1800,7 +2057,6 @@ ShallowWrapper {
                   style={
                     Object {
                       "padding": "0 0 0 80px",
-                      "width": 25,
                     }
                   }
                 >
@@ -1815,13 +2071,7 @@ ShallowWrapper {
                     <pure(EditIcon) />
                   </div>
                 </WithStyles(TableCell)>
-                <WithStyles(TableCell)
-                  style={
-                    Object {
-                      "width": 25,
-                    }
-                  }
-                >
+                <WithStyles(TableCell)>
                   <div
                     onClick={[Function]}
                     style={
@@ -1889,10 +2139,20 @@ ShallowWrapper {
             <WithStyles(Table)>
               <WithStyles(TableHead)>
                 <WithStyles(TableRow)>
-                  <WithStyles(TableCell)>
-                    ID
-                  </WithStyles(TableCell)>
-                  <WithStyles(TableCell)>
+                  <WithStyles(TableCell)
+                    style={
+                      Object {
+                        "width": 25,
+                      }
+                    }
+                  />
+                  <WithStyles(TableCell)
+                    style={
+                      Object {
+                        "width": "60%",
+                      }
+                    }
+                  >
                     Title
                   </WithStyles(TableCell)>
                   <WithStyles(TableCell)>
@@ -1916,11 +2176,28 @@ ShallowWrapper {
               </WithStyles(TableHead)>
               <WithStyles(TableBody)>
                 <WithStyles(TableRow)>
-                  <WithStyles(TableCell)
-                    component="th"
-                    scope="row"
-                  >
-                    1
+                  <WithStyles(TableCell)>
+                    <div
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "cursor": "pointer",
+                          "display": "flex",
+                        }
+                      }
+                    >
+                      <pure(StarBorderIcon) />
+                       
+                      <div
+                        style={
+                          Object {
+                            "fontSize": 15,
+                            "marginLeft": 4,
+                            "marginTop": 4,
+                          }
+                        }
+                      />
+                    </div>
                   </WithStyles(TableCell)>
                   <WithStyles(TableCell)>
                     <Link
@@ -1937,7 +2214,6 @@ ShallowWrapper {
                     style={
                       Object {
                         "padding": "0 0 0 80px",
-                        "width": 25,
                       }
                     }
                   >
@@ -1952,13 +2228,7 @@ ShallowWrapper {
                       <pure(EditIcon) />
                     </div>
                   </WithStyles(TableCell)>
-                  <WithStyles(TableCell)
-                    style={
-                      Object {
-                        "width": 25,
-                      }
-                    }
-                  >
+                  <WithStyles(TableCell)>
                     <div
                       onClick={[Function]}
                       style={
@@ -1972,11 +2242,28 @@ ShallowWrapper {
                   </WithStyles(TableCell)>
                 </WithStyles(TableRow)>
                 <WithStyles(TableRow)>
-                  <WithStyles(TableCell)
-                    component="th"
-                    scope="row"
-                  >
-                    2
+                  <WithStyles(TableCell)>
+                    <div
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "cursor": "pointer",
+                          "display": "flex",
+                        }
+                      }
+                    >
+                      <pure(StarBorderIcon) />
+                       
+                      <div
+                        style={
+                          Object {
+                            "fontSize": 15,
+                            "marginLeft": 4,
+                            "marginTop": 4,
+                          }
+                        }
+                      />
+                    </div>
                   </WithStyles(TableCell)>
                   <WithStyles(TableCell)>
                     <Link
@@ -1993,7 +2280,6 @@ ShallowWrapper {
                     style={
                       Object {
                         "padding": "0 0 0 80px",
-                        "width": 25,
                       }
                     }
                   >
@@ -2008,13 +2294,7 @@ ShallowWrapper {
                       <pure(EditIcon) />
                     </div>
                   </WithStyles(TableCell)>
-                  <WithStyles(TableCell)
-                    style={
-                      Object {
-                        "width": 25,
-                      }
-                    }
-                  >
+                  <WithStyles(TableCell)>
                     <div
                       onClick={[Function]}
                       style={
@@ -2042,10 +2322,20 @@ ShallowWrapper {
               "children": Array [
                 <WithStyles(TableHead)>
                   <WithStyles(TableRow)>
-                    <WithStyles(TableCell)>
-                      ID
-                    </WithStyles(TableCell)>
-                    <WithStyles(TableCell)>
+                    <WithStyles(TableCell)
+                      style={
+                        Object {
+                          "width": 25,
+                        }
+                      }
+                    />
+                    <WithStyles(TableCell)
+                      style={
+                        Object {
+                          "width": "60%",
+                        }
+                      }
+                    >
                       Title
                     </WithStyles(TableCell)>
                     <WithStyles(TableCell)>
@@ -2069,11 +2359,28 @@ ShallowWrapper {
                 </WithStyles(TableHead)>,
                 <WithStyles(TableBody)>
                   <WithStyles(TableRow)>
-                    <WithStyles(TableCell)
-                      component="th"
-                      scope="row"
-                    >
-                      1
+                    <WithStyles(TableCell)>
+                      <div
+                        onClick={[Function]}
+                        style={
+                          Object {
+                            "cursor": "pointer",
+                            "display": "flex",
+                          }
+                        }
+                      >
+                        <pure(StarBorderIcon) />
+                         
+                        <div
+                          style={
+                            Object {
+                              "fontSize": 15,
+                              "marginLeft": 4,
+                              "marginTop": 4,
+                            }
+                          }
+                        />
+                      </div>
                     </WithStyles(TableCell)>
                     <WithStyles(TableCell)>
                       <Link
@@ -2090,7 +2397,6 @@ ShallowWrapper {
                       style={
                         Object {
                           "padding": "0 0 0 80px",
-                          "width": 25,
                         }
                       }
                     >
@@ -2105,13 +2411,7 @@ ShallowWrapper {
                         <pure(EditIcon) />
                       </div>
                     </WithStyles(TableCell)>
-                    <WithStyles(TableCell)
-                      style={
-                        Object {
-                          "width": 25,
-                        }
-                      }
-                    >
+                    <WithStyles(TableCell)>
                       <div
                         onClick={[Function]}
                         style={
@@ -2125,11 +2425,28 @@ ShallowWrapper {
                     </WithStyles(TableCell)>
                   </WithStyles(TableRow)>
                   <WithStyles(TableRow)>
-                    <WithStyles(TableCell)
-                      component="th"
-                      scope="row"
-                    >
-                      2
+                    <WithStyles(TableCell)>
+                      <div
+                        onClick={[Function]}
+                        style={
+                          Object {
+                            "cursor": "pointer",
+                            "display": "flex",
+                          }
+                        }
+                      >
+                        <pure(StarBorderIcon) />
+                         
+                        <div
+                          style={
+                            Object {
+                              "fontSize": 15,
+                              "marginLeft": 4,
+                              "marginTop": 4,
+                            }
+                          }
+                        />
+                      </div>
                     </WithStyles(TableCell)>
                     <WithStyles(TableCell)>
                       <Link
@@ -2146,7 +2463,6 @@ ShallowWrapper {
                       style={
                         Object {
                           "padding": "0 0 0 80px",
-                          "width": 25,
                         }
                       }
                     >
@@ -2161,13 +2477,7 @@ ShallowWrapper {
                         <pure(EditIcon) />
                       </div>
                     </WithStyles(TableCell)>
-                    <WithStyles(TableCell)
-                      style={
-                        Object {
-                          "width": 25,
-                        }
-                      }
-                    >
+                    <WithStyles(TableCell)>
                       <div
                         onClick={[Function]}
                         style={
@@ -2191,10 +2501,20 @@ ShallowWrapper {
                 "nodeType": "class",
                 "props": Object {
                   "children": <WithStyles(TableRow)>
-                    <WithStyles(TableCell)>
-                      ID
-                    </WithStyles(TableCell)>
-                    <WithStyles(TableCell)>
+                    <WithStyles(TableCell)
+                      style={
+                        Object {
+                          "width": 25,
+                        }
+                      }
+                    />
+                    <WithStyles(TableCell)
+                      style={
+                        Object {
+                          "width": "60%",
+                        }
+                      }
+                    >
                       Title
                     </WithStyles(TableCell)>
                     <WithStyles(TableCell)>
@@ -2223,10 +2543,20 @@ ShallowWrapper {
                   "nodeType": "class",
                   "props": Object {
                     "children": Array [
-                      <WithStyles(TableCell)>
-                        ID
-                      </WithStyles(TableCell)>,
-                      <WithStyles(TableCell)>
+                      <WithStyles(TableCell)
+                        style={
+                          Object {
+                            "width": 25,
+                          }
+                        }
+                      />,
+                      <WithStyles(TableCell)
+                        style={
+                          Object {
+                            "width": "60%",
+                          }
+                        }
+                      >
                         Title
                       </WithStyles(TableCell)>,
                       <WithStyles(TableCell)>
@@ -2255,10 +2585,12 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "class",
                       "props": Object {
-                        "children": "ID",
+                        "style": Object {
+                          "width": 25,
+                        },
                       },
                       "ref": null,
-                      "rendered": "ID",
+                      "rendered": null,
                       "type": [Function],
                     },
                     Object {
@@ -2267,6 +2599,9 @@ ShallowWrapper {
                       "nodeType": "class",
                       "props": Object {
                         "children": "Title",
+                        "style": Object {
+                          "width": "60%",
+                        },
                       },
                       "ref": null,
                       "rendered": "Title",
@@ -2321,11 +2656,28 @@ ShallowWrapper {
                 "props": Object {
                   "children": Array [
                     <WithStyles(TableRow)>
-                      <WithStyles(TableCell)
-                        component="th"
-                        scope="row"
-                      >
-                        1
+                      <WithStyles(TableCell)>
+                        <div
+                          onClick={[Function]}
+                          style={
+                            Object {
+                              "cursor": "pointer",
+                              "display": "flex",
+                            }
+                          }
+                        >
+                          <pure(StarBorderIcon) />
+                           
+                          <div
+                            style={
+                              Object {
+                                "fontSize": 15,
+                                "marginLeft": 4,
+                                "marginTop": 4,
+                              }
+                            }
+                          />
+                        </div>
                       </WithStyles(TableCell)>
                       <WithStyles(TableCell)>
                         <Link
@@ -2342,7 +2694,6 @@ ShallowWrapper {
                         style={
                           Object {
                             "padding": "0 0 0 80px",
-                            "width": 25,
                           }
                         }
                       >
@@ -2357,13 +2708,7 @@ ShallowWrapper {
                           <pure(EditIcon) />
                         </div>
                       </WithStyles(TableCell)>
-                      <WithStyles(TableCell)
-                        style={
-                          Object {
-                            "width": 25,
-                          }
-                        }
-                      >
+                      <WithStyles(TableCell)>
                         <div
                           onClick={[Function]}
                           style={
@@ -2377,11 +2722,28 @@ ShallowWrapper {
                       </WithStyles(TableCell)>
                     </WithStyles(TableRow)>,
                     <WithStyles(TableRow)>
-                      <WithStyles(TableCell)
-                        component="th"
-                        scope="row"
-                      >
-                        2
+                      <WithStyles(TableCell)>
+                        <div
+                          onClick={[Function]}
+                          style={
+                            Object {
+                              "cursor": "pointer",
+                              "display": "flex",
+                            }
+                          }
+                        >
+                          <pure(StarBorderIcon) />
+                           
+                          <div
+                            style={
+                              Object {
+                                "fontSize": 15,
+                                "marginLeft": 4,
+                                "marginTop": 4,
+                              }
+                            }
+                          />
+                        </div>
                       </WithStyles(TableCell)>
                       <WithStyles(TableCell)>
                         <Link
@@ -2398,7 +2760,6 @@ ShallowWrapper {
                         style={
                           Object {
                             "padding": "0 0 0 80px",
-                            "width": 25,
                           }
                         }
                       >
@@ -2413,13 +2774,7 @@ ShallowWrapper {
                           <pure(EditIcon) />
                         </div>
                       </WithStyles(TableCell)>
-                      <WithStyles(TableCell)
-                        style={
-                          Object {
-                            "width": 25,
-                          }
-                        }
-                      >
+                      <WithStyles(TableCell)>
                         <div
                           onClick={[Function]}
                           style={
@@ -2442,11 +2797,28 @@ ShallowWrapper {
                     "nodeType": "class",
                     "props": Object {
                       "children": Array [
-                        <WithStyles(TableCell)
-                          component="th"
-                          scope="row"
-                        >
-                          1
+                        <WithStyles(TableCell)>
+                          <div
+                            onClick={[Function]}
+                            style={
+                              Object {
+                                "cursor": "pointer",
+                                "display": "flex",
+                              }
+                            }
+                          >
+                            <pure(StarBorderIcon) />
+                             
+                            <div
+                              style={
+                                Object {
+                                  "fontSize": 15,
+                                  "marginLeft": 4,
+                                  "marginTop": 4,
+                                }
+                              }
+                            />
+                          </div>
                         </WithStyles(TableCell)>,
                         <WithStyles(TableCell)>
                           <Link
@@ -2463,7 +2835,6 @@ ShallowWrapper {
                           style={
                             Object {
                               "padding": "0 0 0 80px",
-                              "width": 25,
                             }
                           }
                         >
@@ -2478,13 +2849,7 @@ ShallowWrapper {
                             <pure(EditIcon) />
                           </div>
                         </WithStyles(TableCell)>,
-                        <WithStyles(TableCell)
-                          style={
-                            Object {
-                              "width": 25,
-                            }
-                          }
-                        >
+                        <WithStyles(TableCell)>
                           <div
                             onClick={[Function]}
                             style={
@@ -2505,12 +2870,84 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "class",
                         "props": Object {
-                          "children": 1,
-                          "component": "th",
-                          "scope": "row",
+                          "children": <div
+                            onClick={[Function]}
+                            style={
+                              Object {
+                                "cursor": "pointer",
+                                "display": "flex",
+                              }
+                            }
+                          >
+                            <pure(StarBorderIcon) />
+                             
+                            <div
+                              style={
+                                Object {
+                                  "fontSize": 15,
+                                  "marginLeft": 4,
+                                  "marginTop": 4,
+                                }
+                              }
+                            />
+                          </div>,
                         },
                         "ref": null,
-                        "rendered": 1,
+                        "rendered": Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": Array [
+                              <pure(StarBorderIcon) />,
+                              " ",
+                              <div
+                                style={
+                                  Object {
+                                    "fontSize": 15,
+                                    "marginLeft": 4,
+                                    "marginTop": 4,
+                                  }
+                                }
+                              />,
+                            ],
+                            "onClick": [Function],
+                            "style": Object {
+                              "cursor": "pointer",
+                              "display": "flex",
+                            },
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "class",
+                              "props": Object {},
+                              "ref": null,
+                              "rendered": null,
+                              "type": [Function],
+                            },
+                            " ",
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "children": undefined,
+                                "style": Object {
+                                  "fontSize": 15,
+                                  "marginLeft": 4,
+                                  "marginTop": 4,
+                                },
+                              },
+                              "ref": null,
+                              "rendered": null,
+                              "type": "div",
+                            },
+                          ],
+                          "type": "div",
+                        },
                         "type": [Function],
                       },
                       Object {
@@ -2569,7 +3006,6 @@ ShallowWrapper {
                           </div>,
                           "style": Object {
                             "padding": "0 0 0 80px",
-                            "width": 25,
                           },
                         },
                         "ref": null,
@@ -2613,9 +3049,6 @@ ShallowWrapper {
                           >
                             <pure(DeleteForeverIcon) />
                           </div>,
-                          "style": Object {
-                            "width": 25,
-                          },
                         },
                         "ref": null,
                         "rendered": Object {
@@ -2652,11 +3085,28 @@ ShallowWrapper {
                     "nodeType": "class",
                     "props": Object {
                       "children": Array [
-                        <WithStyles(TableCell)
-                          component="th"
-                          scope="row"
-                        >
-                          2
+                        <WithStyles(TableCell)>
+                          <div
+                            onClick={[Function]}
+                            style={
+                              Object {
+                                "cursor": "pointer",
+                                "display": "flex",
+                              }
+                            }
+                          >
+                            <pure(StarBorderIcon) />
+                             
+                            <div
+                              style={
+                                Object {
+                                  "fontSize": 15,
+                                  "marginLeft": 4,
+                                  "marginTop": 4,
+                                }
+                              }
+                            />
+                          </div>
                         </WithStyles(TableCell)>,
                         <WithStyles(TableCell)>
                           <Link
@@ -2673,7 +3123,6 @@ ShallowWrapper {
                           style={
                             Object {
                               "padding": "0 0 0 80px",
-                              "width": 25,
                             }
                           }
                         >
@@ -2688,13 +3137,7 @@ ShallowWrapper {
                             <pure(EditIcon) />
                           </div>
                         </WithStyles(TableCell)>,
-                        <WithStyles(TableCell)
-                          style={
-                            Object {
-                              "width": 25,
-                            }
-                          }
-                        >
+                        <WithStyles(TableCell)>
                           <div
                             onClick={[Function]}
                             style={
@@ -2715,12 +3158,84 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "class",
                         "props": Object {
-                          "children": 2,
-                          "component": "th",
-                          "scope": "row",
+                          "children": <div
+                            onClick={[Function]}
+                            style={
+                              Object {
+                                "cursor": "pointer",
+                                "display": "flex",
+                              }
+                            }
+                          >
+                            <pure(StarBorderIcon) />
+                             
+                            <div
+                              style={
+                                Object {
+                                  "fontSize": 15,
+                                  "marginLeft": 4,
+                                  "marginTop": 4,
+                                }
+                              }
+                            />
+                          </div>,
                         },
                         "ref": null,
-                        "rendered": 2,
+                        "rendered": Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": Array [
+                              <pure(StarBorderIcon) />,
+                              " ",
+                              <div
+                                style={
+                                  Object {
+                                    "fontSize": 15,
+                                    "marginLeft": 4,
+                                    "marginTop": 4,
+                                  }
+                                }
+                              />,
+                            ],
+                            "onClick": [Function],
+                            "style": Object {
+                              "cursor": "pointer",
+                              "display": "flex",
+                            },
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "class",
+                              "props": Object {},
+                              "ref": null,
+                              "rendered": null,
+                              "type": [Function],
+                            },
+                            " ",
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "children": undefined,
+                                "style": Object {
+                                  "fontSize": 15,
+                                  "marginLeft": 4,
+                                  "marginTop": 4,
+                                },
+                              },
+                              "ref": null,
+                              "rendered": null,
+                              "type": "div",
+                            },
+                          ],
+                          "type": "div",
+                        },
                         "type": [Function],
                       },
                       Object {
@@ -2779,7 +3294,6 @@ ShallowWrapper {
                           </div>,
                           "style": Object {
                             "padding": "0 0 0 80px",
-                            "width": 25,
                           },
                         },
                         "ref": null,
@@ -2823,9 +3337,6 @@ ShallowWrapper {
                           >
                             <pure(DeleteForeverIcon) />
                           </div>,
-                          "style": Object {
-                            "width": 25,
-                          },
                         },
                         "ref": null,
                         "rendered": Object {
@@ -2895,10 +3406,20 @@ ShallowWrapper {
             <WithStyles(Table)>
               <WithStyles(TableHead)>
                 <WithStyles(TableRow)>
-                  <WithStyles(TableCell)>
-                    ID
-                  </WithStyles(TableCell)>
-                  <WithStyles(TableCell)>
+                  <WithStyles(TableCell)
+                    style={
+                      Object {
+                        "width": 25,
+                      }
+                    }
+                  />
+                  <WithStyles(TableCell)
+                    style={
+                      Object {
+                        "width": "60%",
+                      }
+                    }
+                  >
                     Title
                   </WithStyles(TableCell)>
                   <WithStyles(TableCell)>
@@ -2922,11 +3443,28 @@ ShallowWrapper {
               </WithStyles(TableHead)>
               <WithStyles(TableBody)>
                 <WithStyles(TableRow)>
-                  <WithStyles(TableCell)
-                    component="th"
-                    scope="row"
-                  >
-                    1
+                  <WithStyles(TableCell)>
+                    <div
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "cursor": "pointer",
+                          "display": "flex",
+                        }
+                      }
+                    >
+                      <pure(StarBorderIcon) />
+                       
+                      <div
+                        style={
+                          Object {
+                            "fontSize": 15,
+                            "marginLeft": 4,
+                            "marginTop": 4,
+                          }
+                        }
+                      />
+                    </div>
                   </WithStyles(TableCell)>
                   <WithStyles(TableCell)>
                     <Link
@@ -2943,7 +3481,6 @@ ShallowWrapper {
                     style={
                       Object {
                         "padding": "0 0 0 80px",
-                        "width": 25,
                       }
                     }
                   >
@@ -2958,13 +3495,7 @@ ShallowWrapper {
                       <pure(EditIcon) />
                     </div>
                   </WithStyles(TableCell)>
-                  <WithStyles(TableCell)
-                    style={
-                      Object {
-                        "width": 25,
-                      }
-                    }
-                  >
+                  <WithStyles(TableCell)>
                     <div
                       onClick={[Function]}
                       style={
@@ -2978,11 +3509,28 @@ ShallowWrapper {
                   </WithStyles(TableCell)>
                 </WithStyles(TableRow)>
                 <WithStyles(TableRow)>
-                  <WithStyles(TableCell)
-                    component="th"
-                    scope="row"
-                  >
-                    2
+                  <WithStyles(TableCell)>
+                    <div
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "cursor": "pointer",
+                          "display": "flex",
+                        }
+                      }
+                    >
+                      <pure(StarBorderIcon) />
+                       
+                      <div
+                        style={
+                          Object {
+                            "fontSize": 15,
+                            "marginLeft": 4,
+                            "marginTop": 4,
+                          }
+                        }
+                      />
+                    </div>
                   </WithStyles(TableCell)>
                   <WithStyles(TableCell)>
                     <Link
@@ -2999,7 +3547,6 @@ ShallowWrapper {
                     style={
                       Object {
                         "padding": "0 0 0 80px",
-                        "width": 25,
                       }
                     }
                   >
@@ -3014,13 +3561,7 @@ ShallowWrapper {
                       <pure(EditIcon) />
                     </div>
                   </WithStyles(TableCell)>
-                  <WithStyles(TableCell)
-                    style={
-                      Object {
-                        "width": 25,
-                      }
-                    }
-                  >
+                  <WithStyles(TableCell)>
                     <div
                       onClick={[Function]}
                       style={
@@ -3088,10 +3629,20 @@ ShallowWrapper {
               <WithStyles(Table)>
                 <WithStyles(TableHead)>
                   <WithStyles(TableRow)>
-                    <WithStyles(TableCell)>
-                      ID
-                    </WithStyles(TableCell)>
-                    <WithStyles(TableCell)>
+                    <WithStyles(TableCell)
+                      style={
+                        Object {
+                          "width": 25,
+                        }
+                      }
+                    />
+                    <WithStyles(TableCell)
+                      style={
+                        Object {
+                          "width": "60%",
+                        }
+                      }
+                    >
                       Title
                     </WithStyles(TableCell)>
                     <WithStyles(TableCell)>
@@ -3115,11 +3666,28 @@ ShallowWrapper {
                 </WithStyles(TableHead)>
                 <WithStyles(TableBody)>
                   <WithStyles(TableRow)>
-                    <WithStyles(TableCell)
-                      component="th"
-                      scope="row"
-                    >
-                      1
+                    <WithStyles(TableCell)>
+                      <div
+                        onClick={[Function]}
+                        style={
+                          Object {
+                            "cursor": "pointer",
+                            "display": "flex",
+                          }
+                        }
+                      >
+                        <pure(StarBorderIcon) />
+                         
+                        <div
+                          style={
+                            Object {
+                              "fontSize": 15,
+                              "marginLeft": 4,
+                              "marginTop": 4,
+                            }
+                          }
+                        />
+                      </div>
                     </WithStyles(TableCell)>
                     <WithStyles(TableCell)>
                       <Link
@@ -3136,7 +3704,6 @@ ShallowWrapper {
                       style={
                         Object {
                           "padding": "0 0 0 80px",
-                          "width": 25,
                         }
                       }
                     >
@@ -3151,13 +3718,7 @@ ShallowWrapper {
                         <pure(EditIcon) />
                       </div>
                     </WithStyles(TableCell)>
-                    <WithStyles(TableCell)
-                      style={
-                        Object {
-                          "width": 25,
-                        }
-                      }
-                    >
+                    <WithStyles(TableCell)>
                       <div
                         onClick={[Function]}
                         style={
@@ -3171,11 +3732,28 @@ ShallowWrapper {
                     </WithStyles(TableCell)>
                   </WithStyles(TableRow)>
                   <WithStyles(TableRow)>
-                    <WithStyles(TableCell)
-                      component="th"
-                      scope="row"
-                    >
-                      2
+                    <WithStyles(TableCell)>
+                      <div
+                        onClick={[Function]}
+                        style={
+                          Object {
+                            "cursor": "pointer",
+                            "display": "flex",
+                          }
+                        }
+                      >
+                        <pure(StarBorderIcon) />
+                         
+                        <div
+                          style={
+                            Object {
+                              "fontSize": 15,
+                              "marginLeft": 4,
+                              "marginTop": 4,
+                            }
+                          }
+                        />
+                      </div>
                     </WithStyles(TableCell)>
                     <WithStyles(TableCell)>
                       <Link
@@ -3192,7 +3770,6 @@ ShallowWrapper {
                       style={
                         Object {
                           "padding": "0 0 0 80px",
-                          "width": 25,
                         }
                       }
                     >
@@ -3207,13 +3784,7 @@ ShallowWrapper {
                         <pure(EditIcon) />
                       </div>
                     </WithStyles(TableCell)>
-                    <WithStyles(TableCell)
-                      style={
-                        Object {
-                          "width": 25,
-                        }
-                      }
-                    >
+                    <WithStyles(TableCell)>
                       <div
                         onClick={[Function]}
                         style={
@@ -3241,10 +3812,20 @@ ShallowWrapper {
                 "children": Array [
                   <WithStyles(TableHead)>
                     <WithStyles(TableRow)>
-                      <WithStyles(TableCell)>
-                        ID
-                      </WithStyles(TableCell)>
-                      <WithStyles(TableCell)>
+                      <WithStyles(TableCell)
+                        style={
+                          Object {
+                            "width": 25,
+                          }
+                        }
+                      />
+                      <WithStyles(TableCell)
+                        style={
+                          Object {
+                            "width": "60%",
+                          }
+                        }
+                      >
                         Title
                       </WithStyles(TableCell)>
                       <WithStyles(TableCell)>
@@ -3268,11 +3849,28 @@ ShallowWrapper {
                   </WithStyles(TableHead)>,
                   <WithStyles(TableBody)>
                     <WithStyles(TableRow)>
-                      <WithStyles(TableCell)
-                        component="th"
-                        scope="row"
-                      >
-                        1
+                      <WithStyles(TableCell)>
+                        <div
+                          onClick={[Function]}
+                          style={
+                            Object {
+                              "cursor": "pointer",
+                              "display": "flex",
+                            }
+                          }
+                        >
+                          <pure(StarBorderIcon) />
+                           
+                          <div
+                            style={
+                              Object {
+                                "fontSize": 15,
+                                "marginLeft": 4,
+                                "marginTop": 4,
+                              }
+                            }
+                          />
+                        </div>
                       </WithStyles(TableCell)>
                       <WithStyles(TableCell)>
                         <Link
@@ -3289,7 +3887,6 @@ ShallowWrapper {
                         style={
                           Object {
                             "padding": "0 0 0 80px",
-                            "width": 25,
                           }
                         }
                       >
@@ -3304,13 +3901,7 @@ ShallowWrapper {
                           <pure(EditIcon) />
                         </div>
                       </WithStyles(TableCell)>
-                      <WithStyles(TableCell)
-                        style={
-                          Object {
-                            "width": 25,
-                          }
-                        }
-                      >
+                      <WithStyles(TableCell)>
                         <div
                           onClick={[Function]}
                           style={
@@ -3324,11 +3915,28 @@ ShallowWrapper {
                       </WithStyles(TableCell)>
                     </WithStyles(TableRow)>
                     <WithStyles(TableRow)>
-                      <WithStyles(TableCell)
-                        component="th"
-                        scope="row"
-                      >
-                        2
+                      <WithStyles(TableCell)>
+                        <div
+                          onClick={[Function]}
+                          style={
+                            Object {
+                              "cursor": "pointer",
+                              "display": "flex",
+                            }
+                          }
+                        >
+                          <pure(StarBorderIcon) />
+                           
+                          <div
+                            style={
+                              Object {
+                                "fontSize": 15,
+                                "marginLeft": 4,
+                                "marginTop": 4,
+                              }
+                            }
+                          />
+                        </div>
                       </WithStyles(TableCell)>
                       <WithStyles(TableCell)>
                         <Link
@@ -3345,7 +3953,6 @@ ShallowWrapper {
                         style={
                           Object {
                             "padding": "0 0 0 80px",
-                            "width": 25,
                           }
                         }
                       >
@@ -3360,13 +3967,7 @@ ShallowWrapper {
                           <pure(EditIcon) />
                         </div>
                       </WithStyles(TableCell)>
-                      <WithStyles(TableCell)
-                        style={
-                          Object {
-                            "width": 25,
-                          }
-                        }
-                      >
+                      <WithStyles(TableCell)>
                         <div
                           onClick={[Function]}
                           style={
@@ -3390,10 +3991,20 @@ ShallowWrapper {
                   "nodeType": "class",
                   "props": Object {
                     "children": <WithStyles(TableRow)>
-                      <WithStyles(TableCell)>
-                        ID
-                      </WithStyles(TableCell)>
-                      <WithStyles(TableCell)>
+                      <WithStyles(TableCell)
+                        style={
+                          Object {
+                            "width": 25,
+                          }
+                        }
+                      />
+                      <WithStyles(TableCell)
+                        style={
+                          Object {
+                            "width": "60%",
+                          }
+                        }
+                      >
                         Title
                       </WithStyles(TableCell)>
                       <WithStyles(TableCell)>
@@ -3422,10 +4033,20 @@ ShallowWrapper {
                     "nodeType": "class",
                     "props": Object {
                       "children": Array [
-                        <WithStyles(TableCell)>
-                          ID
-                        </WithStyles(TableCell)>,
-                        <WithStyles(TableCell)>
+                        <WithStyles(TableCell)
+                          style={
+                            Object {
+                              "width": 25,
+                            }
+                          }
+                        />,
+                        <WithStyles(TableCell)
+                          style={
+                            Object {
+                              "width": "60%",
+                            }
+                          }
+                        >
                           Title
                         </WithStyles(TableCell)>,
                         <WithStyles(TableCell)>
@@ -3454,10 +4075,12 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "class",
                         "props": Object {
-                          "children": "ID",
+                          "style": Object {
+                            "width": 25,
+                          },
                         },
                         "ref": null,
-                        "rendered": "ID",
+                        "rendered": null,
                         "type": [Function],
                       },
                       Object {
@@ -3466,6 +4089,9 @@ ShallowWrapper {
                         "nodeType": "class",
                         "props": Object {
                           "children": "Title",
+                          "style": Object {
+                            "width": "60%",
+                          },
                         },
                         "ref": null,
                         "rendered": "Title",
@@ -3520,11 +4146,28 @@ ShallowWrapper {
                   "props": Object {
                     "children": Array [
                       <WithStyles(TableRow)>
-                        <WithStyles(TableCell)
-                          component="th"
-                          scope="row"
-                        >
-                          1
+                        <WithStyles(TableCell)>
+                          <div
+                            onClick={[Function]}
+                            style={
+                              Object {
+                                "cursor": "pointer",
+                                "display": "flex",
+                              }
+                            }
+                          >
+                            <pure(StarBorderIcon) />
+                             
+                            <div
+                              style={
+                                Object {
+                                  "fontSize": 15,
+                                  "marginLeft": 4,
+                                  "marginTop": 4,
+                                }
+                              }
+                            />
+                          </div>
                         </WithStyles(TableCell)>
                         <WithStyles(TableCell)>
                           <Link
@@ -3541,7 +4184,6 @@ ShallowWrapper {
                           style={
                             Object {
                               "padding": "0 0 0 80px",
-                              "width": 25,
                             }
                           }
                         >
@@ -3556,13 +4198,7 @@ ShallowWrapper {
                             <pure(EditIcon) />
                           </div>
                         </WithStyles(TableCell)>
-                        <WithStyles(TableCell)
-                          style={
-                            Object {
-                              "width": 25,
-                            }
-                          }
-                        >
+                        <WithStyles(TableCell)>
                           <div
                             onClick={[Function]}
                             style={
@@ -3576,11 +4212,28 @@ ShallowWrapper {
                         </WithStyles(TableCell)>
                       </WithStyles(TableRow)>,
                       <WithStyles(TableRow)>
-                        <WithStyles(TableCell)
-                          component="th"
-                          scope="row"
-                        >
-                          2
+                        <WithStyles(TableCell)>
+                          <div
+                            onClick={[Function]}
+                            style={
+                              Object {
+                                "cursor": "pointer",
+                                "display": "flex",
+                              }
+                            }
+                          >
+                            <pure(StarBorderIcon) />
+                             
+                            <div
+                              style={
+                                Object {
+                                  "fontSize": 15,
+                                  "marginLeft": 4,
+                                  "marginTop": 4,
+                                }
+                              }
+                            />
+                          </div>
                         </WithStyles(TableCell)>
                         <WithStyles(TableCell)>
                           <Link
@@ -3597,7 +4250,6 @@ ShallowWrapper {
                           style={
                             Object {
                               "padding": "0 0 0 80px",
-                              "width": 25,
                             }
                           }
                         >
@@ -3612,13 +4264,7 @@ ShallowWrapper {
                             <pure(EditIcon) />
                           </div>
                         </WithStyles(TableCell)>
-                        <WithStyles(TableCell)
-                          style={
-                            Object {
-                              "width": 25,
-                            }
-                          }
-                        >
+                        <WithStyles(TableCell)>
                           <div
                             onClick={[Function]}
                             style={
@@ -3641,11 +4287,28 @@ ShallowWrapper {
                       "nodeType": "class",
                       "props": Object {
                         "children": Array [
-                          <WithStyles(TableCell)
-                            component="th"
-                            scope="row"
-                          >
-                            1
+                          <WithStyles(TableCell)>
+                            <div
+                              onClick={[Function]}
+                              style={
+                                Object {
+                                  "cursor": "pointer",
+                                  "display": "flex",
+                                }
+                              }
+                            >
+                              <pure(StarBorderIcon) />
+                               
+                              <div
+                                style={
+                                  Object {
+                                    "fontSize": 15,
+                                    "marginLeft": 4,
+                                    "marginTop": 4,
+                                  }
+                                }
+                              />
+                            </div>
                           </WithStyles(TableCell)>,
                           <WithStyles(TableCell)>
                             <Link
@@ -3662,7 +4325,6 @@ ShallowWrapper {
                             style={
                               Object {
                                 "padding": "0 0 0 80px",
-                                "width": 25,
                               }
                             }
                           >
@@ -3677,13 +4339,7 @@ ShallowWrapper {
                               <pure(EditIcon) />
                             </div>
                           </WithStyles(TableCell)>,
-                          <WithStyles(TableCell)
-                            style={
-                              Object {
-                                "width": 25,
-                              }
-                            }
-                          >
+                          <WithStyles(TableCell)>
                             <div
                               onClick={[Function]}
                               style={
@@ -3704,12 +4360,84 @@ ShallowWrapper {
                           "key": undefined,
                           "nodeType": "class",
                           "props": Object {
-                            "children": 1,
-                            "component": "th",
-                            "scope": "row",
+                            "children": <div
+                              onClick={[Function]}
+                              style={
+                                Object {
+                                  "cursor": "pointer",
+                                  "display": "flex",
+                                }
+                              }
+                            >
+                              <pure(StarBorderIcon) />
+                               
+                              <div
+                                style={
+                                  Object {
+                                    "fontSize": 15,
+                                    "marginLeft": 4,
+                                    "marginTop": 4,
+                                  }
+                                }
+                              />
+                            </div>,
                           },
                           "ref": null,
-                          "rendered": 1,
+                          "rendered": Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": Array [
+                                <pure(StarBorderIcon) />,
+                                " ",
+                                <div
+                                  style={
+                                    Object {
+                                      "fontSize": 15,
+                                      "marginLeft": 4,
+                                      "marginTop": 4,
+                                    }
+                                  }
+                                />,
+                              ],
+                              "onClick": [Function],
+                              "style": Object {
+                                "cursor": "pointer",
+                                "display": "flex",
+                              },
+                            },
+                            "ref": null,
+                            "rendered": Array [
+                              Object {
+                                "instance": null,
+                                "key": undefined,
+                                "nodeType": "class",
+                                "props": Object {},
+                                "ref": null,
+                                "rendered": null,
+                                "type": [Function],
+                              },
+                              " ",
+                              Object {
+                                "instance": null,
+                                "key": undefined,
+                                "nodeType": "host",
+                                "props": Object {
+                                  "children": undefined,
+                                  "style": Object {
+                                    "fontSize": 15,
+                                    "marginLeft": 4,
+                                    "marginTop": 4,
+                                  },
+                                },
+                                "ref": null,
+                                "rendered": null,
+                                "type": "div",
+                              },
+                            ],
+                            "type": "div",
+                          },
                           "type": [Function],
                         },
                         Object {
@@ -3768,7 +4496,6 @@ ShallowWrapper {
                             </div>,
                             "style": Object {
                               "padding": "0 0 0 80px",
-                              "width": 25,
                             },
                           },
                           "ref": null,
@@ -3812,9 +4539,6 @@ ShallowWrapper {
                             >
                               <pure(DeleteForeverIcon) />
                             </div>,
-                            "style": Object {
-                              "width": 25,
-                            },
                           },
                           "ref": null,
                           "rendered": Object {
@@ -3851,11 +4575,28 @@ ShallowWrapper {
                       "nodeType": "class",
                       "props": Object {
                         "children": Array [
-                          <WithStyles(TableCell)
-                            component="th"
-                            scope="row"
-                          >
-                            2
+                          <WithStyles(TableCell)>
+                            <div
+                              onClick={[Function]}
+                              style={
+                                Object {
+                                  "cursor": "pointer",
+                                  "display": "flex",
+                                }
+                              }
+                            >
+                              <pure(StarBorderIcon) />
+                               
+                              <div
+                                style={
+                                  Object {
+                                    "fontSize": 15,
+                                    "marginLeft": 4,
+                                    "marginTop": 4,
+                                  }
+                                }
+                              />
+                            </div>
                           </WithStyles(TableCell)>,
                           <WithStyles(TableCell)>
                             <Link
@@ -3872,7 +4613,6 @@ ShallowWrapper {
                             style={
                               Object {
                                 "padding": "0 0 0 80px",
-                                "width": 25,
                               }
                             }
                           >
@@ -3887,13 +4627,7 @@ ShallowWrapper {
                               <pure(EditIcon) />
                             </div>
                           </WithStyles(TableCell)>,
-                          <WithStyles(TableCell)
-                            style={
-                              Object {
-                                "width": 25,
-                              }
-                            }
-                          >
+                          <WithStyles(TableCell)>
                             <div
                               onClick={[Function]}
                               style={
@@ -3914,12 +4648,84 @@ ShallowWrapper {
                           "key": undefined,
                           "nodeType": "class",
                           "props": Object {
-                            "children": 2,
-                            "component": "th",
-                            "scope": "row",
+                            "children": <div
+                              onClick={[Function]}
+                              style={
+                                Object {
+                                  "cursor": "pointer",
+                                  "display": "flex",
+                                }
+                              }
+                            >
+                              <pure(StarBorderIcon) />
+                               
+                              <div
+                                style={
+                                  Object {
+                                    "fontSize": 15,
+                                    "marginLeft": 4,
+                                    "marginTop": 4,
+                                  }
+                                }
+                              />
+                            </div>,
                           },
                           "ref": null,
-                          "rendered": 2,
+                          "rendered": Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": Array [
+                                <pure(StarBorderIcon) />,
+                                " ",
+                                <div
+                                  style={
+                                    Object {
+                                      "fontSize": 15,
+                                      "marginLeft": 4,
+                                      "marginTop": 4,
+                                    }
+                                  }
+                                />,
+                              ],
+                              "onClick": [Function],
+                              "style": Object {
+                                "cursor": "pointer",
+                                "display": "flex",
+                              },
+                            },
+                            "ref": null,
+                            "rendered": Array [
+                              Object {
+                                "instance": null,
+                                "key": undefined,
+                                "nodeType": "class",
+                                "props": Object {},
+                                "ref": null,
+                                "rendered": null,
+                                "type": [Function],
+                              },
+                              " ",
+                              Object {
+                                "instance": null,
+                                "key": undefined,
+                                "nodeType": "host",
+                                "props": Object {
+                                  "children": undefined,
+                                  "style": Object {
+                                    "fontSize": 15,
+                                    "marginLeft": 4,
+                                    "marginTop": 4,
+                                  },
+                                },
+                                "ref": null,
+                                "rendered": null,
+                                "type": "div",
+                              },
+                            ],
+                            "type": "div",
+                          },
                           "type": [Function],
                         },
                         Object {
@@ -3978,7 +4784,6 @@ ShallowWrapper {
                             </div>,
                             "style": Object {
                               "padding": "0 0 0 80px",
-                              "width": 25,
                             },
                           },
                           "ref": null,
@@ -4022,9 +4827,6 @@ ShallowWrapper {
                             >
                               <pure(DeleteForeverIcon) />
                             </div>,
-                            "style": Object {
-                              "width": 25,
-                            },
                           },
                           "ref": null,
                           "rendered": Object {
@@ -4145,10 +4947,20 @@ ShallowWrapper {
           <WithStyles(Table)>
             <WithStyles(TableHead)>
               <WithStyles(TableRow)>
-                <WithStyles(TableCell)>
-                  ID
-                </WithStyles(TableCell)>
-                <WithStyles(TableCell)>
+                <WithStyles(TableCell)
+                  style={
+                    Object {
+                      "width": 25,
+                    }
+                  }
+                />
+                <WithStyles(TableCell)
+                  style={
+                    Object {
+                      "width": "60%",
+                    }
+                  }
+                >
                   Title
                 </WithStyles(TableCell)>
                 <WithStyles(TableCell)>
@@ -4172,11 +4984,28 @@ ShallowWrapper {
             </WithStyles(TableHead)>
             <WithStyles(TableBody)>
               <WithStyles(TableRow)>
-                <WithStyles(TableCell)
-                  component="th"
-                  scope="row"
-                >
-                  1
+                <WithStyles(TableCell)>
+                  <div
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "cursor": "pointer",
+                        "display": "flex",
+                      }
+                    }
+                  >
+                    <pure(StarBorderIcon) />
+                     
+                    <div
+                      style={
+                        Object {
+                          "fontSize": 15,
+                          "marginLeft": 4,
+                          "marginTop": 4,
+                        }
+                      }
+                    />
+                  </div>
                 </WithStyles(TableCell)>
                 <WithStyles(TableCell)>
                   <Link
@@ -4193,7 +5022,6 @@ ShallowWrapper {
                   style={
                     Object {
                       "padding": "0 0 0 80px",
-                      "width": 25,
                     }
                   }
                 >
@@ -4208,13 +5036,7 @@ ShallowWrapper {
                     <pure(EditIcon) />
                   </div>
                 </WithStyles(TableCell)>
-                <WithStyles(TableCell)
-                  style={
-                    Object {
-                      "width": 25,
-                    }
-                  }
-                >
+                <WithStyles(TableCell)>
                   <div
                     onClick={[Function]}
                     style={
@@ -4228,11 +5050,28 @@ ShallowWrapper {
                 </WithStyles(TableCell)>
               </WithStyles(TableRow)>
               <WithStyles(TableRow)>
-                <WithStyles(TableCell)
-                  component="th"
-                  scope="row"
-                >
-                  2
+                <WithStyles(TableCell)>
+                  <div
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "cursor": "pointer",
+                        "display": "flex",
+                      }
+                    }
+                  >
+                    <pure(StarBorderIcon) />
+                     
+                    <div
+                      style={
+                        Object {
+                          "fontSize": 15,
+                          "marginLeft": 4,
+                          "marginTop": 4,
+                        }
+                      }
+                    />
+                  </div>
                 </WithStyles(TableCell)>
                 <WithStyles(TableCell)>
                   <Link
@@ -4249,7 +5088,6 @@ ShallowWrapper {
                   style={
                     Object {
                       "padding": "0 0 0 80px",
-                      "width": 25,
                     }
                   }
                 >
@@ -4264,13 +5102,7 @@ ShallowWrapper {
                     <pure(EditIcon) />
                   </div>
                 </WithStyles(TableCell)>
-                <WithStyles(TableCell)
-                  style={
-                    Object {
-                      "width": 25,
-                    }
-                  }
-                >
+                <WithStyles(TableCell)>
                   <div
                     onClick={[Function]}
                     style={
@@ -4338,10 +5170,20 @@ ShallowWrapper {
             <WithStyles(Table)>
               <WithStyles(TableHead)>
                 <WithStyles(TableRow)>
-                  <WithStyles(TableCell)>
-                    ID
-                  </WithStyles(TableCell)>
-                  <WithStyles(TableCell)>
+                  <WithStyles(TableCell)
+                    style={
+                      Object {
+                        "width": 25,
+                      }
+                    }
+                  />
+                  <WithStyles(TableCell)
+                    style={
+                      Object {
+                        "width": "60%",
+                      }
+                    }
+                  >
                     Title
                   </WithStyles(TableCell)>
                   <WithStyles(TableCell)>
@@ -4365,11 +5207,28 @@ ShallowWrapper {
               </WithStyles(TableHead)>
               <WithStyles(TableBody)>
                 <WithStyles(TableRow)>
-                  <WithStyles(TableCell)
-                    component="th"
-                    scope="row"
-                  >
-                    1
+                  <WithStyles(TableCell)>
+                    <div
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "cursor": "pointer",
+                          "display": "flex",
+                        }
+                      }
+                    >
+                      <pure(StarBorderIcon) />
+                       
+                      <div
+                        style={
+                          Object {
+                            "fontSize": 15,
+                            "marginLeft": 4,
+                            "marginTop": 4,
+                          }
+                        }
+                      />
+                    </div>
                   </WithStyles(TableCell)>
                   <WithStyles(TableCell)>
                     <Link
@@ -4386,7 +5245,6 @@ ShallowWrapper {
                     style={
                       Object {
                         "padding": "0 0 0 80px",
-                        "width": 25,
                       }
                     }
                   >
@@ -4401,13 +5259,7 @@ ShallowWrapper {
                       <pure(EditIcon) />
                     </div>
                   </WithStyles(TableCell)>
-                  <WithStyles(TableCell)
-                    style={
-                      Object {
-                        "width": 25,
-                      }
-                    }
-                  >
+                  <WithStyles(TableCell)>
                     <div
                       onClick={[Function]}
                       style={
@@ -4421,11 +5273,28 @@ ShallowWrapper {
                   </WithStyles(TableCell)>
                 </WithStyles(TableRow)>
                 <WithStyles(TableRow)>
-                  <WithStyles(TableCell)
-                    component="th"
-                    scope="row"
-                  >
-                    2
+                  <WithStyles(TableCell)>
+                    <div
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "cursor": "pointer",
+                          "display": "flex",
+                        }
+                      }
+                    >
+                      <pure(StarBorderIcon) />
+                       
+                      <div
+                        style={
+                          Object {
+                            "fontSize": 15,
+                            "marginLeft": 4,
+                            "marginTop": 4,
+                          }
+                        }
+                      />
+                    </div>
                   </WithStyles(TableCell)>
                   <WithStyles(TableCell)>
                     <Link
@@ -4442,7 +5311,6 @@ ShallowWrapper {
                     style={
                       Object {
                         "padding": "0 0 0 80px",
-                        "width": 25,
                       }
                     }
                   >
@@ -4457,13 +5325,7 @@ ShallowWrapper {
                       <pure(EditIcon) />
                     </div>
                   </WithStyles(TableCell)>
-                  <WithStyles(TableCell)
-                    style={
-                      Object {
-                        "width": 25,
-                      }
-                    }
-                  >
+                  <WithStyles(TableCell)>
                     <div
                       onClick={[Function]}
                       style={
@@ -4499,10 +5361,20 @@ ShallowWrapper {
               "children": Array [
                 <WithStyles(TableHead)>
                   <WithStyles(TableRow)>
-                    <WithStyles(TableCell)>
-                      ID
-                    </WithStyles(TableCell)>
-                    <WithStyles(TableCell)>
+                    <WithStyles(TableCell)
+                      style={
+                        Object {
+                          "width": 25,
+                        }
+                      }
+                    />
+                    <WithStyles(TableCell)
+                      style={
+                        Object {
+                          "width": "60%",
+                        }
+                      }
+                    >
                       Title
                     </WithStyles(TableCell)>
                     <WithStyles(TableCell)>
@@ -4526,11 +5398,28 @@ ShallowWrapper {
                 </WithStyles(TableHead)>,
                 <WithStyles(TableBody)>
                   <WithStyles(TableRow)>
-                    <WithStyles(TableCell)
-                      component="th"
-                      scope="row"
-                    >
-                      1
+                    <WithStyles(TableCell)>
+                      <div
+                        onClick={[Function]}
+                        style={
+                          Object {
+                            "cursor": "pointer",
+                            "display": "flex",
+                          }
+                        }
+                      >
+                        <pure(StarBorderIcon) />
+                         
+                        <div
+                          style={
+                            Object {
+                              "fontSize": 15,
+                              "marginLeft": 4,
+                              "marginTop": 4,
+                            }
+                          }
+                        />
+                      </div>
                     </WithStyles(TableCell)>
                     <WithStyles(TableCell)>
                       <Link
@@ -4547,7 +5436,6 @@ ShallowWrapper {
                       style={
                         Object {
                           "padding": "0 0 0 80px",
-                          "width": 25,
                         }
                       }
                     >
@@ -4562,13 +5450,7 @@ ShallowWrapper {
                         <pure(EditIcon) />
                       </div>
                     </WithStyles(TableCell)>
-                    <WithStyles(TableCell)
-                      style={
-                        Object {
-                          "width": 25,
-                        }
-                      }
-                    >
+                    <WithStyles(TableCell)>
                       <div
                         onClick={[Function]}
                         style={
@@ -4582,11 +5464,28 @@ ShallowWrapper {
                     </WithStyles(TableCell)>
                   </WithStyles(TableRow)>
                   <WithStyles(TableRow)>
-                    <WithStyles(TableCell)
-                      component="th"
-                      scope="row"
-                    >
-                      2
+                    <WithStyles(TableCell)>
+                      <div
+                        onClick={[Function]}
+                        style={
+                          Object {
+                            "cursor": "pointer",
+                            "display": "flex",
+                          }
+                        }
+                      >
+                        <pure(StarBorderIcon) />
+                         
+                        <div
+                          style={
+                            Object {
+                              "fontSize": 15,
+                              "marginLeft": 4,
+                              "marginTop": 4,
+                            }
+                          }
+                        />
+                      </div>
                     </WithStyles(TableCell)>
                     <WithStyles(TableCell)>
                       <Link
@@ -4603,7 +5502,6 @@ ShallowWrapper {
                       style={
                         Object {
                           "padding": "0 0 0 80px",
-                          "width": 25,
                         }
                       }
                     >
@@ -4618,13 +5516,7 @@ ShallowWrapper {
                         <pure(EditIcon) />
                       </div>
                     </WithStyles(TableCell)>
-                    <WithStyles(TableCell)
-                      style={
-                        Object {
-                          "width": 25,
-                        }
-                      }
-                    >
+                    <WithStyles(TableCell)>
                       <div
                         onClick={[Function]}
                         style={
@@ -4648,10 +5540,20 @@ ShallowWrapper {
                 "nodeType": "class",
                 "props": Object {
                   "children": <WithStyles(TableRow)>
-                    <WithStyles(TableCell)>
-                      ID
-                    </WithStyles(TableCell)>
-                    <WithStyles(TableCell)>
+                    <WithStyles(TableCell)
+                      style={
+                        Object {
+                          "width": 25,
+                        }
+                      }
+                    />
+                    <WithStyles(TableCell)
+                      style={
+                        Object {
+                          "width": "60%",
+                        }
+                      }
+                    >
                       Title
                     </WithStyles(TableCell)>
                     <WithStyles(TableCell)>
@@ -4680,10 +5582,20 @@ ShallowWrapper {
                   "nodeType": "class",
                   "props": Object {
                     "children": Array [
-                      <WithStyles(TableCell)>
-                        ID
-                      </WithStyles(TableCell)>,
-                      <WithStyles(TableCell)>
+                      <WithStyles(TableCell)
+                        style={
+                          Object {
+                            "width": 25,
+                          }
+                        }
+                      />,
+                      <WithStyles(TableCell)
+                        style={
+                          Object {
+                            "width": "60%",
+                          }
+                        }
+                      >
                         Title
                       </WithStyles(TableCell)>,
                       <WithStyles(TableCell)>
@@ -4712,10 +5624,12 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "class",
                       "props": Object {
-                        "children": "ID",
+                        "style": Object {
+                          "width": 25,
+                        },
                       },
                       "ref": null,
-                      "rendered": "ID",
+                      "rendered": null,
                       "type": [Function],
                     },
                     Object {
@@ -4724,6 +5638,9 @@ ShallowWrapper {
                       "nodeType": "class",
                       "props": Object {
                         "children": "Title",
+                        "style": Object {
+                          "width": "60%",
+                        },
                       },
                       "ref": null,
                       "rendered": "Title",
@@ -4778,11 +5695,28 @@ ShallowWrapper {
                 "props": Object {
                   "children": Array [
                     <WithStyles(TableRow)>
-                      <WithStyles(TableCell)
-                        component="th"
-                        scope="row"
-                      >
-                        1
+                      <WithStyles(TableCell)>
+                        <div
+                          onClick={[Function]}
+                          style={
+                            Object {
+                              "cursor": "pointer",
+                              "display": "flex",
+                            }
+                          }
+                        >
+                          <pure(StarBorderIcon) />
+                           
+                          <div
+                            style={
+                              Object {
+                                "fontSize": 15,
+                                "marginLeft": 4,
+                                "marginTop": 4,
+                              }
+                            }
+                          />
+                        </div>
                       </WithStyles(TableCell)>
                       <WithStyles(TableCell)>
                         <Link
@@ -4799,7 +5733,6 @@ ShallowWrapper {
                         style={
                           Object {
                             "padding": "0 0 0 80px",
-                            "width": 25,
                           }
                         }
                       >
@@ -4814,13 +5747,7 @@ ShallowWrapper {
                           <pure(EditIcon) />
                         </div>
                       </WithStyles(TableCell)>
-                      <WithStyles(TableCell)
-                        style={
-                          Object {
-                            "width": 25,
-                          }
-                        }
-                      >
+                      <WithStyles(TableCell)>
                         <div
                           onClick={[Function]}
                           style={
@@ -4834,11 +5761,28 @@ ShallowWrapper {
                       </WithStyles(TableCell)>
                     </WithStyles(TableRow)>,
                     <WithStyles(TableRow)>
-                      <WithStyles(TableCell)
-                        component="th"
-                        scope="row"
-                      >
-                        2
+                      <WithStyles(TableCell)>
+                        <div
+                          onClick={[Function]}
+                          style={
+                            Object {
+                              "cursor": "pointer",
+                              "display": "flex",
+                            }
+                          }
+                        >
+                          <pure(StarBorderIcon) />
+                           
+                          <div
+                            style={
+                              Object {
+                                "fontSize": 15,
+                                "marginLeft": 4,
+                                "marginTop": 4,
+                              }
+                            }
+                          />
+                        </div>
                       </WithStyles(TableCell)>
                       <WithStyles(TableCell)>
                         <Link
@@ -4855,7 +5799,6 @@ ShallowWrapper {
                         style={
                           Object {
                             "padding": "0 0 0 80px",
-                            "width": 25,
                           }
                         }
                       >
@@ -4870,13 +5813,7 @@ ShallowWrapper {
                           <pure(EditIcon) />
                         </div>
                       </WithStyles(TableCell)>
-                      <WithStyles(TableCell)
-                        style={
-                          Object {
-                            "width": 25,
-                          }
-                        }
-                      >
+                      <WithStyles(TableCell)>
                         <div
                           onClick={[Function]}
                           style={
@@ -4899,11 +5836,28 @@ ShallowWrapper {
                     "nodeType": "class",
                     "props": Object {
                       "children": Array [
-                        <WithStyles(TableCell)
-                          component="th"
-                          scope="row"
-                        >
-                          1
+                        <WithStyles(TableCell)>
+                          <div
+                            onClick={[Function]}
+                            style={
+                              Object {
+                                "cursor": "pointer",
+                                "display": "flex",
+                              }
+                            }
+                          >
+                            <pure(StarBorderIcon) />
+                             
+                            <div
+                              style={
+                                Object {
+                                  "fontSize": 15,
+                                  "marginLeft": 4,
+                                  "marginTop": 4,
+                                }
+                              }
+                            />
+                          </div>
                         </WithStyles(TableCell)>,
                         <WithStyles(TableCell)>
                           <Link
@@ -4920,7 +5874,6 @@ ShallowWrapper {
                           style={
                             Object {
                               "padding": "0 0 0 80px",
-                              "width": 25,
                             }
                           }
                         >
@@ -4935,13 +5888,7 @@ ShallowWrapper {
                             <pure(EditIcon) />
                           </div>
                         </WithStyles(TableCell)>,
-                        <WithStyles(TableCell)
-                          style={
-                            Object {
-                              "width": 25,
-                            }
-                          }
-                        >
+                        <WithStyles(TableCell)>
                           <div
                             onClick={[Function]}
                             style={
@@ -4962,12 +5909,84 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "class",
                         "props": Object {
-                          "children": 1,
-                          "component": "th",
-                          "scope": "row",
+                          "children": <div
+                            onClick={[Function]}
+                            style={
+                              Object {
+                                "cursor": "pointer",
+                                "display": "flex",
+                              }
+                            }
+                          >
+                            <pure(StarBorderIcon) />
+                             
+                            <div
+                              style={
+                                Object {
+                                  "fontSize": 15,
+                                  "marginLeft": 4,
+                                  "marginTop": 4,
+                                }
+                              }
+                            />
+                          </div>,
                         },
                         "ref": null,
-                        "rendered": 1,
+                        "rendered": Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": Array [
+                              <pure(StarBorderIcon) />,
+                              " ",
+                              <div
+                                style={
+                                  Object {
+                                    "fontSize": 15,
+                                    "marginLeft": 4,
+                                    "marginTop": 4,
+                                  }
+                                }
+                              />,
+                            ],
+                            "onClick": [Function],
+                            "style": Object {
+                              "cursor": "pointer",
+                              "display": "flex",
+                            },
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "class",
+                              "props": Object {},
+                              "ref": null,
+                              "rendered": null,
+                              "type": [Function],
+                            },
+                            " ",
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "children": undefined,
+                                "style": Object {
+                                  "fontSize": 15,
+                                  "marginLeft": 4,
+                                  "marginTop": 4,
+                                },
+                              },
+                              "ref": null,
+                              "rendered": null,
+                              "type": "div",
+                            },
+                          ],
+                          "type": "div",
+                        },
                         "type": [Function],
                       },
                       Object {
@@ -5026,7 +6045,6 @@ ShallowWrapper {
                           </div>,
                           "style": Object {
                             "padding": "0 0 0 80px",
-                            "width": 25,
                           },
                         },
                         "ref": null,
@@ -5070,9 +6088,6 @@ ShallowWrapper {
                           >
                             <pure(DeleteForeverIcon) />
                           </div>,
-                          "style": Object {
-                            "width": 25,
-                          },
                         },
                         "ref": null,
                         "rendered": Object {
@@ -5109,11 +6124,28 @@ ShallowWrapper {
                     "nodeType": "class",
                     "props": Object {
                       "children": Array [
-                        <WithStyles(TableCell)
-                          component="th"
-                          scope="row"
-                        >
-                          2
+                        <WithStyles(TableCell)>
+                          <div
+                            onClick={[Function]}
+                            style={
+                              Object {
+                                "cursor": "pointer",
+                                "display": "flex",
+                              }
+                            }
+                          >
+                            <pure(StarBorderIcon) />
+                             
+                            <div
+                              style={
+                                Object {
+                                  "fontSize": 15,
+                                  "marginLeft": 4,
+                                  "marginTop": 4,
+                                }
+                              }
+                            />
+                          </div>
                         </WithStyles(TableCell)>,
                         <WithStyles(TableCell)>
                           <Link
@@ -5130,7 +6162,6 @@ ShallowWrapper {
                           style={
                             Object {
                               "padding": "0 0 0 80px",
-                              "width": 25,
                             }
                           }
                         >
@@ -5145,13 +6176,7 @@ ShallowWrapper {
                             <pure(EditIcon) />
                           </div>
                         </WithStyles(TableCell)>,
-                        <WithStyles(TableCell)
-                          style={
-                            Object {
-                              "width": 25,
-                            }
-                          }
-                        >
+                        <WithStyles(TableCell)>
                           <div
                             onClick={[Function]}
                             style={
@@ -5172,12 +6197,84 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "class",
                         "props": Object {
-                          "children": 2,
-                          "component": "th",
-                          "scope": "row",
+                          "children": <div
+                            onClick={[Function]}
+                            style={
+                              Object {
+                                "cursor": "pointer",
+                                "display": "flex",
+                              }
+                            }
+                          >
+                            <pure(StarBorderIcon) />
+                             
+                            <div
+                              style={
+                                Object {
+                                  "fontSize": 15,
+                                  "marginLeft": 4,
+                                  "marginTop": 4,
+                                }
+                              }
+                            />
+                          </div>,
                         },
                         "ref": null,
-                        "rendered": 2,
+                        "rendered": Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": Array [
+                              <pure(StarBorderIcon) />,
+                              " ",
+                              <div
+                                style={
+                                  Object {
+                                    "fontSize": 15,
+                                    "marginLeft": 4,
+                                    "marginTop": 4,
+                                  }
+                                }
+                              />,
+                            ],
+                            "onClick": [Function],
+                            "style": Object {
+                              "cursor": "pointer",
+                              "display": "flex",
+                            },
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "class",
+                              "props": Object {},
+                              "ref": null,
+                              "rendered": null,
+                              "type": [Function],
+                            },
+                            " ",
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "children": undefined,
+                                "style": Object {
+                                  "fontSize": 15,
+                                  "marginLeft": 4,
+                                  "marginTop": 4,
+                                },
+                              },
+                              "ref": null,
+                              "rendered": null,
+                              "type": "div",
+                            },
+                          ],
+                          "type": "div",
+                        },
                         "type": [Function],
                       },
                       Object {
@@ -5236,7 +6333,6 @@ ShallowWrapper {
                           </div>,
                           "style": Object {
                             "padding": "0 0 0 80px",
-                            "width": 25,
                           },
                         },
                         "ref": null,
@@ -5280,9 +6376,6 @@ ShallowWrapper {
                           >
                             <pure(DeleteForeverIcon) />
                           </div>,
-                          "style": Object {
-                            "width": 25,
-                          },
                         },
                         "ref": null,
                         "rendered": Object {
@@ -5353,10 +6446,20 @@ ShallowWrapper {
             <WithStyles(Table)>
               <WithStyles(TableHead)>
                 <WithStyles(TableRow)>
-                  <WithStyles(TableCell)>
-                    ID
-                  </WithStyles(TableCell)>
-                  <WithStyles(TableCell)>
+                  <WithStyles(TableCell)
+                    style={
+                      Object {
+                        "width": 25,
+                      }
+                    }
+                  />
+                  <WithStyles(TableCell)
+                    style={
+                      Object {
+                        "width": "60%",
+                      }
+                    }
+                  >
                     Title
                   </WithStyles(TableCell)>
                   <WithStyles(TableCell)>
@@ -5380,11 +6483,28 @@ ShallowWrapper {
               </WithStyles(TableHead)>
               <WithStyles(TableBody)>
                 <WithStyles(TableRow)>
-                  <WithStyles(TableCell)
-                    component="th"
-                    scope="row"
-                  >
-                    1
+                  <WithStyles(TableCell)>
+                    <div
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "cursor": "pointer",
+                          "display": "flex",
+                        }
+                      }
+                    >
+                      <pure(StarBorderIcon) />
+                       
+                      <div
+                        style={
+                          Object {
+                            "fontSize": 15,
+                            "marginLeft": 4,
+                            "marginTop": 4,
+                          }
+                        }
+                      />
+                    </div>
                   </WithStyles(TableCell)>
                   <WithStyles(TableCell)>
                     <Link
@@ -5401,7 +6521,6 @@ ShallowWrapper {
                     style={
                       Object {
                         "padding": "0 0 0 80px",
-                        "width": 25,
                       }
                     }
                   >
@@ -5416,13 +6535,7 @@ ShallowWrapper {
                       <pure(EditIcon) />
                     </div>
                   </WithStyles(TableCell)>
-                  <WithStyles(TableCell)
-                    style={
-                      Object {
-                        "width": 25,
-                      }
-                    }
-                  >
+                  <WithStyles(TableCell)>
                     <div
                       onClick={[Function]}
                       style={
@@ -5436,11 +6549,28 @@ ShallowWrapper {
                   </WithStyles(TableCell)>
                 </WithStyles(TableRow)>
                 <WithStyles(TableRow)>
-                  <WithStyles(TableCell)
-                    component="th"
-                    scope="row"
-                  >
-                    2
+                  <WithStyles(TableCell)>
+                    <div
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "cursor": "pointer",
+                          "display": "flex",
+                        }
+                      }
+                    >
+                      <pure(StarBorderIcon) />
+                       
+                      <div
+                        style={
+                          Object {
+                            "fontSize": 15,
+                            "marginLeft": 4,
+                            "marginTop": 4,
+                          }
+                        }
+                      />
+                    </div>
                   </WithStyles(TableCell)>
                   <WithStyles(TableCell)>
                     <Link
@@ -5457,7 +6587,6 @@ ShallowWrapper {
                     style={
                       Object {
                         "padding": "0 0 0 80px",
-                        "width": 25,
                       }
                     }
                   >
@@ -5472,13 +6601,7 @@ ShallowWrapper {
                       <pure(EditIcon) />
                     </div>
                   </WithStyles(TableCell)>
-                  <WithStyles(TableCell)
-                    style={
-                      Object {
-                        "width": 25,
-                      }
-                    }
-                  >
+                  <WithStyles(TableCell)>
                     <div
                       onClick={[Function]}
                       style={
@@ -5546,10 +6669,20 @@ ShallowWrapper {
               <WithStyles(Table)>
                 <WithStyles(TableHead)>
                   <WithStyles(TableRow)>
-                    <WithStyles(TableCell)>
-                      ID
-                    </WithStyles(TableCell)>
-                    <WithStyles(TableCell)>
+                    <WithStyles(TableCell)
+                      style={
+                        Object {
+                          "width": 25,
+                        }
+                      }
+                    />
+                    <WithStyles(TableCell)
+                      style={
+                        Object {
+                          "width": "60%",
+                        }
+                      }
+                    >
                       Title
                     </WithStyles(TableCell)>
                     <WithStyles(TableCell)>
@@ -5573,11 +6706,28 @@ ShallowWrapper {
                 </WithStyles(TableHead)>
                 <WithStyles(TableBody)>
                   <WithStyles(TableRow)>
-                    <WithStyles(TableCell)
-                      component="th"
-                      scope="row"
-                    >
-                      1
+                    <WithStyles(TableCell)>
+                      <div
+                        onClick={[Function]}
+                        style={
+                          Object {
+                            "cursor": "pointer",
+                            "display": "flex",
+                          }
+                        }
+                      >
+                        <pure(StarBorderIcon) />
+                         
+                        <div
+                          style={
+                            Object {
+                              "fontSize": 15,
+                              "marginLeft": 4,
+                              "marginTop": 4,
+                            }
+                          }
+                        />
+                      </div>
                     </WithStyles(TableCell)>
                     <WithStyles(TableCell)>
                       <Link
@@ -5594,7 +6744,6 @@ ShallowWrapper {
                       style={
                         Object {
                           "padding": "0 0 0 80px",
-                          "width": 25,
                         }
                       }
                     >
@@ -5609,13 +6758,7 @@ ShallowWrapper {
                         <pure(EditIcon) />
                       </div>
                     </WithStyles(TableCell)>
-                    <WithStyles(TableCell)
-                      style={
-                        Object {
-                          "width": 25,
-                        }
-                      }
-                    >
+                    <WithStyles(TableCell)>
                       <div
                         onClick={[Function]}
                         style={
@@ -5629,11 +6772,28 @@ ShallowWrapper {
                     </WithStyles(TableCell)>
                   </WithStyles(TableRow)>
                   <WithStyles(TableRow)>
-                    <WithStyles(TableCell)
-                      component="th"
-                      scope="row"
-                    >
-                      2
+                    <WithStyles(TableCell)>
+                      <div
+                        onClick={[Function]}
+                        style={
+                          Object {
+                            "cursor": "pointer",
+                            "display": "flex",
+                          }
+                        }
+                      >
+                        <pure(StarBorderIcon) />
+                         
+                        <div
+                          style={
+                            Object {
+                              "fontSize": 15,
+                              "marginLeft": 4,
+                              "marginTop": 4,
+                            }
+                          }
+                        />
+                      </div>
                     </WithStyles(TableCell)>
                     <WithStyles(TableCell)>
                       <Link
@@ -5650,7 +6810,6 @@ ShallowWrapper {
                       style={
                         Object {
                           "padding": "0 0 0 80px",
-                          "width": 25,
                         }
                       }
                     >
@@ -5665,13 +6824,7 @@ ShallowWrapper {
                         <pure(EditIcon) />
                       </div>
                     </WithStyles(TableCell)>
-                    <WithStyles(TableCell)
-                      style={
-                        Object {
-                          "width": 25,
-                        }
-                      }
-                    >
+                    <WithStyles(TableCell)>
                       <div
                         onClick={[Function]}
                         style={
@@ -5707,10 +6860,20 @@ ShallowWrapper {
                 "children": Array [
                   <WithStyles(TableHead)>
                     <WithStyles(TableRow)>
-                      <WithStyles(TableCell)>
-                        ID
-                      </WithStyles(TableCell)>
-                      <WithStyles(TableCell)>
+                      <WithStyles(TableCell)
+                        style={
+                          Object {
+                            "width": 25,
+                          }
+                        }
+                      />
+                      <WithStyles(TableCell)
+                        style={
+                          Object {
+                            "width": "60%",
+                          }
+                        }
+                      >
                         Title
                       </WithStyles(TableCell)>
                       <WithStyles(TableCell)>
@@ -5734,11 +6897,28 @@ ShallowWrapper {
                   </WithStyles(TableHead)>,
                   <WithStyles(TableBody)>
                     <WithStyles(TableRow)>
-                      <WithStyles(TableCell)
-                        component="th"
-                        scope="row"
-                      >
-                        1
+                      <WithStyles(TableCell)>
+                        <div
+                          onClick={[Function]}
+                          style={
+                            Object {
+                              "cursor": "pointer",
+                              "display": "flex",
+                            }
+                          }
+                        >
+                          <pure(StarBorderIcon) />
+                           
+                          <div
+                            style={
+                              Object {
+                                "fontSize": 15,
+                                "marginLeft": 4,
+                                "marginTop": 4,
+                              }
+                            }
+                          />
+                        </div>
                       </WithStyles(TableCell)>
                       <WithStyles(TableCell)>
                         <Link
@@ -5755,7 +6935,6 @@ ShallowWrapper {
                         style={
                           Object {
                             "padding": "0 0 0 80px",
-                            "width": 25,
                           }
                         }
                       >
@@ -5770,13 +6949,7 @@ ShallowWrapper {
                           <pure(EditIcon) />
                         </div>
                       </WithStyles(TableCell)>
-                      <WithStyles(TableCell)
-                        style={
-                          Object {
-                            "width": 25,
-                          }
-                        }
-                      >
+                      <WithStyles(TableCell)>
                         <div
                           onClick={[Function]}
                           style={
@@ -5790,11 +6963,28 @@ ShallowWrapper {
                       </WithStyles(TableCell)>
                     </WithStyles(TableRow)>
                     <WithStyles(TableRow)>
-                      <WithStyles(TableCell)
-                        component="th"
-                        scope="row"
-                      >
-                        2
+                      <WithStyles(TableCell)>
+                        <div
+                          onClick={[Function]}
+                          style={
+                            Object {
+                              "cursor": "pointer",
+                              "display": "flex",
+                            }
+                          }
+                        >
+                          <pure(StarBorderIcon) />
+                           
+                          <div
+                            style={
+                              Object {
+                                "fontSize": 15,
+                                "marginLeft": 4,
+                                "marginTop": 4,
+                              }
+                            }
+                          />
+                        </div>
                       </WithStyles(TableCell)>
                       <WithStyles(TableCell)>
                         <Link
@@ -5811,7 +7001,6 @@ ShallowWrapper {
                         style={
                           Object {
                             "padding": "0 0 0 80px",
-                            "width": 25,
                           }
                         }
                       >
@@ -5826,13 +7015,7 @@ ShallowWrapper {
                           <pure(EditIcon) />
                         </div>
                       </WithStyles(TableCell)>
-                      <WithStyles(TableCell)
-                        style={
-                          Object {
-                            "width": 25,
-                          }
-                        }
-                      >
+                      <WithStyles(TableCell)>
                         <div
                           onClick={[Function]}
                           style={
@@ -5856,10 +7039,20 @@ ShallowWrapper {
                   "nodeType": "class",
                   "props": Object {
                     "children": <WithStyles(TableRow)>
-                      <WithStyles(TableCell)>
-                        ID
-                      </WithStyles(TableCell)>
-                      <WithStyles(TableCell)>
+                      <WithStyles(TableCell)
+                        style={
+                          Object {
+                            "width": 25,
+                          }
+                        }
+                      />
+                      <WithStyles(TableCell)
+                        style={
+                          Object {
+                            "width": "60%",
+                          }
+                        }
+                      >
                         Title
                       </WithStyles(TableCell)>
                       <WithStyles(TableCell)>
@@ -5888,10 +7081,20 @@ ShallowWrapper {
                     "nodeType": "class",
                     "props": Object {
                       "children": Array [
-                        <WithStyles(TableCell)>
-                          ID
-                        </WithStyles(TableCell)>,
-                        <WithStyles(TableCell)>
+                        <WithStyles(TableCell)
+                          style={
+                            Object {
+                              "width": 25,
+                            }
+                          }
+                        />,
+                        <WithStyles(TableCell)
+                          style={
+                            Object {
+                              "width": "60%",
+                            }
+                          }
+                        >
                           Title
                         </WithStyles(TableCell)>,
                         <WithStyles(TableCell)>
@@ -5920,10 +7123,12 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "class",
                         "props": Object {
-                          "children": "ID",
+                          "style": Object {
+                            "width": 25,
+                          },
                         },
                         "ref": null,
-                        "rendered": "ID",
+                        "rendered": null,
                         "type": [Function],
                       },
                       Object {
@@ -5932,6 +7137,9 @@ ShallowWrapper {
                         "nodeType": "class",
                         "props": Object {
                           "children": "Title",
+                          "style": Object {
+                            "width": "60%",
+                          },
                         },
                         "ref": null,
                         "rendered": "Title",
@@ -5986,11 +7194,28 @@ ShallowWrapper {
                   "props": Object {
                     "children": Array [
                       <WithStyles(TableRow)>
-                        <WithStyles(TableCell)
-                          component="th"
-                          scope="row"
-                        >
-                          1
+                        <WithStyles(TableCell)>
+                          <div
+                            onClick={[Function]}
+                            style={
+                              Object {
+                                "cursor": "pointer",
+                                "display": "flex",
+                              }
+                            }
+                          >
+                            <pure(StarBorderIcon) />
+                             
+                            <div
+                              style={
+                                Object {
+                                  "fontSize": 15,
+                                  "marginLeft": 4,
+                                  "marginTop": 4,
+                                }
+                              }
+                            />
+                          </div>
                         </WithStyles(TableCell)>
                         <WithStyles(TableCell)>
                           <Link
@@ -6007,7 +7232,6 @@ ShallowWrapper {
                           style={
                             Object {
                               "padding": "0 0 0 80px",
-                              "width": 25,
                             }
                           }
                         >
@@ -6022,13 +7246,7 @@ ShallowWrapper {
                             <pure(EditIcon) />
                           </div>
                         </WithStyles(TableCell)>
-                        <WithStyles(TableCell)
-                          style={
-                            Object {
-                              "width": 25,
-                            }
-                          }
-                        >
+                        <WithStyles(TableCell)>
                           <div
                             onClick={[Function]}
                             style={
@@ -6042,11 +7260,28 @@ ShallowWrapper {
                         </WithStyles(TableCell)>
                       </WithStyles(TableRow)>,
                       <WithStyles(TableRow)>
-                        <WithStyles(TableCell)
-                          component="th"
-                          scope="row"
-                        >
-                          2
+                        <WithStyles(TableCell)>
+                          <div
+                            onClick={[Function]}
+                            style={
+                              Object {
+                                "cursor": "pointer",
+                                "display": "flex",
+                              }
+                            }
+                          >
+                            <pure(StarBorderIcon) />
+                             
+                            <div
+                              style={
+                                Object {
+                                  "fontSize": 15,
+                                  "marginLeft": 4,
+                                  "marginTop": 4,
+                                }
+                              }
+                            />
+                          </div>
                         </WithStyles(TableCell)>
                         <WithStyles(TableCell)>
                           <Link
@@ -6063,7 +7298,6 @@ ShallowWrapper {
                           style={
                             Object {
                               "padding": "0 0 0 80px",
-                              "width": 25,
                             }
                           }
                         >
@@ -6078,13 +7312,7 @@ ShallowWrapper {
                             <pure(EditIcon) />
                           </div>
                         </WithStyles(TableCell)>
-                        <WithStyles(TableCell)
-                          style={
-                            Object {
-                              "width": 25,
-                            }
-                          }
-                        >
+                        <WithStyles(TableCell)>
                           <div
                             onClick={[Function]}
                             style={
@@ -6107,11 +7335,28 @@ ShallowWrapper {
                       "nodeType": "class",
                       "props": Object {
                         "children": Array [
-                          <WithStyles(TableCell)
-                            component="th"
-                            scope="row"
-                          >
-                            1
+                          <WithStyles(TableCell)>
+                            <div
+                              onClick={[Function]}
+                              style={
+                                Object {
+                                  "cursor": "pointer",
+                                  "display": "flex",
+                                }
+                              }
+                            >
+                              <pure(StarBorderIcon) />
+                               
+                              <div
+                                style={
+                                  Object {
+                                    "fontSize": 15,
+                                    "marginLeft": 4,
+                                    "marginTop": 4,
+                                  }
+                                }
+                              />
+                            </div>
                           </WithStyles(TableCell)>,
                           <WithStyles(TableCell)>
                             <Link
@@ -6128,7 +7373,6 @@ ShallowWrapper {
                             style={
                               Object {
                                 "padding": "0 0 0 80px",
-                                "width": 25,
                               }
                             }
                           >
@@ -6143,13 +7387,7 @@ ShallowWrapper {
                               <pure(EditIcon) />
                             </div>
                           </WithStyles(TableCell)>,
-                          <WithStyles(TableCell)
-                            style={
-                              Object {
-                                "width": 25,
-                              }
-                            }
-                          >
+                          <WithStyles(TableCell)>
                             <div
                               onClick={[Function]}
                               style={
@@ -6170,12 +7408,84 @@ ShallowWrapper {
                           "key": undefined,
                           "nodeType": "class",
                           "props": Object {
-                            "children": 1,
-                            "component": "th",
-                            "scope": "row",
+                            "children": <div
+                              onClick={[Function]}
+                              style={
+                                Object {
+                                  "cursor": "pointer",
+                                  "display": "flex",
+                                }
+                              }
+                            >
+                              <pure(StarBorderIcon) />
+                               
+                              <div
+                                style={
+                                  Object {
+                                    "fontSize": 15,
+                                    "marginLeft": 4,
+                                    "marginTop": 4,
+                                  }
+                                }
+                              />
+                            </div>,
                           },
                           "ref": null,
-                          "rendered": 1,
+                          "rendered": Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": Array [
+                                <pure(StarBorderIcon) />,
+                                " ",
+                                <div
+                                  style={
+                                    Object {
+                                      "fontSize": 15,
+                                      "marginLeft": 4,
+                                      "marginTop": 4,
+                                    }
+                                  }
+                                />,
+                              ],
+                              "onClick": [Function],
+                              "style": Object {
+                                "cursor": "pointer",
+                                "display": "flex",
+                              },
+                            },
+                            "ref": null,
+                            "rendered": Array [
+                              Object {
+                                "instance": null,
+                                "key": undefined,
+                                "nodeType": "class",
+                                "props": Object {},
+                                "ref": null,
+                                "rendered": null,
+                                "type": [Function],
+                              },
+                              " ",
+                              Object {
+                                "instance": null,
+                                "key": undefined,
+                                "nodeType": "host",
+                                "props": Object {
+                                  "children": undefined,
+                                  "style": Object {
+                                    "fontSize": 15,
+                                    "marginLeft": 4,
+                                    "marginTop": 4,
+                                  },
+                                },
+                                "ref": null,
+                                "rendered": null,
+                                "type": "div",
+                              },
+                            ],
+                            "type": "div",
+                          },
                           "type": [Function],
                         },
                         Object {
@@ -6234,7 +7544,6 @@ ShallowWrapper {
                             </div>,
                             "style": Object {
                               "padding": "0 0 0 80px",
-                              "width": 25,
                             },
                           },
                           "ref": null,
@@ -6278,9 +7587,6 @@ ShallowWrapper {
                             >
                               <pure(DeleteForeverIcon) />
                             </div>,
-                            "style": Object {
-                              "width": 25,
-                            },
                           },
                           "ref": null,
                           "rendered": Object {
@@ -6317,11 +7623,28 @@ ShallowWrapper {
                       "nodeType": "class",
                       "props": Object {
                         "children": Array [
-                          <WithStyles(TableCell)
-                            component="th"
-                            scope="row"
-                          >
-                            2
+                          <WithStyles(TableCell)>
+                            <div
+                              onClick={[Function]}
+                              style={
+                                Object {
+                                  "cursor": "pointer",
+                                  "display": "flex",
+                                }
+                              }
+                            >
+                              <pure(StarBorderIcon) />
+                               
+                              <div
+                                style={
+                                  Object {
+                                    "fontSize": 15,
+                                    "marginLeft": 4,
+                                    "marginTop": 4,
+                                  }
+                                }
+                              />
+                            </div>
                           </WithStyles(TableCell)>,
                           <WithStyles(TableCell)>
                             <Link
@@ -6338,7 +7661,6 @@ ShallowWrapper {
                             style={
                               Object {
                                 "padding": "0 0 0 80px",
-                                "width": 25,
                               }
                             }
                           >
@@ -6353,13 +7675,7 @@ ShallowWrapper {
                               <pure(EditIcon) />
                             </div>
                           </WithStyles(TableCell)>,
-                          <WithStyles(TableCell)
-                            style={
-                              Object {
-                                "width": 25,
-                              }
-                            }
-                          >
+                          <WithStyles(TableCell)>
                             <div
                               onClick={[Function]}
                               style={
@@ -6380,12 +7696,84 @@ ShallowWrapper {
                           "key": undefined,
                           "nodeType": "class",
                           "props": Object {
-                            "children": 2,
-                            "component": "th",
-                            "scope": "row",
+                            "children": <div
+                              onClick={[Function]}
+                              style={
+                                Object {
+                                  "cursor": "pointer",
+                                  "display": "flex",
+                                }
+                              }
+                            >
+                              <pure(StarBorderIcon) />
+                               
+                              <div
+                                style={
+                                  Object {
+                                    "fontSize": 15,
+                                    "marginLeft": 4,
+                                    "marginTop": 4,
+                                  }
+                                }
+                              />
+                            </div>,
                           },
                           "ref": null,
-                          "rendered": 2,
+                          "rendered": Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": Array [
+                                <pure(StarBorderIcon) />,
+                                " ",
+                                <div
+                                  style={
+                                    Object {
+                                      "fontSize": 15,
+                                      "marginLeft": 4,
+                                      "marginTop": 4,
+                                    }
+                                  }
+                                />,
+                              ],
+                              "onClick": [Function],
+                              "style": Object {
+                                "cursor": "pointer",
+                                "display": "flex",
+                              },
+                            },
+                            "ref": null,
+                            "rendered": Array [
+                              Object {
+                                "instance": null,
+                                "key": undefined,
+                                "nodeType": "class",
+                                "props": Object {},
+                                "ref": null,
+                                "rendered": null,
+                                "type": [Function],
+                              },
+                              " ",
+                              Object {
+                                "instance": null,
+                                "key": undefined,
+                                "nodeType": "host",
+                                "props": Object {
+                                  "children": undefined,
+                                  "style": Object {
+                                    "fontSize": 15,
+                                    "marginLeft": 4,
+                                    "marginTop": 4,
+                                  },
+                                },
+                                "ref": null,
+                                "rendered": null,
+                                "type": "div",
+                              },
+                            ],
+                            "type": "div",
+                          },
                           "type": [Function],
                         },
                         Object {
@@ -6444,7 +7832,6 @@ ShallowWrapper {
                             </div>,
                             "style": Object {
                               "padding": "0 0 0 80px",
-                              "width": 25,
                             },
                           },
                           "ref": null,
@@ -6488,9 +7875,6 @@ ShallowWrapper {
                             >
                               <pure(DeleteForeverIcon) />
                             </div>,
-                            "style": Object {
-                              "width": 25,
-                            },
                           },
                           "ref": null,
                           "rendered": Object {

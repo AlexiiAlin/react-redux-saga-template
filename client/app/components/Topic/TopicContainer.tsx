@@ -9,7 +9,7 @@ import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 
 interface TopicProps {
   topic: Topic,
-  isLoading: boolean
+  isLoading: boolean,
   match: MatchProps,
   onLoad: Function,
   addComment: Function,
@@ -54,14 +54,14 @@ export class TopicContainer extends React.Component<TopicProps, TopicState> {
     const { topic } = this.props;
 
     const comments = topic.comments && topic.comments.map(comment => (
-      <Paper key={comment.id} style={{width: '40%', margin: 24, overflowX: 'auto'}}>
+      <Paper key={comment.id} style={{width: 'calc(54% + 10px)', margin: 24, marginLeft: '23%', overflowX: 'auto'}}>
         <div style={{padding: 24, wordBreak: 'break-word'}}>
           <b>{comment.user.username}</b>
             <div style={{display: 'flex'}}>
               <div style={{marginTop: 8}}>
                 {comment.description}
               </div>
-              <div onClick={() => this.deleteComment(comment.id)} style={{cursor: 'pointer', marginLeft: '40%', marginTop: -8, position: 'absolute', display: 'flex'}}>
+              <div onClick={() => this.deleteComment(comment.id)} style={{cursor: 'pointer', marginLeft: '54%', marginTop: -8, position: 'absolute', display: 'flex'}}>
                 <DeleteForeverIcon/>
               </div>
             </div>
@@ -70,9 +70,19 @@ export class TopicContainer extends React.Component<TopicProps, TopicState> {
     ));
 
     return(
-      <div>
-        <div style={{marginLeft: 24}}>
+      <div style={{marginBottom: '10%'}}>
+        <div style={{marginLeft: '23%'}}>
         <h1>{topic && topic.title}</h1>
+        <Paper style={{width: 'calc(70% + 10px)', overflowX: 'auto'}}>
+            {this.props.topic.url && <img src={this.props.topic.url} style={{width: '100%'}}/>}
+        </Paper>
+
+          {this.props.topic.description && (<Paper style={{width: 'calc(70% - 10px)', overflowX: 'auto', marginTop: 16, padding: 10}}>
+            <div>
+              {this.props.topic.description}
+            </div>
+          </Paper>)}
+
 
         <ValidatorForm onSubmit={(event) => {
           event.preventDefault();
@@ -85,7 +95,7 @@ export class TopicContainer extends React.Component<TopicProps, TopicState> {
             name="comment"
             value={this.state.comment}
             onChange={this.changeComment}
-            style={{width: 'calc(40% + 12px)'}}
+            style={{width: 'calc(70% + 12px)'}}
             margin="normal"
             InputLabelProps={{
               shrink: true
@@ -109,7 +119,7 @@ export class TopicContainer extends React.Component<TopicProps, TopicState> {
         <div>
           {comments}
 
-          {this.props.isLoading && <CircularProgress style={{marginLeft: '20%', marginTop: 24}}/>}
+          {this.props.isLoading && <CircularProgress style={{marginLeft: '48%', marginTop: 24}}/>}
           </div>
       </div>
     )

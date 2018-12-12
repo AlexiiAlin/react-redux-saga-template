@@ -14,12 +14,15 @@ import {connect} from "react-redux";
 import {TopicsActions} from "./store/topics.actions";
 import {Topic} from "../../shared/interfaces";
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
+import StarBorder from '@material-ui/icons/StarBorder';
+import Star from '@material-ui/icons/Star';
 import { Edit } from "@material-ui/icons";
 import history from '../../history';
 import { ApplicationState } from '../../store/application-state';
 
 interface TopicsProps {
   deleteTopic: Function,
+  likeTopic: Function,
   onLoad: Function
   topics: Topic[],
   isLoading: boolean
@@ -39,6 +42,10 @@ export class TopicsContainer extends React.Component<TopicsProps, {}> {
     history.push(`/createTopic/${id}`);
   }
 
+  likeTopic(id) {
+    this.props.likeTopic(id);
+  }
+
   render() {
     const { topics } = this.props;
 
@@ -50,10 +57,13 @@ export class TopicsContainer extends React.Component<TopicsProps, {}> {
           </TableCell>
         </TableRow>
       : topics.map(topic => {
+
         return (
           <TableRow key={topic.id}>
-            <TableCell component="th" scope="row">
-              {topic.id}
+            <TableCell>
+              <div onClick={() => this.likeTopic(topic.id)} style={{cursor: 'pointer', display: 'flex'}}>
+                {topic.isLiked ? <Star/> : <StarBorder/>} <div style={{marginTop: 4, marginLeft: 4, fontSize: 15}}>{topic.numberOfLikes}</div>
+              </div>
             </TableCell>
             <TableCell>
               <Link to={`/topics/${topic.id}`}>{topic.title}</Link>
@@ -61,12 +71,12 @@ export class TopicsContainer extends React.Component<TopicsProps, {}> {
             <TableCell>
               {topic.userName}
             </TableCell>
-            <TableCell style={{width: 25, padding: '0 0 0 80px'}}>
+            <TableCell style={{padding: '0 0 0 80px'}}>
               <div onClick={() => this.editTopic(topic.id)} style={{cursor: 'pointer'}}>
                 <Edit/>
               </div>
             </TableCell>
-            <TableCell style={{width: 25}}>
+            <TableCell>
               <div onClick={() => this.deleteTopic(topic.id)} style={{cursor: 'pointer'}}>
                 <DeleteForeverIcon/>
               </div>
@@ -79,7 +89,7 @@ export class TopicsContainer extends React.Component<TopicsProps, {}> {
       <div>
         <Link to='/createTopic'>
           <Button variant='contained' style={{marginLeft: 24, marginTop: 24}}>
-              Create topic
+              Create location
           </Button>
         </Link>
 
@@ -88,8 +98,8 @@ export class TopicsContainer extends React.Component<TopicsProps, {}> {
           <Table>
             <TableHead>
               <TableRow>
-                <TableCell>ID</TableCell>
-                <TableCell>Title</TableCell>
+                <TableCell style={{width: 25}}></TableCell>
+                <TableCell style={{width: '60%'}}>Title</TableCell>
                 <TableCell>Username</TableCell>
                 <TableCell style={{width: 25}}/>
                 <TableCell style={{width: 25}}/>
@@ -119,6 +129,9 @@ const mapDispatchToProps = dispatch => {
     },
     deleteTopic: (id: number) => {
       dispatch(TopicsActions.deleteTopic(id));
+    },
+    likeTopic: (id: number) => {
+      dispatch(TopicsActions.likeTopic(id));
     }
   }
 };

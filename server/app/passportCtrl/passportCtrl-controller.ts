@@ -19,7 +19,6 @@ export class PassportCtrl {
               @Required() @BodyParams("password") password: string,
               @Req() request,
               @Res() response: Express.Response) {
-
     return new Promise<User>((resolve, reject) => {
       Passport
         .authenticate("login", (err, user: User) => {
@@ -75,10 +74,7 @@ export class PassportCtrl {
 
   @Post("/logout")
   public logout(@Req() request) {
-    console.log('Cica logout');
-    console.log('User before logout', request.user);
     request.logout();
-    console.log('User after logout', request.user);
     return "Success!";
   }
 

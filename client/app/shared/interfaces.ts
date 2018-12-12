@@ -1,8 +1,12 @@
 export interface Topic {
-    id: number,
-    title: string,
-    userName: string,
-    comments: Comment[]
+  id: number,
+  title: string,
+  userName: string,
+  isLiked: boolean,
+  numberOfLikes: number,
+  description: string,
+  url: string,
+  comments: Comment[]
 }
 
 export interface Comment {

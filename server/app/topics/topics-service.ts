@@ -3,6 +3,7 @@ import {Connection} from "typeorm";
 import {Topic} from "../models/topic";
 import {OrmConfigService} from "../services/ormconfig-service";
 import { Comment } from '../models/comment';
+import { UserLikesTopic } from '../models/userLikeTopic';
 
 @Service()
 export class TopicsService {
@@ -12,7 +13,7 @@ export class TopicsService {
   public getTopics() {
     return this.ormService.connection.then((connection: Connection) => {
       return connection.getRepository(Topic)
-        .find({relations: ["user"]});
+        .find({relations: ["user", "userLikesTopic"]});
     });
   }
 
@@ -40,7 +41,17 @@ export class TopicsService {
       return connection.createQueryBuilder()
         .delete()
         .from(Comment)
-        .where("topicId = :id", { id})
+        .where("topicId = :id", {id})
+        .execute();
+    })
+  }
+
+  public deleteLikes(id: number) {
+    return this.ormService.connection.then((connection: Connection) => {
+      return connection.createQueryBuilder()
+        .delete()
+        .from(UserLikesTopic)
+        .where("topicId = :id", {id})
         .execute();
     })
   }

@@ -25,9 +25,6 @@ export function loginReducer(state = initialState, action) {
     case LoginActions.LOGIN_FAIL: {
       return {...state, ...{badCredentials: true}}
     }
-    case LoginActions.LOGOUT: {
-      return {...state}
-    }
     default:
       return state;
   }

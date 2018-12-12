@@ -3,6 +3,7 @@ export class TopicsActions {
   static readonly TOPICS_LOAD_SUCCESS = '[TOPICS]LOAD_SUCCESS';
   static readonly TOPICS_LOAD_FAIL = '[TOPICS]LOAD_FAIL';
   static readonly TOPICS_DELETE = '[TOPICS]DELETE';
+  static readonly TOPICS_LIKE = '[TOPICS]LIKE';
 
   static loadTopicsStarted() {
     return {
@@ -27,4 +28,14 @@ export class TopicsActions {
       }
     }
   }
+
+  static likeTopic(id: number) {
+    return {
+      type: TopicsActions.TOPICS_LIKE,
+      payload: {
+        id
+      }
+    }
+  }
+
 }

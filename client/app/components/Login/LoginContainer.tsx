@@ -6,6 +6,7 @@ import AccesibilityIcon from '@material-ui/icons/AccessibilityOutlined';
 import { ApplicationState } from '../../store/application-state';
 import { UserProfileState } from '../NavBar/store/nav-bar';
 import { ValidatorForm, TextValidator} from 'react-material-ui-form-validator';
+import {Link} from "react-router-dom";
 
 interface LoginProps {
   userName: string,
@@ -14,7 +15,6 @@ interface LoginProps {
   changePassword: any,
   badCredentials: boolean,
   login: Function,
-  logout: Function,
   userProfile: UserProfileState
 }
 
@@ -24,17 +24,10 @@ class LoginContainer extends React.Component<LoginProps, {}> {
     this.props.login(userName, password);
   }
 
-  logout() {
-    this.props.logout();
-  }
 
   render() {
-    const renderBody = this.props.userProfile.isAuthenticated
-      ? (
-        <div onClick={() => this.logout()}>
-          <Button type="submit" variant='contained' className="width-100">Log out</Button>
-        </div>
-      ) : (
+    const renderBody = !this.props.userProfile.isAuthenticated &&
+      (
         <ValidatorForm onSubmit={(event) => {
           event.preventDefault();
           return this.login(this.props.userName, this.props.password);
@@ -42,10 +35,12 @@ class LoginContainer extends React.Component<LoginProps, {}> {
           <div style={{alignSelf: 'center'}}>
             <AccesibilityIcon style={{marginLeft: '48%'}}/>
           </div>
-          <div style={{textAlign: 'center'}}>
+          <h1 style={{textAlign: 'center'}}>
             Sign in to access the app!
-          </div>
-
+          </h1>
+          <h3 style={{textAlign: 'center', color: 'gray'}}>
+            Or <Link to='signup'><u><b>register</b></u></Link> if you don't have an account.
+          </h3>
           <div>
             <TextValidator
               name="username"
@@ -75,7 +70,7 @@ class LoginContainer extends React.Component<LoginProps, {}> {
             />
           </div>
 
-          <div onClick={() => this.login(this.props.userName, this.props.password)}>
+          <div>
             <Button type="submit" variant='contained' className="width-100" style={{marginTop: 8}}>Log in</Button>
           </div>
 
@@ -112,9 +107,6 @@ const mapDispatchToProps = dispatch => {
     },
     login: (userName, password) => {
       dispatch(LoginActions.loginStarted(userName, password));
-    },
-    logout: () => {
-      dispatch(LoginActions.logout())
     }
   }
 };

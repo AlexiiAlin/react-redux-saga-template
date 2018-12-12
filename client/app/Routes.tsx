@@ -5,38 +5,35 @@ import TopicContainer from "./components/Topic/TopicContainer";
 import CreateTopicContainer from "./components/CreateTopic/CreateTopicContainer";
 import LoginContainer from './components/Login/LoginContainer';
 import { PrivateRoute } from './PrivateRoute';
-
-class User extends React.Component<{match: any}, {}> {
-    render() {
-        return (
-            <h1>Hello user {this.props.match.params.username}</h1>
-        )
-    }
-}
+import SignupContainer from "./components/Signup/SignupContainer";
+import ProfileContainer from './components/Profile/ProfileContainer';
+import { NotFound } from './NotFound';
 
 export class Routes extends React.Component<{}, {}> {
-    render() {
-        return(
-            <div style={{height: 'calc(100% - 64px)'}}>
-                <Route path="/" exact strict render={
-                    () => {
-                        return (<h1 style={{marginLeft: 24}}>Welcome to this app that is <u>not</u> a forum</h1>)}
-                }/>
+  render() {
+    return(
+      <div style={{height: 'calc(100% - 64px)'}}>
+        <Route path="/" exact strict render={
+          () => {
+            return (<h1 style={{marginLeft: 24}}>Welcome to this app that is <u>not</u> a forum.</h1>)}
+        }/>
 
-                <PrivateRoute path="/topics" exact strict component={TopicsContainer}/>
+        <PrivateRoute path="/topics" exact strict component={TopicsContainer}/>
 
-                <PrivateRoute path="/topics/:id" exact strict component={TopicContainer}/>
+        <PrivateRoute path="/topics/:id" exact strict component={TopicContainer}/>
 
-                <PrivateRoute path="/createTopic/:id?" exact strict component={CreateTopicContainer}/>
+        <PrivateRoute path="/createTopic/:id?" exact strict component={CreateTopicContainer}/>
 
-                <Route path="/login" exact strict component={LoginContainer}/>
+        <Route path="/login" exact strict component={LoginContainer}/>
 
-                <Route path="/logout" exact strict component={LoginContainer}/>
+        <PrivateRoute path="/profile" exact strict component={ProfileContainer}/>
 
-                {/*<Route path="/user/:username?" component={User}/>*/}
+        <PrivateRoute path="/profile/edit" exact strict component={ProfileContainer}/>
 
-                <PrivateRoute path="/user/:username?" component={User}/>
-            </div>
-        )
-    }
+        <Route path="/signup" exact strict component={SignupContainer}/>
+
+        <Route path="/notFound" exact strict component={NotFound}/>
+      </div>
+    )
+  }
 }

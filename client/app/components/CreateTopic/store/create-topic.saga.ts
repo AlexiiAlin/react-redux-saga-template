@@ -21,7 +21,11 @@ function* saveTopic(action) {
 function* loadTopic(action) {
   yield delay(1000);
   const response = yield call(axios.get, `/api/topics/${action.payload.id}`);
-  const title = response.data.title;
+  const topic = {
+    title: response.data.title,
+    description: response.data.description,
+    url: response.data.url
+  };
 
-  yield put({type: CreateTopicActions.LOAD_TOPIC_SUCCEED, payload: {title}})
+  yield put({type: CreateTopicActions.LOAD_TOPIC_SUCCEED, payload: {topic}})
 }

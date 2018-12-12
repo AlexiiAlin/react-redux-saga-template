@@ -5,6 +5,8 @@ import { createTopicSagas } from "../components/CreateTopic/store/create-topic.s
 import { loginSaga } from '../components/Login/store/login.saga';
 import { navBarSaga } from '../components/NavBar/store/nav-bar.saga';
 import history from '../history';
+import {signUpSaga} from "../components/Signup/store/signup.saga";
+import { profileSaga } from '../components/Profile/store/profile.saga';
 
 export function* rootSaga() {
   try {
@@ -13,12 +15,15 @@ export function* rootSaga() {
       topicSaga(),
       createTopicSagas(),
       loginSaga(),
-      navBarSaga()
+      signUpSaga(),
+      navBarSaga(),
+      profileSaga()
     ])
   } catch (e) {
     if(e.response.status === 403) {
       window.location.href = `${window.location.origin}/login`;
-    } else {
+    } else if(e.response.status === 404 || e.response.status === 400) {
+      window.location.href = `${window.location.origin}/notFound`;
     }
   }
 }

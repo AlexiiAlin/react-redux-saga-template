@@ -9,6 +9,7 @@ import { ApplicationState } from '../../store/application-state';
 
 interface NavBarProps{
   userName: string,
+  appTitle: string,
   isAuthenticated: boolean,
   loadUserProfile: Function
 }
@@ -30,9 +31,9 @@ class NavBarContainer extends React.Component<NavBarProps, {}> {
               <Home nativeColor='white'/>
             </Link>
             <Typography variant="h6" style={{width: '90%', display: 'flex', justifyContent: 'center'}}>
-              <Link to="/topics" style={{color: 'white'}}>Norum - Not a forum</Link>
+              <Link to="/topics" style={{color: 'white'}}>{this.props.appTitle}</Link>
             </Typography>
-            <Link to={this.props.isAuthenticated ? '/logout' :'/login'} style={{width: '5%', display: 'flex', justifyContent: 'center', color: 'white'}}>
+            <Link to={this.props.isAuthenticated ? '/profile' :'/login'} style={{width: '5%', display: 'flex', justifyContent: 'center', color: 'white'}}>
               {loginInfo}
             </Link>
           </Toolbar>
@@ -44,6 +45,7 @@ class NavBarContainer extends React.Component<NavBarProps, {}> {
 
 const mapStateToProps = (state : ApplicationState) => {
   return {
+    appTitle: state.userProfile.appTitle,
     userName: state.userProfile.userName,
     isAuthenticated: state.userProfile.isAuthenticated
   }

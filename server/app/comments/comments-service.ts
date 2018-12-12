@@ -14,7 +14,7 @@ export class CommentsService {
     })
   }
 
-  public saveComment(comment) {
+  public saveComment(comment: Comment) {
     return this.ormService.connection.then((connection: Connection) => {
       return connection.getRepository(Comment).save(comment);
     })
