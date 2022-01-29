@@ -12,7 +12,7 @@ export class OrmConfigService {
     'host': 'localhost',
     'port': 3306,
     'username': 'root',
-    'password': 'T1e2s3t4',
+    'password': 'root',
     'database': 'FORUM-DB',
     'logging': ['error'],
     'entities': [

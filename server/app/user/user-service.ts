@@ -1,7 +1,7 @@
 import { OrmConfigService } from '../services/ormconfig-service';
 import { Connection } from 'typeorm';
 import { User } from '../models/user';
-import { Service } from '@tsed/common';
+import { Service } from "@tsed/common";
 
 @Service()
 export class UserService {

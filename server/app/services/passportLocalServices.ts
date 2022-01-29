@@ -9,7 +9,7 @@ import {
   Inject
 } from "@tsed/common";
 import {UserService} from "../user/user-service";
-import { BadRequest, NotFound } from "ts-httpexceptions";
+import {BadRequest, NotFound} from "@tsed/exceptions";
 
 @Service()
 export class PassportLocalService implements BeforeRoutesInit, AfterRoutesInit {

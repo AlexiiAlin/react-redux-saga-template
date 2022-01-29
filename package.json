@@ -35,8 +35,9 @@
   "dependencies": {
     "@material-ui/core": "^3.5.1",
     "@material-ui/icons": "^3.0.1",
-    "@tsed/common": "^4.32.0",
-    "@tsed/core": "^4.32.0",
+    "@tsed/common": "^5.60.2",
+    "@tsed/core": "^5.56.0",
+    "@tsed/exceptions": "^5.60.2",
     "@types/axios": "^0.14.0",
     "@types/react-redux": "^6.0.9",
     "@types/react-router": "^4.4.1",

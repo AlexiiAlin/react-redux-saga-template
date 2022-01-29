@@ -1,5 +1,4 @@
 import {Authenticated, BodyParams, Controller, Get, Post, Request} from '@tsed/common';
-import { Forbidden } from 'ts-httpexceptions';
 import {Topic} from "../models/topic";
 import {User} from "../models/user";
 import {UserService} from "./user-service";
@@ -25,15 +24,15 @@ export class UserController {
   }
 
   @Post('/signup')
-  public signupUser(@Request() request: any,
-                     @BodyParams() user: User) {
+  public signupUser(@Request() request: any) {
+    const user = request.body;
     return this.userService.create(user);
   }
 
   @Post('/update')
   @Authenticated()
-  public updateUser(@Request() request: any,
-                    @BodyParams() user: User) {
+  public updateUser(@Request() request: any) {
+    const user = request.body;
     user.id = request.user.id;
     return this.userService.create(user);
   }

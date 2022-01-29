@@ -16,8 +16,8 @@ export class CommentsController {
 
   @Post('')
   @Authenticated()
-  public addComment(@Request() request: any,
-                    @BodyParams() comment: Comment) {
+  public addComment(@Request() request: any) {
+    const comment = request.body;
     comment.userId = request.user.id;
     return this.commentsService.saveComment(comment);
   }

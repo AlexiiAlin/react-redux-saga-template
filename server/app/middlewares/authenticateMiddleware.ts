@@ -7,13 +7,13 @@ import {
   IMiddleware,
   EndpointMetadata
 } from "@tsed/common";
-import {Forbidden} from "ts-httpexceptions";
+import {Forbidden} from "@tsed/exceptions";
 
 @OverrideMiddleware(AuthenticatedMiddleware)
 export class MyAuthenticatedMiddleware implements IMiddleware {
   public use(@EndpointInfo() endpoint: EndpointMetadata,
              @Request() request: any,
-             @Next() next: Express.NextFunction) { // next is optional here
+             @Next() next: any) { // next is optional here
 
     // options given to the @Authenticated decorator
     const options = endpoint.get(AuthenticatedMiddleware) || {};
