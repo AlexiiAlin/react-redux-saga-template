@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Route } from "react-router-dom";
-import TopicsContainer from "./components/Topics/TopicsContainer";
-import TopicContainer from "./components/Topic/TopicContainer";
-import CreateTopicContainer from "./components/CreateTopic/CreateTopicContainer";
+import TopicsContainer from "./components/Questions/QuestionsContainer";
+import TopicContainer from "./components/Question/QuestionContainer";
+import CreateTopicContainer from "./components/CreateQuestion/CreateQuestionContainer";
 import LoginContainer from './components/Login/LoginContainer';
 import { PrivateRoute } from './PrivateRoute';
 import SignupContainer from "./components/Signup/SignupContainer";

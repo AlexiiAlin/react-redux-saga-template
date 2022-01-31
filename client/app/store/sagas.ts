@@ -1,7 +1,7 @@
 import { all } from "redux-saga/effects";
-import { topicsSaga } from "../components/Topics/store/topics.saga";
-import { topicSaga } from "../components/Topic/store/topic.saga";
-import { createTopicSagas } from "../components/CreateTopic/store/create-topic.saga";
+import { questionsSaga } from "../components/Questions/store/questions.saga";
+import { questionSaga } from "../components/Question/store/question.saga";
+import { createTopicSagas } from "../components/CreateQuestion/store/create-question.saga";
 import { loginSaga } from '../components/Login/store/login.saga';
 import { navBarSaga } from '../components/NavBar/store/nav-bar.saga';
 import history from '../history';
@@ -11,8 +11,8 @@ import { profileSaga } from '../components/Profile/store/profile.saga';
 export function* rootSaga() {
   try {
     yield all([
-      topicsSaga(),
-      topicSaga(),
+      questionsSaga(),
+      questionSaga(),
       createTopicSagas(),
       loginSaga(),
       signUpSaga(),
